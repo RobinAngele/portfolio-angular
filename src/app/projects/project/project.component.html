@@ -1,0 +1,18 @@
+<div class="project-container" [class.odd]="isSecondElement"
+    data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+    <div class="image-container">
+        <img [src]="project.prevImageUrl" alt="Project Preview Image" draggable="false" loading="lazy">
+        <app-button [btnText]="'PROJECTS.LIVE_TEST' | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
+    </div>
+    <div>
+        <div class="description-container">
+            <h4>{{ project.title }}</h4>
+            <p class="project-stack">{{ project.stack }}</p>
+            <p>{{ project.description }}</p>
+        </div>
+        <div class="button-container">
+            <app-button [btnText]="'PROJECTS.LIVE_TEST' | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
+            <app-button [btnText]="'PROJECTS.GITHUB' | translate" [href]="project.github" [target]="'_blank'"></app-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+}
+
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+        display: flex;
+        transition: transform 0.1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 30px;
+        }
+    }
+}

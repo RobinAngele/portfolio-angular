@@ -1,0 +1,10 @@
+<div class="skill-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+    @for (skill of skills; track skill.name) {
+    <div class="skill-card" [class]="skill.class">
+        <div class="skill-icon">
+            <img [src]="skill.icon" [alt]="skill.name + ' icon'">
+        </div>
+        <div class="skill-name">{{ skill.name }}</div>
+    </div>
+    }
+</div>

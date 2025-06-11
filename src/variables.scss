@@ -1,0 +1,40 @@
+// Colors
+$col-primary: #5988FF;
+$col-primary-light: #EAF0FF;
+$col-primary-dark: #0043F0;
+$col-valid: #70E61C;
+$col-error: #E61C40;
+$col-dark: #141D2F;
+$col-light: #F5F5F5;
+$col-accent: $col-primary;
+$col-accent-hover: #4677E5;
+
+// Font-Sizes
+$fs-64: 64px;
+$fs-24: 24px;
+$fs-18: 18px;
+$fs-12: 12px;
+$fs-h1: 128px;
+$fs-h2: 120px;
+$fs-h3: 96px;
+$fs-h4: 48px;
+$fs-h5: 32px;
+$fs-h6: 24px;
+$fs-body: 16px;
+
+// Spacing
+$gap-xs: 8px;
+$gap-sm: 16px;
+$gap-md: 24px;
+$gap-lg: 32px;
+$gap-xl: 48px;
+
+// Area spacing (for section padding)
+$area-spacing-md: 100px;
+$area-spacing-sm: 48px;
+
+// Media Breakpoints
+$m-mobile-lg: 1120px;
+$m-mobile-md: 800px;
+$m-mobile-sm: 374px;
+$m-tablet: 1024px;

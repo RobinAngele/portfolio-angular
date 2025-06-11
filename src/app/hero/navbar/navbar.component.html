@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <a href="#introduction"><li>{{ 'NAVBAR.ABOUT' | translate }}</li></a>
+        <a href="#skillset"><li>{{ 'NAVBAR.SKILLS' | translate }}</li></a>
+        <a href="#projects"><li>{{ 'NAVBAR.PROJECTS' | translate }}</li></a>
+        <a href="#contact"><li>{{ 'NAVBAR.CONTACT' | translate }}</li></a>
+    </ul>
+    <div class="language-toggle">
+        <img *ngIf="currentLang === 'en'" 
+             src="assets/icons/translation_EN active.svg" 
+             alt="English" 
+             (click)="switchLanguage('de')">
+        <img *ngIf="currentLang === 'de'" 
+             src="assets/icons/translation_DE active.svg" 
+             alt="Deutsch" 
+             (click)="switchLanguage('en')">
+    </div>
+</nav>

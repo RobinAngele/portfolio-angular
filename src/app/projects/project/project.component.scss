@@ -1,0 +1,112 @@
+@use 'variables' as v;
+
+.project-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 75px;
+}
+
+.image-container {
+    position: relative;
+    flex-shrink: 0;
+    width: 620px;
+    user-select: none;
+
+    &:hover img {
+        transform: scale(1.02);
+        filter: brightness(60%);
+    }
+
+    &:hover app-button {
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.1s ease-in-out;
+    }
+
+    app-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h4 {
+        margin-bottom: 35px;
+    }
+}
+
+.project-stack {
+    color: v.$col-primary;
+    font-size: v.$fs-24;
+}
+
+.button-container {
+    display: flex;
+    gap: 35px;
+
+    app-button:first-child {
+        display: none;
+    }
+}
+
+.odd:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+
+    .button-container {
+        justify-content: flex-end;
+    }
+}
+
+// Media
+@media screen and (max-width: v.$m-mobile-lg) {
+    .project-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 45px;
+    }
+
+    .image-container {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .button-container {
+        app-button:first-child {
+            display: inline-block;
+        }
+    }
+
+    .odd:nth-child(odd) {
+        flex-direction: column;
+        text-align: left;
+
+        .button-container {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: v.$m-mobile-sm) {
+    .button-container {
+        flex-direction: column;
+        gap: 12px;
+
+        app-button:first-child {
+            display: inline-block;
+        }
+    }
+}

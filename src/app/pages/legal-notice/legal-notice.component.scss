@@ -1,0 +1,69 @@
+@use '../../../variables' as v;
+@use '../../../mixins' as m;
+
+.container {
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .navigation {
+        position: static;
+        width: 100%;
+        max-width: 1440px;
+        margin-top: 24px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5;
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    .content {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .section {
+        margin-bottom: 40px;
+
+        h2 {
+            margin-bottom: 16px;
+            font-size: v.$fs-h4;
+            color: v.$col-primary;
+        }
+
+        p {
+            margin-bottom: 8px;
+            font-size: v.$fs-body;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: v.$m-mobile-md) {
+    .container {
+        padding: 0 24px;
+
+        .navigation {
+            margin-top: 16px;
+            margin-bottom: 60px;
+
+            .logo {
+                width: 60px;
+            }
+        }
+    }
+}

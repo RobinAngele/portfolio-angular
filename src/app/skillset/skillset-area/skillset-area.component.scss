@@ -1,0 +1,55 @@
+@use 'variables' as v;
+
+.skillset-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    padding-top: v.$area-spacing-md;
+    padding-bottom: v.$area-spacing-md;
+    background: linear-gradient(
+        128.94deg,
+        v.$col-primary -33.96%,
+        v.$col-primary 36.71%,
+        v.$col-primary-dark 112.25%);
+
+    h3 {
+        color: white;
+        text-align: center;
+    }
+}
+
+// Media
+@media screen and (max-width: v.$m-mobile-md) {
+    .skillset-area {
+        gap: 32px;
+        padding-top: v.$area-spacing-sm;
+        padding-bottom: v.$area-spacing-sm;
+    }
+}
+
+.skillset-section {
+    padding: 80px 0;
+    background-color: v.$col-light;
+}
+
+.skillset-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    
+    h2 {
+        margin-bottom: 24px;
+    }
+    
+    p {
+        font-size: v.$fs-18;
+        line-height: 1.6;
+    }
+}

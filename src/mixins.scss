@@ -1,0 +1,31 @@
+@use 'variables' as v;
+
+@mixin app-bubble(
+    $size: 100px,
+    $top: unset,
+    $left: unset,
+    $right: unset,
+    $bottom: unset,
+    $index: -1
+) {
+    position: absolute;
+    width: $size;
+    height: $size;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    border-radius: 100%;
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, v.$col-primary 6.25%, v.$col-primary 51.56%, v.$col-primary-dark 100%);
+    z-index: $index;
+    transition: all 0.24s ease-in-out;
+}
+
+@mixin heading-style($font: 'Baloo2') {
+    margin: 0;
+    font-family: $font;
+    font-weight: 800;
+    color: v.$col-primary;
+    line-height: 1;
+    user-select: none;
+}

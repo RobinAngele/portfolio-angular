@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="navigation">
+        <a href="#hero" draggable="false">
+            <img src="assets/img/logo_blue.svg" alt="Logo" class="logo" draggable="false">
+        </a>
+        <app-navbar></app-navbar>
+    </div>
+    <div class="content">
+        <h1 [innerHTML]="'PRIVACY.TITLE' | translate"></h1>
+        <div class="section">
+            <h2>{{ 'PRIVACY.SECTION1_HEADING' | translate }}</h2>
+            <p>{{ 'PRIVACY.SECTION1_TEXT' | translate }}</p>
+        </div>
+        <div class="section">
+            <h2>{{ 'PRIVACY.SECTION2_HEADING' | translate }}</h2>
+            <p>{{ 'PRIVACY.SECTION2_TEXT' | translate }}</p>
+        </div>
+        <div class="section">
+            <h2>{{ 'PRIVACY.SECTION3_HEADING' | translate }}</h2>
+            <p>{{ 'PRIVACY.SECTION3_TEXT' | translate }}</p>
+        </div>
+        <div class="section">
+            <h2>{{ 'PRIVACY.SECTION4_HEADING' | translate }}</h2>
+            <p>{{ 'PRIVACY.SECTION4_TEXT' | translate }}</p>
+            <p>{{ 'PRIVACY.CONTACT_EMAIL' | translate }}: <a href="mailto:frontend@robin4consulting.com">frontend&#64;robin4consulting.com</a></p>
+        </div>
+        <div class="section">
+            <h2>{{ 'PRIVACY.SECTION5_HEADING' | translate }}</h2>
+            <p>{{ 'PRIVACY.SECTION5_TEXT' | translate }}</p>
+        </div>
+    </div>
+</div>
+<app-footer-area></app-footer-area>

@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'aos/dist/aos.css';
+
+// Fonts
+@font-face {
+    font-family: 'Baloo2';
+    src: url('/assets/fonts/baloo2/Baloo2-ExtraBold.woff2');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/montserrat/Montserrat-Regular.woff2');
+    font-weight: 400;
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+    user-select: none;
+}
+
+a:focus {
+    border-radius: 5px;
+}
+
+.container {
+    position: relative;
+    padding: 0 100px;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background: v.$col-primary;
+    border-radius: 5px;
+}
+
+// Headings
+@mixin heading-style($font: 'Baloo2') {
+    margin: 0;
+    font-family: $font;
+    font-weight: 800;
+    color: v.$col-primary;
+    line-height: 1;
+    user-select: none
+}
+
+h1 {
+    @include heading-style;
+    font-size: v.$fs-h1;
+}
+
+h2 {
+    @include heading-style;
+    font-size: v.$fs-h2;
+}
+
+h3 {
+    @include heading-style;
+    font-size: v.$fs-h3;
+}
+
+h4 {
+    @include heading-style;
+    font-size: v.$fs-h4;
+}
+
+h5 {
+    @include heading-style;
+    font-size: v.$fs-h5;
+}
+
+h6 {
+    @include heading-style('Montserrat');
+    font-size: v.$fs-h6;
+}
+
+.fs-body {
+    @include heading-style('Montserrat');
+    font-size: v.$fs-body;
+}
+
+// Media
+@media screen and (max-width: v.$m-mobile-md) {
+    .container {
+        padding: 0 24px;
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 64px;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: v.$m-mobile-sm) {
+    h2 {
+        font-size: v.$fs-h4;
+    }
+
+    h3 {
+        font-size: v.$fs-h4;
+    }
+}

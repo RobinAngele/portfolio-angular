@@ -1,0 +1,100 @@
+{
+  "GENERAL": {
+    "GREETING": "Hallo",
+    "WELCOME": "Willkommen zu meinem Portfolio"
+  },
+  "NAVBAR": {
+    "HOME": "Startseite",
+    "ABOUT": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt"
+  },
+  "HERO": {
+    "GREETING": "Hallo! Ich bin",
+    "ROLE_1": "FRONTEND",
+    "ROLE_2": "ENTWICKLER",
+    "SCROLL": "SCROLLEN"
+  },
+  "INTRODUCTION": {
+    "HEADING": "Lass uns zusammen arbeiten",
+    "HEADING_LINE1": "Lass uns",
+    "HEADING_LINE2": "zusammen",
+    "HEADING_LINE3": "arbeiten",
+    "I_AM": "Ich bin",
+    "BIO": "Ich bin ein leidenschaftlicher Frontend-Entwickler, ursprünglich aus Paris, jetzt wohnhaft in Hessen nahe Frankfurt, Deutschland. Ich nutze gerne verschiedene Technologien, um tolle Produkte zu entwickeln und konzentriere mich darauf, Probleme für verschiedene Branchen und Nischen zu lösen. Ich interessiere mich auch für KI, Automatisierung und Projektmanagement.",
+    "CONTACT_INTRO": "Ich würde mich freuen, von dir zu hören. Ob es ein Projekt, eine Jobmöglichkeit oder nur ein Gespräch ist.",
+    "SEND_MESSAGE": "Nachricht senden"
+  },
+  "SKILLSET": {
+    "TITLE": "Fähigkeiten",
+    "SKILLS": {
+      "ANGULAR": "Angular",
+      "TYPESCRIPT": "TypeScript", 
+      "JAVASCRIPT": "JavaScript",
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "FIREBASE": "Firebase",
+      "REST_API": "REST API",
+      "MATERIAL_DESIGN": "Material Design",
+      "SCRUM": "Scrum",
+      "GIT": "Git",
+      "GROWTH_MINDSET": "Growth Mindset"
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Meine Projekte",
+    "DESCRIPTION": "Diese Projekte zeigen meine Expertise in der Frontend-Entwicklung, KI-Integration und Automatisierung. Jedes Projekt demonstriert verschiedene Fähigkeiten und moderne Webtechnologien.",
+    "LIVE_TEST": "Live-Test",
+    "GITHUB": "GitHub"
+  },
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "HEADING": "Projekte zu verwirklichen?",
+    "DESCRIPTION": "Kontaktiere mich gerne über dieses Formular. Ich bin interessiert, von dir und deinen Ideen zu hören, damit wir sie gemeinsam umsetzen können.",
+    "NEED_DEVELOPER": "Brauchst du einen Frontend-Entwickler?",
+    "CONTACT_ME": "Kontaktiere mich!"
+  },
+  "CONTACT_FORM": {
+    "NAME": "Dein Name",
+    "NAME_PLACEHOLDER": "Bitte gib deinen Namen ein",
+    "NAME_ERROR": "Dein Name wird benötigt",
+    "EMAIL": "Deine E-Mail",
+    "EMAIL_PLACEHOLDER": "Bitte gib deine E-Mail-Adresse ein",
+    "EMAIL_ERROR": "Eine gültige E-Mail-Adresse wird benötigt",
+    "MESSAGE": "Deine Nachricht",
+    "MESSAGE_PLACEHOLDER": "Bitte gib deine Nachricht ein",
+    "MESSAGE_ERROR": "Deine Nachricht wird benötigt",
+    "PRIVACY_AGREEMENT": "Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu",
+    "PRIVACY_ERROR": "Du musst der Datenschutzerklärung zustimmen",
+    "SEND": "Nachricht senden",
+    "SUCCESS": "Deine Nachricht wurde erfolgreich gesendet!",
+    "ERROR": "Fehler beim Senden der Nachricht. Bitte versuche es erneut."
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY_POLICY": "Datenschutz"
+  },
+  "LEGAL": {
+    "TITLE": "Impressum",
+    "INFO_HEADING": "Angaben gemäß § 5 TMG",
+    "COUNTRY": "Deutschland",
+    "CONTACT_HEADING": "Kontakt",
+    "EMAIL": "E-Mail",
+    "RESPONSIBLE_HEADING": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV"
+  },
+  "PRIVACY": {
+    "TITLE": "Datenschutz",
+    "SECTION1_HEADING": "1. Datenschutz auf einen Blick",
+    "SECTION1_TEXT": "Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie wir mit Ihren Daten umgehen, wenn Sie unsere Website besuchen.",
+    "SECTION2_HEADING": "2. Allgemeine Hinweise",
+    "SECTION2_TEXT": "Diese Website sammelt keine persönlichen Daten, die über das technisch Notwendige für den Betrieb der Website hinausgehen. Wir verarbeiten Ihre Daten in Übereinstimmung mit den relevanten Datenschutzbestimmungen.",
+    "SECTION3_HEADING": "3. Hosting",
+    "SECTION3_TEXT": "Diese Website wird auf all-inkl.com (ALL-INKL.COM - Neue Medien Münnich) gehostet. Der Hosting-Anbieter kann technische Informationen wie IP-Adressen, Browser-Typ und Datum und Uhrzeit des Zugriffs im Rahmen seiner standardmäßigen Protokollierungsverfahren erfassen. Diese Daten werden gesammelt, um die Sicherheit und Funktionalität der Website zu gewährleisten.",
+    "SECTION4_HEADING": "4. Kontaktformular",
+    "SECTION4_TEXT": "Wenn Sie das Kontaktformular verwenden, werden Ihre angegebenen Daten nur zur Bearbeitung Ihrer Anfrage verwendet und nicht länger als nötig gespeichert. Durch das Absenden des Kontaktformulars erklären Sie sich mit der Verarbeitung der bereitgestellten Daten für diesen Zweck einverstanden.",
+    "CONTACT_EMAIL": "Für Anfragen können Sie uns auch direkt kontaktieren unter",
+    "SECTION5_HEADING": "5. Ihre Rechte",
+    "SECTION5_TEXT": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten gemäß den geltenden Datenschutzgesetzen. Bei Fragen zum Datenschutz wenden Sie sich bitte an uns unter frontend@robin4consulting.com."
+  }
+}

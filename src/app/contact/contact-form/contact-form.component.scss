@@ -1,0 +1,229 @@
+@use '../../../variables' as v;
+
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+
+    input,
+    textarea {
+        flex: 1;
+        width: 100%;
+        border: 1px solid v.$col-primary;
+        border-radius: 10px;
+        padding: 15px 22px;
+
+        &:hover,
+        &:focus {
+            border: 1px solid v.$col-primary;
+            outline: 1px solid v.$col-primary;
+        }
+
+        &:-internal-autofill-selected {
+            appearance: none;
+            background: transparent;
+        }
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        opacity: 0;
+        transition: opacity 0.24s ease-in-out;
+    }
+
+    input:focus::placeholder,
+    textarea:focus::placeholder {
+        opacity: 1;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    label {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        padding: 5px;
+        background: linear-gradient(transparent 25%, white 45%, white 65%, transparent 99%);
+        transition: all 0.24s ease-in-out;
+        pointer-events: none;
+    }
+
+    input:focus+label,
+    textarea:focus+label,
+    input:not(:placeholder-shown)+label,
+    textarea:not(:placeholder-shown)+label {
+        top: -15px;
+    }
+
+    p {
+        position: absolute;
+        left: 25px;
+        bottom: -18px;
+        display: none;
+        font-size: v.$fs-12;
+        color: v.$col-error;
+    }
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: 2px solid v.$col-primary;
+        border-radius: 4px;
+        cursor: pointer;
+        accent-color: v.$col-primary;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    label {
+        color: v.$col-dark;
+        font-size: v.$fs-body;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .privacy-link {
+            color: v.$col-primary;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: v.$col-primary-dark;
+            }
+        }
+    }
+
+    p {
+        position: absolute;
+        left: 32px;
+        bottom: -18px;
+        display: none;
+        font-size: v.$fs-12;
+        color: v.$col-error;
+    }
+}
+
+button {
+    margin: auto;
+}
+
+
+.btn-primary {
+    display: inline-block;
+    width: max-content;
+    padding: 15px 30px;
+    color: v.$col-primary;
+    font-size: v.$fs-24;
+    text-decoration: none;
+    border: 2px solid v.$col-primary;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    background: white linear-gradient(300deg, transparent 49%, v.$col-primary 51%);
+    background-position: 100% 100%;
+    background-size: 400% 400%;
+    transition: all 0.1s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover:enabled,
+    &:focus:enabled {
+        transform: scale(1.1);
+        color: white;
+        outline: 2px solid v.$col-primary;
+        background-color: v.$col-primary;
+        animation: move 0.1s forwards;
+    }
+
+    &:active:enabled {
+        background: v.$col-primary-dark;
+    }
+
+    &:disabled {
+        color: gray;
+        border: 2px solid gray;
+        background-color: whitesmoke;
+        cursor: default;
+    }
+}
+
+.mail-bubble {
+    position: absolute;
+    right: 50%;
+    bottom: 150px;
+    display: none;
+    width: 60px;
+    height: 60px;
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
+.mail-animation {
+    animation: mail-bubble 3.5s forwards;
+}
+
+
+// Animations
+@keyframes move {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes mail-bubble {
+    0% {
+        opacity: 0;
+        transform:
+            translateX(50%)
+            rotate(0);
+    }
+
+    25% {
+        opacity: 1;
+        transform:
+            translateX(0)
+            rotate(-45deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateX(800px)
+            rotate(800deg);
+    }
+}
+
+
+// Media
+@media screen and (max-width: v.$m-mobile-md) {
+    .btn-primary {
+        padding: 12px 24px
+    }
+}

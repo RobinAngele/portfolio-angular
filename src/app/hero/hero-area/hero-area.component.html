@@ -1,0 +1,26 @@
+<header class="container" id="hero">
+    <app-bubble></app-bubble>
+    <app-bubble></app-bubble>
+    
+    <div class="navigation">
+        <app-logo></app-logo>
+        <app-navbar></app-navbar>
+        <app-navmenu></app-navmenu>
+    </div>
+    
+    <div class="hero-container">
+        <div>
+            <img src="assets/img/her.webp" alt="Hero Image" draggable="false">
+        </div>
+        <div class="greeting">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">{{ 'HERO.GREETING' | translate }} {{ name }}</p>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-anchor-placement="bottom-bottom">{{ 'HERO.ROLE_1' | translate }}</h1>
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-anchor-placement="bottom-bottom">{{ 'HERO.ROLE_2' | translate }}</h2>
+            <div class="cta-section">
+                <p>{{ 'HERO.SCROLL' | translate }}</p>
+                <div class="line"></div>
+                <app-social-media-header></app-social-media-header>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,88 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced from 32px */
+    width: 100%;
+    /* This will determine the spacing for the first row */
+    justify-content: space-between;
+}
+
+/* Add an invisible element to create the break for second row */
+.skill-grid::after {
+    content: "";
+    width: 100%;
+    order: 1;
+    height: 0;
+}
+
+/* Second row items */
+.skill-grid > :nth-child(n+7):nth-child(-n+11) {
+    /* Move them to after the break */
+    order: 2;
+    /* Center these items */
+    margin: 0 auto;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Reduced from 10px */
+    color: white;
+    text-align: center;
+    transition: transform 0.14s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        font-weight: 600;
+    }
+
+    img {
+        height: 160px; /* Reduced from 120px to make icons smaller */
+    }
+}
+
+/* Specifically for the pushed down card */
+.push-down {
+    position: relative;
+    top: 35px !important; /* Updated from 80px as requested */
+    margin-bottom: 40px; /* Updated from 80px as requested */
+    
+    img {
+        height: 120px; /* Smaller size just for the mindset icon */
+    }
+}
+
+// Media
+@media screen and (max-width: v.$m-mobile-md) {
+    .skill-grid {
+        gap: 16px; /* Reduced from 24px */
+        justify-content: space-around;
+    }
+    
+    /* Reset ordering for mobile layout */
+    .skill-grid::after {
+        display: none;
+    }
+    
+    .skill-grid > :nth-child(n+7):nth-child(-n+11) {
+        order: initial;
+        margin: 0;
+    }
+
+    .skill-card {
+        img {
+            height: 80px; /* Reduced from 95px to match the desktop size reduction */
+        }
+    }
+}
+
+@media screen and (max-width: v.$m-mobile-sm) {
+    .skill-grid {
+        gap: 16px; /* Reduced from 24px */
+    }
+}

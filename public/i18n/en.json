@@ -1,0 +1,86 @@
+{
+  "GENERAL": {
+    "GREETING": "Hello",
+    "WELCOME": "Welcome to my portfolio"
+  },
+  "NAVBAR": {
+    "HOME": "Home",
+    "ABOUT": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "GREETING": "Hello! I am",
+    "ROLE_1": "FRONTEND",
+    "ROLE_2": "DEVELOPER",
+    "SCROLL": "SCROLL"
+  },
+  "INTRODUCTION": {
+    "HEADING": "Let's work together",
+    "HEADING_LINE1": "Let's work",
+    "HEADING_LINE2": "together",
+    "I_AM": "I am",
+    "BIO": "I'm a passionate frontend developer originally from Paris, now living in Hessen close to Frankfurt, Germany. I enjoy using various technologies to build amazing products and focusing on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
+    "CONTACT_INTRO": "I would love to hear from you. Whether it is a project, job opportunity, or just a chat.",
+    "SEND_MESSAGE": "Send a message"
+  },
+  "SKILLSET": {
+    "TITLE": "Skillset"
+  },
+  "PROJECTS": {
+    "TITLE": "My Work",
+    "DESCRIPTION": "Below you can get an impression of my work. You are welcome to try and inspect the projects.",
+    "LIVE_TEST": "Live test",
+    "GITHUB": "GitHub"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "HEADING": "Got projects to realize?",
+    "DESCRIPTION": "Feel free to contact me through this form. I'm interested in hearing from you and your ideas, so that we can turn them into reality.",
+    "NEED_DEVELOPER": "Need a Frontend developer?",
+    "CONTACT_ME": "Contact me!"
+  },
+  "CONTACT_FORM": {
+    "NAME": "Your name",
+    "NAME_PLACEHOLDER": "Please enter your name.",
+    "NAME_ERROR": "Your name is required.",
+    "EMAIL": "Your email",
+    "EMAIL_PLACEHOLDER": "Please enter your email.",
+    "EMAIL_ERROR": "Your valid email is required.",
+    "MESSAGE": "Your message",
+    "MESSAGE_PLACEHOLDER": "Please enter your message.",
+    "MESSAGE_ERROR": "Your message is required.",
+    "PRIVACY_AGREEMENT": "I agree to the processing of my data according to the",
+    "PRIVACY_ERROR": "You must agree to the privacy policy.",
+    "SEND": "Get in touch",
+    "SUCCESS": "Your message has been sent!",
+    "ERROR": "Error sending message. Please try again."
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal Notice",
+    "PRIVACY_POLICY": "Privacy Policy"
+  },
+  "LEGAL": {
+    "TITLE": "Legal Notice",
+    "INFO_HEADING": "Information according to § 5 TMG",
+    "COUNTRY": "Germany",
+    "CONTACT_HEADING": "Contact",
+    "EMAIL": "Email",
+    "RESPONSIBLE_HEADING": "Responsible for content according to § 55 Abs. 2 RStV"
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "SECTION1_HEADING": "1. Data Protection at a Glance",
+    "SECTION1_TEXT": "We take the protection of your personal data very seriously. This privacy policy informs you about how we handle your data when you visit our website.",
+    "SECTION2_HEADING": "2. General Information",
+    "SECTION2_TEXT": "This website does not collect any personal data beyond what is technically necessary for the operation of the website. We process your data in compliance with relevant data protection regulations.",
+    "SECTION3_HEADING": "3. Hosting",
+    "SECTION3_TEXT": "This website is hosted on all-inkl.com (ALL-INKL.COM - Neue Medien Münnich). The hosting provider may collect technical information such as IP addresses, browser type, and date and time of access as part of its standard logging procedures. This data is collected to ensure the security and functionality of the website.",
+    "SECTION4_HEADING": "4. Contact Form",
+    "SECTION4_TEXT": "If you use the contact form, your provided data will only be used to process your inquiry and will not be stored beyond what is necessary to answer your request. By submitting the contact form, you consent to the processing of the provided data for this purpose.",
+    "CONTACT_EMAIL": "For inquiries, you can also contact us directly at",
+    "SECTION5_HEADING": "5. Your Rights",
+    "SECTION5_TEXT": "You have the right to information, correction, deletion, and restriction of processing of your personal data in accordance with applicable data protection laws. If you have questions about data protection, please contact us at frontend@robin4consulting.com."
+  }
+}

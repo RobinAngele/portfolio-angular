@@ -1,0 +1,54 @@
+<form (submit)="sendMail()" method="post"  autocomplete="off">
+    <!-- Name -->
+    <div class="input-container">
+        <input type="text"
+            name="name" id="name" #name
+            placeholder="{{ 'CONTACT_FORM.NAME_PLACEHOLDER' | translate }}"
+            minlength="4" required>
+        <label for="name">{{ 'CONTACT_FORM.NAME' | translate }}</label>
+        <p id="name-error">{{ 'CONTACT_FORM.NAME_ERROR' | translate }}</p>
+    </div>
+
+    <!-- Email -->
+    <div class="input-container">
+        <input type="email"
+            name="email" id="email" #email
+            placeholder="{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}"
+            pattern="^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$"
+            required>
+        <label for="email">{{ 'CONTACT_FORM.EMAIL' | translate }}</label>
+        <p id="email-error">{{ 'CONTACT_FORM.EMAIL_ERROR' | translate }}</p>
+    </div>
+
+    <!-- Message -->
+    <div class="input-container">
+        <textarea cols="30" rows="10"
+            name="message" id="message" #message
+            placeholder="{{ 'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate }}" title=""
+            required></textarea>
+        <label for="message">{{ 'CONTACT_FORM.MESSAGE' | translate }}</label>
+        <p id="message-error">{{ 'CONTACT_FORM.MESSAGE_ERROR' | translate }}</p>
+    </div>
+
+    <!-- Privacy Policy Agreement -->
+    <div class="checkbox-container">
+        <input type="checkbox" 
+            name="privacy" id="privacy" #privacy
+            required>
+        <label for="privacy">
+            {{ 'CONTACT_FORM.PRIVACY_AGREEMENT' | translate }}
+            <a href="/privacy-policy" target="_blank" class="privacy-link">
+                {{ 'FOOTER.PRIVACY_POLICY' | translate }}
+            </a>
+        </label>
+        <p id="privacy-error">{{ 'CONTACT_FORM.PRIVACY_ERROR' | translate }}</p>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn-primary"
+    [disabled]="!(isInputValid['name'] && isInputValid['email'] && isInputValid['message'] && isInputValid['privacy'])">
+    {{ 'CONTACT_FORM.SEND' | translate }}</button>
+
+    <!-- Bubble -->
+    <img src="/assets/icons/mail_blue.svg" class="mail-bubble" id="bubble" #bubble>
+</form>

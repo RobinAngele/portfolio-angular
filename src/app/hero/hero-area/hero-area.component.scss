@@ -1,0 +1,220 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+header {
+    position: relative;
+    height: 100dvh;
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, v.$col-primary-light 91.39%);
+    overflow-x: clip;
+}
+
+app-navmenu {
+    display: none;
+}
+
+.navigation {
+    position: absolute;
+    top: 24px;
+    left: 100px;
+    right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: minmax(20px, 800px) minmax(20px, 800px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80dvh;
+    padding: 0 100px;
+    font-size: 2vw;
+
+    >div:first-of-type {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    >div {
+        height: inherit;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+    }
+
+    p {
+        font-size: clamp(16px, 2.2em, v.$fs-64);
+        color: v.$col-primary;
+        margin-top: 0;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    h1 {
+        font-size: clamp(16px, 4.2em, v.$fs-h1);
+    }
+
+    h2 {
+        font-size: clamp(16px, 3.9em, v.$fs-h2);
+    }
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+        text-align: center;
+    }
+
+    h1, h2 {
+        line-height: 0.8;
+    }
+
+    .cta-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+
+        p {
+            text-align: center;
+            font-size: v.$fs-24;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.line {
+    align-self: center;
+    border-left: 3px solid v.$col-primary;
+    height: 200px;
+}
+
+app-bubble:nth-of-type(1) {
+    @include m.app-bubble(
+        $size: 55dvw,
+        $top: -20dvh,
+        $left: -10dvw,
+        $index: 0);
+}
+
+app-bubble:nth-of-type(2) {
+    @include m.app-bubble(
+        $size: 200px,
+        $left: 50%,
+        $bottom: 0,
+        $index: 1);
+        transform: translate(-50%, 50%);
+}
+
+// Media
+@media screen and (max-width: v.$m-mobile-md) {
+    .navigation {
+        left: 24px;
+        right: 24px;
+    }
+
+    app-navbar {
+        display: none;
+    }
+
+    app-navmenu {
+        display: inline;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 48px;
+        padding: 0 24px;
+
+        div {
+            height: auto;
+        }
+
+        img {
+            max-height: 55dvh;
+            max-width: 90dvw;
+            object-fit: contain;
+        }
+    }
+
+    .greeting {
+        align-items: center;
+        font-size: 4vw;
+        padding: 0 24px;
+
+        p {
+            color: white;
+            font-size: clamp(16px, 2.2em, 36px);
+        }
+
+        h1 {
+            color: white;
+            font-size: clamp(16px, 4.2em, 73px);
+        }
+
+        h2 {
+            color: white;
+            font-size: clamp(16px, 3.9em, 67px);
+        }
+
+        .cta-section {
+            display: none;
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 110dvw,
+            $top: -15dvh,
+            $left: -200px,
+            $index: 0);
+        clip: rect(0px 400dvw 115dvh 0px);
+    }
+
+    app-bubble:nth-of-type(2) {
+        @include m.app-bubble(
+            $size: 150px,
+            $left: 50%,
+            $bottom: 0,
+            $index: 1);
+            transform: translate(-50%, 50%);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: max(155dvw, 590px),
+            $top: -6dvh,
+            $left: -220px,
+            $index: 0);
+        clip: rect(0px 400dvw 106dvh 0px);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: max(155dvw, 590px),
+            $top: calc(-150px + 10dvh),
+            $left: -220px,
+            $index: 0);
+        clip: rect(0px 400dvw 106dvh 0px);
+    }
+}

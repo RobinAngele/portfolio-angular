@@ -1,0 +1,28 @@
+<div class="burger-menu-button" [class.button-open]="isMenuOpen" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()">
+    <div class="mobile-menu" [class.open]="isMenuOpen">
+        <nav>
+            <ul>
+                <li><a href="#introduction" (click)="closeMenu()">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
+                <li><a href="#skillset" (click)="closeMenu()">{{ 'NAVBAR.SKILLS' | translate }}</a></li>
+                <li><a href="#projects" (click)="closeMenu()">{{ 'NAVBAR.PROJECTS' | translate }}</a></li>
+                <li><a href="#contact" (click)="closeMenu()">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
+            </ul>
+            <div class="language-toggle">
+                <img *ngIf="currentLang === 'en'" 
+                     src="assets/icons/translation_EN active.svg" 
+                     alt="English" 
+                     (click)="switchLanguage('de')">
+                <img *ngIf="currentLang === 'de'" 
+                     src="assets/icons/translation_DE active.svg" 
+                     alt="Deutsch" 
+                     (click)="switchLanguage('en')">
+            </div>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="social-media-container">
+    @for (link of socialLinks; track link.name) {
+        <a [href]="link.href" target="_blank">
+            <img [src]="link.icon" [alt]="link.name" title="{{ link.name }} Profile" draggable="false">
+        </a>
+    }
+</div>

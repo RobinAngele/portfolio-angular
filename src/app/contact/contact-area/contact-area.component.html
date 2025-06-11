@@ -1,0 +1,18 @@
+<section class="container contact-area" id="contact">
+    <app-bubble></app-bubble>
+    <app-bubble></app-bubble>
+    <h3>{{ 'CONTACT.TITLE' | translate }}</h3>
+    <div class="contact-container">
+        <div>
+            <h5>{{ 'CONTACT.HEADING' | translate }}</h5>
+            <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
+            <p>{{ 'CONTACT.NEED_DEVELOPER' | translate }} <span>{{ 'CONTACT.CONTACT_ME' | translate }}</span></p>
+        </div>
+        <div>
+            <app-contact-form></app-contact-form>
+        </div>
+    </div>
+    <a href="#hero" class="to-top-button">
+        <img src="/assets/icons/arrow_up_blue.svg" alt="Arrow Up" draggable="false">
+    </a>
+</section>

@@ -1,0 +1,5 @@
+@use 'mixins' as *;
+
+.bubble {
+    @include app-bubble(100px, 50px, 50px, unset, unset, -1);
+}
