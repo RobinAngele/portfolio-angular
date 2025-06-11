@@ -6,6 +6,12 @@
     gap: 75px;
     padding-top: 180px;
     padding-bottom: v.$area-spacing-md;
+    position: relative;
+    background: white;
+    z-index: 10;
+    margin-top: 0px;
+    // Add a subtle shadow to enhance the overlay effect
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
 
     h2 {
         flex-basis: 568px;
