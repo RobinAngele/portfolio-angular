@@ -18,6 +18,9 @@ export class SkillGridComponent {
     { name: 'Material Design', icon: 'assets/icons/material-design_white.svg' },
     { name: 'Scrum', icon: 'assets/icons/scrum_white.svg' },
     { name: 'Git', icon: 'assets/icons/git_white.svg' },
-    { name: 'Growth mindset', icon: 'assets/icons/mindset_white.svg', class: 'push-down' }
+    { name: 'Docker', icon: 'assets/icons/Docker.svg' },
+    { name: 'WordPress', icon: 'assets/icons/wordpress.svg' },
+    { name: 'Linux', icon: 'assets/icons/Linux.svg' },
+    { name: 'Growth Mindset', icon: 'assets/icons/mindset_white.svg', class: 'push-down' }
   ];
 }

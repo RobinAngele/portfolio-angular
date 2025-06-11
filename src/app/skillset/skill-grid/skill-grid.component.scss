@@ -4,26 +4,10 @@
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Reduced from 32px */
+    gap: 24px;
     width: 100%;
-    /* This will determine the spacing for the first row */
-    justify-content: space-between;
-}
-
-/* Add an invisible element to create the break for second row */
-.skill-grid::after {
-    content: "";
-    width: 100%;
-    order: 1;
-    height: 0;
-}
-
-/* Second row items */
-.skill-grid > :nth-child(n+7):nth-child(-n+11) {
-    /* Move them to after the break */
-    order: 2;
-    /* Center these items */
-    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .skill-card {
@@ -31,58 +15,117 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px; /* Reduced from 10px */
+    gap: 15px;
     color: white;
     text-align: center;
-    transition: transform 0.14s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    width: 130px;
+    margin: 10px;
 
     &:hover {
         transform: scale(1.1);
         font-weight: 600;
     }
 
-    img {
-        height: 160px; /* Reduced from 120px to make icons smaller */
+    .skill-icon {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+
+        img {
+            max-height: 65px;
+            max-width: 65px;
+            object-fit: contain;
+        }
+    }
+    
+    .skill-name {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: auto;
     }
 }
 
 /* Specifically for the pushed down card */
 .push-down {
     position: relative;
-    top: 35px !important; /* Updated from 80px as requested */
-    margin-bottom: 40px; /* Updated from 80px as requested */
+    top: 0px!important; // Adjust the top position as needed
     
-    img {
-        height: 120px; /* Smaller size just for the mindset icon */
+    .skill-icon img {
+        max-height: 60px;
     }
 }
 
-// Media
-@media screen and (max-width: v.$m-mobile-md) {
+// Media queries for tablet devices
+@media screen and (max-width: v.$m-tablet) {
     .skill-grid {
-        gap: 16px; /* Reduced from 24px */
-        justify-content: space-around;
-    }
-    
-    /* Reset ordering for mobile layout */
-    .skill-grid::after {
-        display: none;
-    }
-    
-    .skill-grid > :nth-child(n+7):nth-child(-n+11) {
-        order: initial;
-        margin: 0;
+        gap: 20px;
     }
 
     .skill-card {
-        img {
-            height: 80px; /* Reduced from 95px to match the desktop size reduction */
+        width: 110px;
+        margin: 8px;
+        gap: 12px;
+
+        .skill-icon {
+            height: 60px;
+            
+            img {
+                max-height: 55px;
+                max-width: 55px;
+            }
         }
+        
+        .skill-name {
+            font-size: 14px;
+        }
+    }
+}
+
+// Media queries for mobile devices
+@media screen and (max-width: v.$m-mobile-md) {
+    .skill-grid {
+        gap: 16px;
+    }
+    
+    .skill-card {
+        width: 90px;
+        margin: 6px;
+        gap: 10px;
+
+        .skill-icon {
+            height: 50px;
+            
+            img {
+                max-height: 45px;
+                max-width: 45px;
+            }
+        }
+        
+        .skill-name {
+            font-size: 12px;
+        }
+    }
+    
+    .push-down {
+        top: 15px;
     }
 }
 
 @media screen and (max-width: v.$m-mobile-sm) {
     .skill-grid {
-        gap: 16px; /* Reduced from 24px */
+        gap: 12px;
+    }
+    
+    .skill-card {
+        width: 80px;
+        margin: 5px;
+        
+        .skill-icon img {
+            max-height: 40px;
+            max-width: 40px;
+        }
     }
 }
