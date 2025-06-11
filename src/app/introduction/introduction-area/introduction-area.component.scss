@@ -69,11 +69,13 @@ app-button {
     margin: auto;
 }
 
-app-bubble {
+app-bubble:nth-of-type(1) {
     @include m.app-bubble(
         $size: 80px,
         $top: 60px,
         $right: 25%);
+    pointer-events: auto;
+    z-index: 1;
 }
 
 // Media
@@ -117,11 +119,13 @@ app-bubble {
         }
     }
 
-    app-bubble {
+    app-bubble:nth-of-type(1) {
         @include m.app-bubble(
             $size: 60px,
             $top: 45px,
             $right: 8%);
+        pointer-events: auto;
+        z-index: 1;
     }
 
     // Ensure text doesn't wrap even on mobile

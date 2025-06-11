@@ -6,11 +6,16 @@
     padding-bottom: v.$area-spacing-md;
     overflow-x: clip;
 
+    h3 {
+        pointer-events: none;
+    }
+
     p {
         width: 620px;
         font-size: v.$fs-24;
         padding-top: 35px;
         padding-bottom: v.$area-spacing-md;
+        pointer-events: none;
     }
 }
 
@@ -18,41 +23,52 @@
     display: flex;
     flex-direction: column;
     gap: 140px;
+    pointer-events: auto;
 }
 
 app-bubble:nth-of-type(1) {
     @include m.app-bubble(
         $size: 110px,
         $top: 50px,
-        $right: 40%);
+        $right: 40%,
+        $index: 0);
+    pointer-events: auto;
 }
 
 app-bubble:nth-of-type(2) {
     @include m.app-bubble(
         $size: 180px,
         $top: 230px,
-        $right: 10%);
+        $right: 10%,
+        $index: 0);
+    pointer-events: auto;
 }
 
 app-bubble:nth-of-type(3) {
     @include m.app-bubble(
         $size: 390px,
         $top: 22%,
-        $left: -10%);
+        $left: -10%,
+        $index: 0);
+    pointer-events: auto;
 }
 
 app-bubble:nth-of-type(4) {
     @include m.app-bubble(
         $size: 550px,
         $top: 36%,
-        $right: -20%);
+        $right: -20%,
+        $index: 0);
+    pointer-events: auto;
 }
 
 app-bubble:nth-of-type(5) {
     @include m.app-bubble(
         $size: 180px,
         $top: 75%,
-        $left: 30%);
+        $left: 30%,
+        $index: 0);
+    pointer-events: auto;
 }
 
 // Media
@@ -67,28 +83,36 @@ app-bubble:nth-of-type(5) {
         @include m.app-bubble(
             $size: 110px,
             $top: 50px,
-            $right: 25%);
+            $right: 25%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(2) {
         @include m.app-bubble(
             $size: 180px,
             $top: 280px,
-            $right: 6%)
+            $right: 6%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(3) {
         @include m.app-bubble(
             $size: 250px,
             $top: 15%,
-            $left: -10%);
+            $left: -10%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(4) {
         @include m.app-bubble(
             $size: 450px,
             $top: 36%,
-            $right: -20%);
+            $right: -20%,
+            $index: 0);
+        pointer-events: auto;
     }
 }
 
@@ -111,34 +135,44 @@ app-bubble:nth-of-type(5) {
         @include m.app-bubble(
             $size: 35px,
             $top: 12px,
-            $right: 25%);
+            $right: 25%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(2) {
         @include m.app-bubble(
             $size: 70px,
             $top: 200px,
-            $right: 10%)
+            $right: 10%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(3) {
         @include m.app-bubble(
             $size: 200px,
             $top: 10%,
-            $left: -10%);
+            $left: -10%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(4) {
         @include m.app-bubble(
             $size: 400px,
             $top: 28%,
-            $right: -20%);
+            $right: -20%,
+            $index: 0);
+        pointer-events: auto;
     }
 
     app-bubble:nth-of-type(5) {
         @include m.app-bubble(
             $size: 100px,
             $top: 77%,
-            $left: 30%);
+            $left: 30%,
+            $index: 0);
+        pointer-events: auto;
     }
 }
