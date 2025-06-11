@@ -30,7 +30,7 @@ app-bubble:nth-of-type(1) {
     @include m.app-bubble(
         $size: 110px,
         $top: 50px,
-        $right: 40%,
+        $right: 60%,
         $index: 0);
     pointer-events: auto;
 }
@@ -46,18 +46,18 @@ app-bubble:nth-of-type(2) {
 
 app-bubble:nth-of-type(3) {
     @include m.app-bubble(
-        $size: 390px,
+        $size: 70px,
         $top: 22%,
-        $left: -10%,
-        $index: 0);
+        $right: 20%,
+        $index: 10);
     pointer-events: auto;
 }
 
 app-bubble:nth-of-type(4) {
     @include m.app-bubble(
-        $size: 550px,
-        $top: 36%,
-        $right: -20%,
+        $size: 50px,
+        $top: 46%,
+        $right: 70%,
         $index: 0);
     pointer-events: auto;
 }
@@ -66,8 +66,8 @@ app-bubble:nth-of-type(5) {
     @include m.app-bubble(
         $size: 180px,
         $top: 75%,
-        $left: 30%,
-        $index: 0);
+        $left: 70%,
+        $index: 10);
     pointer-events: auto;
 }
 

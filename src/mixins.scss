@@ -15,10 +15,8 @@
     left: $left;
     right: $right;
     bottom: $bottom;
-    border-radius: 100%;
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, v.$col-primary 6.25%, v.$col-primary 51.56%, v.$col-primary-dark 100%);
     z-index: $index;
-    transition: all 0.24s ease-in-out;
+    // Removed border-radius and transition that override bubble component styles
 }
 
 @mixin heading-style($font: 'Baloo2') {
