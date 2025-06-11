@@ -2,13 +2,15 @@
 @use '../../../mixins' as m;
 
 .projects-area {
-    padding: v.$area-spacing-md 0;
+    padding-top: v.$area-spacing-md;
+    padding-bottom: v.$area-spacing-md;
     overflow-x: clip;
 
     p {
         width: 620px;
         font-size: v.$fs-24;
-        padding: 35px 0 v.$area-spacing-md;
+        padding-top: 35px;
+        padding-bottom: v.$area-spacing-md;
     }
 }
 
@@ -18,43 +20,125 @@
     gap: 140px;
 }
 
-// Bubble positioning - consolidated
-app-bubble {
-    &:nth-of-type(1) { @include m.app-bubble(110px, 50px, null, 40%); }
-    &:nth-of-type(2) { @include m.app-bubble(180px, 230px, null, 10%); }
-    &:nth-of-type(3) { @include m.app-bubble(390px, 22%, -10%, null); }
-    &:nth-of-type(4) { @include m.app-bubble(550px, 36%, null, -20%); }
-    &:nth-of-type(5) { @include m.app-bubble(180px, 75%, 30%, null); }
+app-bubble:nth-of-type(1) {
+    @include m.app-bubble(
+        $size: 110px,
+        $top: 50px,
+        $right: 40%);
 }
 
+app-bubble:nth-of-type(2) {
+    @include m.app-bubble(
+        $size: 180px,
+        $top: 230px,
+        $right: 10%);
+}
+
+app-bubble:nth-of-type(3) {
+    @include m.app-bubble(
+        $size: 390px,
+        $top: 22%,
+        $left: -10%);
+}
+
+app-bubble:nth-of-type(4) {
+    @include m.app-bubble(
+        $size: 550px,
+        $top: 36%,
+        $right: -20%);
+}
+
+app-bubble:nth-of-type(5) {
+    @include m.app-bubble(
+        $size: 180px,
+        $top: 75%,
+        $left: 30%);
+}
+
+// Media
 @media screen and (max-width: v.$m-mobile-lg) {
-    .projects-area p { width: auto; }
-    
-    app-bubble {
-        &:nth-of-type(1) { @include m.app-bubble(110px, 50px, null, 25%); }
-        &:nth-of-type(2) { @include m.app-bubble(180px, 280px, null, 6%); }
-        &:nth-of-type(3) { @include m.app-bubble(250px, 15%, -10%, null); }
-        &:nth-of-type(4) { @include m.app-bubble(450px, 36%, null, -20%); }
+    .projects-area {
+        p {
+            width: auto;
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 110px,
+            $top: 50px,
+            $right: 25%);
+    }
+
+    app-bubble:nth-of-type(2) {
+        @include m.app-bubble(
+            $size: 180px,
+            $top: 280px,
+            $right: 6%)
+    }
+
+    app-bubble:nth-of-type(3) {
+        @include m.app-bubble(
+            $size: 250px,
+            $top: 15%,
+            $left: -10%);
+    }
+
+    app-bubble:nth-of-type(4) {
+        @include m.app-bubble(
+            $size: 450px,
+            $top: 36%,
+            $right: -20%);
     }
 }
 
 @media screen and (max-width: v.$m-mobile-md) {
     .projects-area {
-        padding: v.$area-spacing-sm 0;
-        
+        padding-top: v.$area-spacing-sm;
+        padding-bottom: v.$area-spacing-sm;
+
         p {
             font-size: v.$fs-18;
             padding-bottom: v.$area-spacing-sm;
         }
     }
 
-    .projects-container { gap: 100px; }
-    
-    app-bubble {
-        &:nth-of-type(1) { @include m.app-bubble(35px, 12px, null, 25%); }
-        &:nth-of-type(2) { @include m.app-bubble(70px, 200px, null, 10%); }
-        &:nth-of-type(3) { @include m.app-bubble(200px, 10%, -10%, null); }
-        &:nth-of-type(4) { @include m.app-bubble(400px, 28%, null, -20%); }
-        &:nth-of-type(5) { @include m.app-bubble(100px, 77%, 30%, null); }
+    .projects-container {
+        gap: 100px;
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 35px,
+            $top: 12px,
+            $right: 25%);
+    }
+
+    app-bubble:nth-of-type(2) {
+        @include m.app-bubble(
+            $size: 70px,
+            $top: 200px,
+            $right: 10%)
+    }
+
+    app-bubble:nth-of-type(3) {
+        @include m.app-bubble(
+            $size: 200px,
+            $top: 10%,
+            $left: -10%);
+    }
+
+    app-bubble:nth-of-type(4) {
+        @include m.app-bubble(
+            $size: 400px,
+            $top: 28%,
+            $right: -20%);
+    }
+
+    app-bubble:nth-of-type(5) {
+        @include m.app-bubble(
+            $size: 100px,
+            $top: 77%,
+            $left: 30%);
     }
 }
