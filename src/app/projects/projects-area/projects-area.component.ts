@@ -29,7 +29,7 @@ export class ProjectsAreaComponent {
       stack: "JavaScript (OOP) | HTML | CSS",
       description: "Jump-and-Run game based on an object-oriented approach. Features include character movement, collision detection, and enemy AI.",
       github: "https://github.com/RobinAngele/el-pollo-loco",
-      projectUrl: 'https://el-pollo-loco.robin4consulting.com',
+      projectUrl: 'https://robinangele.github.io/el-pollo-loco/',
       prevImageUrl: "assets/img/preview_polloloco.png"
     },
     {
@@ -37,7 +37,7 @@ export class ProjectsAreaComponent {
       stack: "REST API | JavaScript | HTML | CSS",
       description: "Pokedex App using REST API to fetch all Pokemon data from the PokeAPI. Includes search functionality and detailed Pokemon information.",
       github: "https://github.com/RobinAngele/Pokedex",
-      projectUrl: 'https://pokedex.robin4consulting.com',
+      projectUrl: 'https://robinangele.github.io/pokedex/',
       prevImageUrl: "assets/img/preview_pokedex.png"
     }
   ];
