@@ -34,7 +34,10 @@ export class AppComponent implements OnInit {
     this.translate.use('en');
   }
 
-  ngOnInit() {
+  /**
+   * Initializes the component and sets up AOS animations if running in browser
+   */
+  ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
     }

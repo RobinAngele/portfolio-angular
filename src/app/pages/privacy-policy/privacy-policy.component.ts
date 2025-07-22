@@ -21,7 +21,6 @@ export class PrivacyPolicyComponent {
   ) {
     this.currentLang = this.translate.currentLang || 'en';
     this.titleService.setTitle('Privacy Policy | Robin Angelé');
-
     this.translate.onLangChange.subscribe(() => {
       if (this.translate.currentLang === 'de') {
         this.titleService.setTitle('Datenschutz | Robin Angelé');
@@ -31,7 +30,11 @@ export class PrivacyPolicyComponent {
     });
   }
 
-  switchLanguage(lang: string) {
+  /**
+   * Switches the application language
+   * @param lang - Language code to switch to
+   */
+  switchLanguage(lang: string): void {
     this.translate.use(lang);
     this.currentLang = lang;
   }

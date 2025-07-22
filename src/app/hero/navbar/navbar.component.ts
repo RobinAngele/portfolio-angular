@@ -18,8 +18,11 @@ export class NavbarComponent {
     this.currentLang = this.translate.currentLang || 'en';
   }
 
+  /**
+   * Listens to scroll events and updates scrolled state
+   */
   @HostListener('window:scroll', ['$event'])
-  onScroll() {
+  onScroll(): void {
     if (window.scrollY > 20) {
       this.scrolled = true;
     } else {
@@ -27,11 +30,18 @@ export class NavbarComponent {
     }
   }
 
-  toggleMenu() {
+  /**
+   * Toggles the mobile menu open/closed state
+   */
+  toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
 
-  switchLanguage(lang: string) {
+  /**
+   * Switches the application language
+   * @param lang - Language code to switch to
+   */
+  switchLanguage(lang: string): void {
     this.translate.use(lang);
     this.currentLang = lang;
   }

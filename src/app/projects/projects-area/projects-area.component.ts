@@ -14,7 +14,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class ProjectsAreaComponent {
   title: string = "My Projects";
   description: string = "These projects showcase my expertise in frontend development, AI integration, and automation. Each project demonstrates different skills and modern web technologies.";
-  
   projects = [
     {
       title: "Join",
