@@ -97,14 +97,14 @@ form {
         color: v.$col-dark;
         font-size: v.$fs-body;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: inline;
+        line-height: 1.5;
 
         .privacy-link {
             color: v.$col-primary;
             text-decoration: underline;
             transition: color 0.2s ease;
+            white-space: nowrap;
 
             &:hover {
                 color: v.$col-primary-dark;
