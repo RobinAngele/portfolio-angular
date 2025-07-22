@@ -19,10 +19,13 @@ export class EmailService {
 
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
-    formDataToSend.append('email', formData.email);
+    formDataToSend.append('mail', formData.email);
     formDataToSend.append('message', formData.message);
+    const apiUrl = window.location.hostname === 'robin4consulting.com' 
+      ? '/send_mail.php' 
+      : 'https://robin4consulting.com/send_mail.php';
 
-    this.mailSendPromise = fetch('/send_mail.php', {
+    this.mailSendPromise = fetch(apiUrl, {
       method: 'POST',
       body: formDataToSend
     });

@@ -1,5 +1,4 @@
 <form (submit)="sendMail()" method="post"  autocomplete="off">
-    <!-- Name -->
     <div class="input-container">
         <input type="text"
             name="name" id="name" #name
@@ -9,18 +8,16 @@
         <p id="name-error">{{ 'CONTACT_FORM.NAME_ERROR' | translate }}</p>
     </div>
 
-    <!-- Email -->
     <div class="input-container">
         <input type="email"
             name="email" id="email" #email
             placeholder="{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}"
-            pattern="^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
             required>
         <label for="email">{{ 'CONTACT_FORM.EMAIL' | translate }}</label>
         <p id="email-error">{{ 'CONTACT_FORM.EMAIL_ERROR' | translate }}</p>
     </div>
 
-    <!-- Message -->
     <div class="input-container">
         <textarea cols="30" rows="10"
             name="message" id="message" #message
@@ -30,7 +27,6 @@
         <p id="message-error">{{ 'CONTACT_FORM.MESSAGE_ERROR' | translate }}</p>
     </div>
 
-    <!-- Privacy Policy Agreement -->
     <div class="checkbox-container">
         <input type="checkbox" 
             name="privacy" id="privacy" #privacy
@@ -44,11 +40,9 @@
         <p id="privacy-error">{{ 'CONTACT_FORM.PRIVACY_ERROR' | translate }}</p>
     </div>
 
-    <!-- Submit -->
     <button type="submit" class="btn-primary"
     [disabled]="!(isInputValid['name'] && isInputValid['email'] && isInputValid['message'] && isInputValid['privacy'])">
     {{ 'CONTACT_FORM.SEND' | translate }}</button>
 
-    <!-- Bubble -->
     <img src="/assets/icons/mail_blue.svg" class="mail-bubble" id="bubble" #bubble>
 </form>
