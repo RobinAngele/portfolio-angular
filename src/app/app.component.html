@@ -1,12 +1,6 @@
 <div class="portfolio-container">
-  <!-- Logo Component -->
   <app-logo></app-logo>
-
-  <!-- Contact button only appears on main page -->
-  <app-button *ngIf="shouldShowContactButton()" btnText="Contact Me" href="#contact" style="primary"></app-button>
   <app-bubble></app-bubble>
-
-  <!-- Router outlet for page navigation -->
   <router-outlet></router-outlet>
 </div>
 
