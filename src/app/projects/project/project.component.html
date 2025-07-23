@@ -6,9 +6,9 @@
     </div>
     <div>
         <div class="description-container">
-            <h4>{{ project.title }}</h4>
-            <p class="project-stack">{{ project.stack }}</p>
-            <p>{{ project.description }}</p>
+            <h4>{{ project.titleKey | translate }}</h4>
+            <p class="project-stack">{{ project.stackKey | translate }}</p>
+            <p>{{ project.descriptionKey | translate }}</p>
         </div>
         <div class="button-container">
             <app-button [btnText]="'PROJECTS.LIVE_TEST' | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>

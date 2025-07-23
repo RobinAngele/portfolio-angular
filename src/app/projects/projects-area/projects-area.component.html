@@ -7,7 +7,7 @@
     <h3>{{ 'PROJECTS.TITLE' | translate }}</h3>
     <p>{{ 'PROJECTS.DESCRIPTION' | translate }}</p>
     <div class="projects-container">
-        @for (project of projects; track project.title; let i = $index) {
+        @for (project of projects; track project.titleKey; let i = $index) {
             <app-project
                 [project]="project"
                 [isSecondElement]="i % 2 === 1"

@@ -46,7 +46,22 @@
     "TITLE": "Meine Projekte",
     "DESCRIPTION": "Diese Projekte zeigen meine Expertise in der Frontend-Entwicklung, KI-Integration und Automatisierung. Jedes Projekt demonstriert verschiedene Fähigkeiten und moderne Webtechnologien.",
     "LIVE_TEST": "Live-Test",
-    "GITHUB": "GitHub"
+    "GITHUB": "GitHub",
+    "PROJECT_JOIN": {
+      "TITLE": "Join",
+      "STACK": "Angular | TypeScript | HTML | CSS",
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Ein kollaboratives Projektmanagement-Tool mit Drag-and-Drop-Funktionalität."
+    },
+    "PROJECT_POLLO": {
+      "TITLE": "El Pollo Loco",
+      "STACK": "JavaScript (OOP) | HTML | CSS",
+      "DESCRIPTION": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Funktionen umfassen Charakterbewegung, Kollisionserkennung und Gegner-KI."
+    },
+    "PROJECT_POKEDEX": {
+      "TITLE": "Pokedex", 
+      "STACK": "REST API | JavaScript | HTML | CSS",
+      "DESCRIPTION": "Pokedex-App mit REST API zum Abrufen aller Pokemon-Daten von der PokeAPI. Beinhaltet Suchfunktionalität und detaillierte Pokemon-Informationen."
+    }
   },
   "CONTACT": {
     "TITLE": "Kontakt",

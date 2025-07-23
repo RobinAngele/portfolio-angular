@@ -29,10 +29,25 @@
     "TITLE": "Skillset"
   },
   "PROJECTS": {
-    "TITLE": "My Work",
-    "DESCRIPTION": "Below you can get an impression of my work. You are welcome to try and inspect the projects.",
+    "TITLE": "My Projects",
+    "DESCRIPTION": "These projects showcase my expertise in frontend development, AI integration, and automation. Each project demonstrates different skills and modern web technologies.",
     "LIVE_TEST": "Live test",
-    "GITHUB": "GitHub"
+    "GITHUB": "GitHub",
+    "PROJECT_JOIN": {
+      "TITLE": "Join",
+      "STACK": "Angular | TypeScript | HTML | CSS",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. A collaborative project management tool with drag-and-drop functionality."
+    },
+    "PROJECT_POLLO": {
+      "TITLE": "El Pollo Loco",
+      "STACK": "JavaScript (OOP) | HTML | CSS",
+      "DESCRIPTION": "Jump-and-Run game based on an object-oriented approach. Features include character movement, collision detection, and enemy AI."
+    },
+    "PROJECT_POKEDEX": {
+      "TITLE": "Pokedex",
+      "STACK": "REST API | JavaScript | HTML | CSS", 
+      "DESCRIPTION": "Pokedex App using REST API to fetch all Pokemon data from the PokeAPI. Includes search functionality and detailed Pokemon information."
+    }
   },
   "CONTACT": {
     "TITLE": "Contact",
