@@ -4,6 +4,7 @@ import { FooterAreaComponent } from '../../footer/footer-area/footer-area.compon
 import { NavbarComponent } from '../../hero/navbar/navbar.component';
 import { NavmenuComponent } from '../../hero/navmenu/navmenu.component';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -17,12 +18,14 @@ export class LegalNoticeComponent {
 
   constructor(
     private titleService: Title,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private languageService: LanguageService
   ) {
-    this.currentLang = this.translate.currentLang || 'en';
+    this.currentLang = this.languageService.getCurrentLanguage();
     this.titleService.setTitle('Legal Notice | Robin Angelé');
-    this.translate.onLangChange.subscribe(() => {
-      if (this.translate.currentLang === 'de') {
+    this.languageService.currentLanguage$.subscribe(lang => {
+      this.currentLang = lang;
+      if (lang === 'de') {
         this.titleService.setTitle('Impressum | Robin Angelé');
       } else {
         this.titleService.setTitle('Legal Notice | Robin Angelé');
@@ -31,11 +34,10 @@ export class LegalNoticeComponent {
   }
 
   /**
-   * Switches the application language
+   * Switches the application language using the language service
    * @param lang - Language code to switch to
    */
   switchLanguage(lang: string): void {
-    this.translate.use(lang);
-    this.currentLang = lang;
+    this.languageService.setLanguage(lang);
   }
 }

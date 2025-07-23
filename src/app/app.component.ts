@@ -5,6 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
 import AOS from 'aos';
 import { LogoComponent } from './logo/logo.component';
 import { BubbleComponent } from './bubble/bubble.component';
+import { LanguageService } from './services/language.service';
 import translationsEN from "../../public/i18n/en.json";
 import translationsDE from "../../public/i18n/de.json";
 
@@ -25,13 +26,12 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private translate: TranslateService,
+    private languageService: LanguageService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     translate.setTranslation('en', translationsEN);
     translate.setTranslation('de', translationsDE);
     this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
   }
 
   /**

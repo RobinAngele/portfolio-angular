@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { NgIf } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navmenu',
@@ -18,8 +19,14 @@ export class NavmenuComponent {
   isMenuOpen = false;
   currentLang: string;
 
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'en';
+  constructor(
+    private translate: TranslateService,
+    private languageService: LanguageService
+  ) {
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.languageService.currentLanguage$.subscribe(lang => {
+      this.currentLang = lang;
+    });
   }
 
   /**
@@ -37,12 +44,11 @@ export class NavmenuComponent {
   }
 
   /**
-   * Switches the application language and closes menu
+   * Switches the application language using the language service and closes menu
    * @param lang - Language code to switch to
    */
   switchLanguage(lang: string): void {
-    this.translate.use(lang);
-    this.currentLang = lang;
+    this.languageService.setLanguage(lang);
     this.closeMenu();
   }
 }

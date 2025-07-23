@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { NgIf } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,8 +15,14 @@ export class NavbarComponent {
   menuOpen = false;
   currentLang: string;
 
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'en';
+  constructor(
+    private translate: TranslateService,
+    private languageService: LanguageService
+  ) {
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.languageService.currentLanguage$.subscribe(lang => {
+      this.currentLang = lang;
+    });
   }
 
   /**
@@ -38,11 +45,10 @@ export class NavbarComponent {
   }
 
   /**
-   * Switches the application language
+   * Switches the application language using the language service
    * @param lang - Language code to switch to
    */
   switchLanguage(lang: string): void {
-    this.translate.use(lang);
-    this.currentLang = lang;
+    this.languageService.setLanguage(lang);
   }
 }
