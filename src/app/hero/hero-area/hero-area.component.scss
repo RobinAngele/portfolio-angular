@@ -57,6 +57,7 @@ app-navmenu {
         object-fit: cover;
         object-position: bottom;
         transform: scale(2.0);
+        
     }
 
     p {
@@ -143,7 +144,7 @@ app-bubble:nth-of-type(2) {
         font-size: 2.5vw;
         
         img {
-            transform: scale(1.5);
+            transform: scale(1.5) translateY(20px);
         }
 
         p {
@@ -209,7 +210,8 @@ app-bubble:nth-of-type(2) {
         .greeting {
             order: 1 !important;
             flex: 0 0 auto !important;
-            margin-bottom: 8px;
+            margin-bottom: -70px;
+            margin-left: 50px;
         }
 
         >div:first-of-type {
@@ -229,11 +231,13 @@ app-bubble:nth-of-type(2) {
             max-width: 95vw;
             max-height: 95vw;
             object-fit: cover;
-            object-position: center;
             border-radius: 50%;
             aspect-ratio: 1 / 1;
             display: block;
             margin: 0 auto;
+            transform: scale(1.5) translateY(100px);
+
+
         }
     }
 
