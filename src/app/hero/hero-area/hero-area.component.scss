@@ -211,7 +211,7 @@ app-bubble:nth-of-type(2) {
         .greeting {
             order: 1 !important;
             flex: 0 0 auto !important;
-            margin-bottom: -70px;
+            margin-bottom: -90px;
             margin-left: 50px;
         }
 
@@ -279,8 +279,8 @@ app-bubble:nth-of-type(2) {
 
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 335dvw,
-            $top: -35dvh,
+            $size: 350dvw,
+            $top: -115dvh,
             $left: -700px,
             $index: 0);
     }
@@ -316,6 +316,14 @@ app-bubble:nth-of-type(2) {
         img {
             transform: scale(1.6) translateY(120px) !important;
         }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 380dvw,
+            $top: -55dvh,
+            $left: -700px,
+            $index: 0);
     }
 }
 
@@ -364,8 +372,31 @@ app-bubble:nth-of-type(2) {
         img {
             transform: scale(1.95) translateY(170px) !important;
         }
+        .greeting {
+            order: 1 !important;
+            flex: 0 0 auto !important;
+            margin-bottom: -140px;
+            margin-left: 50px;
+        }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .hero-container {
+        img {
+            transform: scale(2.0) translateY(180px) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .hero-container {
+        img {
+            transform: scale(2.0) translateY(80px) !important;
+        }
+    }
+}
+
 
 
 
