@@ -1,10 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-
 @use 'variables' as v;
 @use 'mixins' as m;
 @use 'aos/dist/aos.css';
 
-// Fonts
 @font-face {
     font-family: 'Baloo2';
     src: url('/assets/fonts/baloo2/Baloo2-ExtraBold.woff2');
@@ -44,7 +41,6 @@ a:focus {
     padding: 0 100px;
 }
 
-// Scrollbar
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -59,7 +55,6 @@ a:focus {
     border-radius: 5px;
 }
 
-// Headings
 @mixin heading-style($font: 'Baloo2') {
     margin: 0;
     font-family: $font;
