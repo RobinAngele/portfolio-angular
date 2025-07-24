@@ -199,10 +199,22 @@ app-bubble:nth-of-type(2) {
 
     .hero-container {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
-        gap: 48px;
+        justify-content: center;
         padding: 0 24px;
+        height: calc(100dvh - 80px); /* Account for navigation height */
+
+        >div:first-of-type {
+            order: 2;
+            flex: none;
+        }
+
+        .greeting {
+            order: 1;
+            flex: none;
+            margin-bottom: 48px;
+        }
 
         div {
             height: auto;
@@ -216,21 +228,22 @@ app-bubble:nth-of-type(2) {
 
     .greeting {
         align-items: center;
+        text-align: center;
         font-size: 4vw;
         padding: 0 24px;
 
         p {
-            color: white;
+            color: v.$col-primary;
             font-size: clamp(16px, 2.2em, 36px);
         }
 
         h1 {
-            color: white;
+            color: v.$col-dark;
             font-size: clamp(16px, 4.2em, 73px);
         }
 
         h2 {
-            color: white;
+            color: v.$col-dark;
             font-size: clamp(16px, 3.9em, 67px);
         }
 
