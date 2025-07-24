@@ -8,6 +8,8 @@
 
     h3 {
         pointer-events: none;
+        position: relative;
+        z-index: 20;
     }
 
     p {
@@ -16,6 +18,8 @@
         padding-top: 35px;
         padding-bottom: v.$area-spacing-md;
         pointer-events: none;
+        position: relative;
+        z-index: 20;
     }
 }
 
