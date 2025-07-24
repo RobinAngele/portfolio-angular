@@ -107,29 +107,45 @@ h6 {
         padding: 0 24px;
     }
 
+    h1 {
+        font-size: clamp(28px, 8vw, 48px);
+    }
+
     h2 {
-        font-size: 64px;
+        font-size: clamp(26px, 7.5vw, 44px);
     }
 
     h3 {
-        font-size: 64px;
+        font-size: clamp(24px, 6vw, 36px);
+    }
+
+    h4 {
+        font-size: clamp(20px, 5vw, 28px);
     }
 
     h5 {
-        font-size: 24px;
+        font-size: clamp(18px, 4vw, 24px);
     }
 
     h6 {
-        font-size: 18px;
+        font-size: clamp(16px, 3.5vw, 20px);
     }
 }
 
 @media screen and (max-width: v.$m-mobile-sm) {
+    .container {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+
     h2 {
-        font-size: v.$fs-h4;
+        font-size: clamp(22px, 6.5vw, 28px);
     }
 
     h3 {
-        font-size: v.$fs-h4;
+        font-size: clamp(20px, 5.5vw, 24px);
     }
 }
