@@ -430,7 +430,7 @@ app-bubble:nth-of-type(2) {
 @media screen and (width: 390px) and (height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
     .hero-container {
         img {
-            transform: scale(1.9) translateY(100px) !important;
+            transform: scale(1.9) translateY(120px) !important;
             height: clamp(520px, 100vw, 750px);
         }
         
