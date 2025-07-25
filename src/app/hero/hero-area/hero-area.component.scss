@@ -325,6 +325,10 @@ app-bubble:nth-of-type(2) {
             $top: -55dvh,
             $left: -700px,
             $index: 0);
+        width: 380dvw !important;
+        height: 380dvw !important;
+        top: -55dvh !important;
+        left: -700px !important;
     }
 }
 
