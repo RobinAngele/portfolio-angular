@@ -20,6 +20,12 @@
 }
 
 // Media
+@media screen and (max-width: 1000px) {
+    .skillset-area h3 {
+        font-size: 60px;
+    }
+}
+
 @media screen and (max-width: v.$m-mobile-md) {
     .skillset-area {
         gap: 32px;

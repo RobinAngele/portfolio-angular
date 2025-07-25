@@ -75,6 +75,12 @@ app-bubble:nth-of-type(5) {
     pointer-events: auto;
 }
 
+@media screen and (max-width: 1000px) {
+    .projects-area h3 {
+        font-size: 60px;
+    }
+}
+
 @media screen and (max-width: v.$m-mobile-lg) {
     .projects-area {
         p {
