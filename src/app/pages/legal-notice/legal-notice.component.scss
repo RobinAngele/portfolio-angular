@@ -1,7 +1,7 @@
 @use '../../../variables' as v;
 @use '../../../mixins' as m;
 
-.container {
+.legal-page {
     min-height: 100vh;
     padding: 0;
     display: flex;
@@ -13,15 +13,12 @@
     .navigation {
         position: absolute;
         top: clamp(16px, 3vw, 24px);
-        left: clamp(16px, 8vw, 100px);
-        right: clamp(16px, 8vw, 100px);
+        left: 0;
+        right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 5;
-        width: auto;
-        max-width: none;
-        margin: 0;
 
         .logo {
             width: clamp(45px, 6vw, 64px);
@@ -38,9 +35,6 @@
     }
 
     .content {
-        max-width: min(800px, calc(100vw - 2rem));
-        width: 100%;
-        padding: 0 clamp(16px, 8vw, 100px);
         margin-top: clamp(100px, 15vh, 150px);
     }
 
