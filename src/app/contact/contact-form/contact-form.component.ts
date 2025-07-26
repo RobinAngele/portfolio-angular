@@ -66,15 +66,38 @@ export class ContactFormComponent {
   showValidationResponse(target: HTMLInputElement | HTMLTextAreaElement): void {
     const errorEl = document.getElementById(`${target.id}-error`);
     
-    if (!target.checkValidity()) {
-      target.style.background = "white url('/assets/icons/error.svg') no-repeat right 25px top 10px";
-      errorEl!.style.display = 'inline';
-      this.isInputValid[target.id] = false;
+    if (target.id === 'email') {
+      const isValidEmail = this.isValidEmail(target.value);
+      if (!target.checkValidity() || !isValidEmail) {
+        target.style.background = "white url('/assets/icons/error.svg') no-repeat right 25px top 10px";
+        errorEl!.style.display = 'inline';
+        this.isInputValid[target.id] = false;
+      } else {
+        target.style.background = "white url('/assets/icons/valid.svg') no-repeat right 25px top 10px";
+        errorEl!.style.display = 'none';
+        this.isInputValid[target.id] = true;
+      }
     } else {
-      target.style.background = "white url('/assets/icons/valid.svg') no-repeat right 25px top 10px";
-      errorEl!.style.display = 'none';
-      this.isInputValid[target.id] = true;
+      if (!target.checkValidity()) {
+        target.style.background = "white url('/assets/icons/error.svg') no-repeat right 25px top 10px";
+        errorEl!.style.display = 'inline';
+        this.isInputValid[target.id] = false;
+      } else {
+        target.style.background = "white url('/assets/icons/valid.svg') no-repeat right 25px top 10px";
+        errorEl!.style.display = 'none';
+        this.isInputValid[target.id] = true;
+      }
     }
+  }
+
+  /**
+   * Validates email format more strictly than browser default.
+   * @param email Email string to validate.
+   * @returns True if email is valid, false otherwise.
+   */
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
   }
 
   /**
@@ -104,13 +127,18 @@ export class ContactFormComponent {
           }
         });
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
         const result = await response.json();
-        console.log('Email sent successfully:', result);
-        this.resetForm();
+        
+        if (!response.ok) {
+          if (response.status === 400 && result.error === 'Form incomplete or invalid email') {
+            this.handleServerValidationError();
+          } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+        } else {
+          console.log('Email sent successfully:', result);
+          this.resetForm();
+        }
       } catch (error) {
         console.error('Error sending email:', error);
         this.showErrorMessage();
@@ -179,5 +207,22 @@ export class ContactFormComponent {
     bubbleEl.className = 'mail-bubble error-animation';
     bubbleEl.textContent = this.translate.instant('CONTACT_FORM.ERROR');
     setTimeout(() => {this.resetBubble()}, 5000);
+  }
+
+  /**
+   * Handles server-side validation errors by showing email validation error.
+   */
+  handleServerValidationError() {
+    this.bubbleEl.nativeElement.style.display = 'none';
+    this.bubbleEl.nativeElement.className = 'mail-bubble';
+    
+    const emailEl = this.emailEl.nativeElement;
+    const emailErrorEl = document.getElementById('email-error');
+    
+    emailEl.style.background = "white url('/assets/icons/error.svg') no-repeat right 25px top 10px";
+    emailErrorEl!.style.display = 'inline';
+    this.isInputValid['email'] = false;
+    
+    emailEl.focus();
   }
  }
