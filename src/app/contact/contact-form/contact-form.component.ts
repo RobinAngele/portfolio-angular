@@ -95,13 +95,26 @@ export class ContactFormComponent {
       bubbleEl.style.display = 'inline';
       bubbleEl.className = 'mail-bubble mail-animation';
       
-      await fetch('https://robin4consulting.com/send_mail.php',
-      {
-        method: 'post',
-        body: data
-      })
-      
-      this.resetForm();
+      try {
+        const response = await fetch('https://robin4consulting.com/send_mail.php', {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Email sent successfully:', result);
+        this.resetForm();
+      } catch (error) {
+        console.error('Error sending email:', error);
+        this.showErrorMessage();
+      }
     }
   }
 
@@ -155,5 +168,16 @@ export class ContactFormComponent {
   resetBubble() {
     this.bubbleEl.nativeElement.style.display = 'none';
     this.bubbleEl.nativeElement.className = 'mail-bubble';
+  }
+
+  /**
+   * Shows an error message to the user when email sending fails.
+   */
+  showErrorMessage() {
+    const bubbleEl = this.bubbleEl.nativeElement;
+    bubbleEl.style.display = 'inline';
+    bubbleEl.className = 'mail-bubble error-animation';
+    bubbleEl.textContent = this.translate.instant('CONTACT_FORM.ERROR');
+    setTimeout(() => {this.resetBubble()}, 5000);
   }
  }
