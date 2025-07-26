@@ -75,7 +75,7 @@
 }
 
 @media screen and (max-width: 950px) {
-    .container {
+    .privacy-page {
         .navigation {
             app-navbar {
                 display: none;
@@ -88,9 +88,8 @@
     }
 }
 
-// Fine-tune for very small screens
 @media screen and (max-width: v.$m-mobile-sm) {
-    .container {
+    .privacy-page {
         .content {
             padding: 0 v.$gap-md;
         }

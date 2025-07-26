@@ -75,7 +75,7 @@
 }
 
 @media screen and (max-width: 950px) {
-    .container {
+    .legal-page {
         .navigation {
             app-navbar {
                 display: none;
@@ -89,7 +89,7 @@
 }
 
 @media screen and (max-width: v.$m-mobile-sm) {
-    .container {
+    .legal-page {
         .content {
             padding: 0 v.$gap-md;
         }
