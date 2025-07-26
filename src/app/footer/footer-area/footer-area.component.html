@@ -1,9 +1,11 @@
-<footer class="container">
-    <div class="footer-container">
-        <app-logo></app-logo>
-        <p>© {{ copyrightName }} {{ currentYear }}</p>
-        <app-social-media-footer></app-social-media-footer>
+<footer>
+    <div class="content-container">
+        <div class="footer-container">
+            <app-logo></app-logo>
+            <p>© {{ copyrightName }} {{ currentYear }}</p>
+            <app-social-media-footer></app-social-media-footer>
+        </div>
+        <a routerLink="/legal-notice">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+        <a routerLink="/privacy-policy">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
     </div>
-    <a routerLink="/legal-notice">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
-    <a routerLink="/privacy-policy">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
 </footer>

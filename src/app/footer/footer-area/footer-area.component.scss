@@ -2,9 +2,6 @@
 @use 'mixins' as *;
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-top: 120px;
     padding-bottom: 60px;
     color: white;
@@ -13,6 +10,12 @@ footer {
         v.$col-primary 6.25%,
         v.$col-primary 51.56%,
         v.$col-primary-dark 100%);
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     a {
         align-self: center;
@@ -45,6 +48,10 @@ footer {
 @media screen and (max-width: v.$m-mobile-md) {
     footer {
         padding-top: 60px;
+
+        .content-container {
+            gap: 16px;
+        }
     }
 
     .footer-container {

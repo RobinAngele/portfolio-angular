@@ -1,10 +1,6 @@
 @use 'variables' as v;
 
 .skillset-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 64px;
     padding-top: v.$area-spacing-md;
     padding-bottom: v.$area-spacing-md;
     background: linear-gradient(
@@ -12,6 +8,13 @@
         v.$col-primary -33.96%,
         v.$col-primary 36.71%,
         v.$col-primary-dark 112.25%);
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 64px;
+    }
 
     h3 {
         color: white;
@@ -28,9 +31,12 @@
 
 @media screen and (max-width: v.$m-mobile-md) {
     .skillset-area {
-        gap: 32px;
         padding-top: v.$area-spacing-sm;
         padding-bottom: v.$area-spacing-sm;
+
+        .content-container {
+            gap: 32px;
+        }
     }
 }
 
