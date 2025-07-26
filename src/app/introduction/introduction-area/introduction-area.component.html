@@ -1,26 +1,28 @@
-<section class="introduction-area content-container" id="introduction">
-    <app-bubble></app-bubble>
-    <h2>
-        <div class="heading-container">
-            <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE1' | translate }}</div>
-            <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE2' | translate }}</div>
-            <div *ngIf="currentLang === 'de'" class="heading-line">{{ 'INTRODUCTION.HEADING_LINE3' | translate }}</div>
+<section class="introduction-area" id="introduction">
+    <div class="content-container">
+        <app-bubble></app-bubble>
+        <h2>
+            <div class="heading-container">
+                <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE1' | translate }}</div>
+                <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE2' | translate }}</div>
+                <div *ngIf="currentLang === 'de'" class="heading-line">{{ 'INTRODUCTION.HEADING_LINE3' | translate }}</div>
+            </div>
+            <span class="smaller-text">{{ 'INTRODUCTION.I_AM' | translate }}</span>
+            <div class="icons-container">
+                <img src="assets/icons/work_remote.svg" class="remote-icon" alt="Work Remote">
+                <img src="assets/icons/located_in.svg" class="located-icon" alt="Located in Darmstadt">
+            </div>
+        </h2>
+        <div class="introduction-container">
+            <p>
+                {{ 'INTRODUCTION.BIO' | translate }}
+                <br><br>
+                {{ 'INTRODUCTION.CONTACT_INTRO' | translate }}
+            </p>
+            <app-button
+                [btnText]="contactBtnText | translate"
+                [href]="'#contact'"
+            ></app-button>
         </div>
-        <span class="smaller-text">{{ 'INTRODUCTION.I_AM' | translate }}</span>
-        <div class="icons-container">
-            <img src="assets/icons/work_remote.svg" class="remote-icon" alt="Work Remote">
-            <img src="assets/icons/located_in.svg" class="located-icon" alt="Located in Darmstadt">
-        </div>
-    </h2>
-    <div class="introduction-container">
-        <p>
-            {{ 'INTRODUCTION.BIO' | translate }}
-            <br><br>
-            {{ 'INTRODUCTION.CONTACT_INTRO' | translate }}
-        </p>
-        <app-button
-            [btnText]="contactBtnText | translate"
-            [href]="'#contact'"
-        ></app-button>
     </div>
 </section>
