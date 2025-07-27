@@ -1,6 +1,19 @@
 @use '../../../variables' as v;
 @use '../../../mixins' as m;
 
+$mobile-menu-width-tiny: 88vw;
+$mobile-menu-width-small: 78vw;
+$mobile-menu-width-medium: 68vw;
+$mobile-menu-width-large: 58vw;
+$mobile-menu-width-tablet: 48vw;
+
+$overlay-opacity: 0.5;
+
+:host {
+    --mobile-menu-width: #{$mobile-menu-width-small};
+    --mobile-menu-offset: calc(-1 * var(--mobile-menu-width));
+}
+
 .burger-menu-button {
     display: flex;
     flex-direction: column;
@@ -38,14 +51,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.1s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.open {
-        opacity: 0.9;
+        opacity: $overlay-opacity;
         visibility: visible;
     }
 }
@@ -53,13 +66,14 @@
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
+    right: var(--mobile-menu-offset);
+    width: var(--mobile-menu-width);
+    height: 100vh;
     background-color: white;
     padding: 80px 40px 40px;
-    transition: right 0.1s ease;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
 
     &.open {
         right: 0;
@@ -119,5 +133,131 @@
 @media screen and (min-width: v.$m-tablet) {
     .mobile-menu {
         display: none !important;
+    }
+}
+
+// Dynamic responsive breakpoints for different smartphone screen sizes
+
+// Very small smartphones (iPhone SE, older Android phones)
+@media screen and (max-width: 375px) {
+    :host {
+        --mobile-menu-width: #{$mobile-menu-width-tiny};
+    }
+    
+    .mobile-menu {
+        padding: 50px 16px 25px;
+        
+        nav {
+            gap: 24px;
+            
+            ul {
+                gap: 18px;
+                
+                li a {
+                    font-size: v.$fs-18;
+                }
+            }
+            
+            .language-toggle {
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+}
+
+// Small smartphones (iPhone 12 mini, small Android phones)
+@media screen and (min-width: 376px) and (max-width: 480px) {
+    :host {
+        --mobile-menu-width: #{$mobile-menu-width-small};
+    }
+    
+    .mobile-menu {
+        padding: 60px 20px 30px;
+        
+        nav {
+            gap: 28px;
+            
+            ul {
+                gap: 22px;
+                
+                li a {
+                    font-size: v.$fs-18;
+                }
+            }
+            
+            .language-toggle {
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
+
+// Medium smartphones (iPhone 12, most Android phones)
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    :host {
+        --mobile-menu-width: #{$mobile-menu-width-medium};
+    }
+    
+    .mobile-menu {
+        padding: 75px 30px 40px;
+        
+        nav {
+            gap: 36px;
+            
+            ul {
+                gap: 26px;
+                
+                li a {
+                    font-size: v.$fs-24;
+                }
+            }
+            
+            .language-toggle {
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+// Large smartphones (iPhone 12 Pro Max, large Android phones)
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    :host {
+        --mobile-menu-width: #{$mobile-menu-width-large};
+    }
+    
+    .mobile-menu {
+        padding: 80px 35px 40px;
+        
+        nav {
+            gap: 40px;
+            
+            ul {
+                gap: 30px;
+                
+                li a {
+                    font-size: v.$fs-24;
+                }
+            }
+        }
+    }
+}
+
+// Small tablets and large phones in landscape
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    :host {
+        --mobile-menu-width: #{$mobile-menu-width-tablet};
+    }
+    
+    .mobile-menu {
+        padding: 80px 40px 40px;
     }
 }
