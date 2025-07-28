@@ -100,8 +100,6 @@ app-bubble:nth-of-type(2) {
         $right: 10%,
         $index: 0);
 }
-
-
 @media screen and (max-width: v.$m-mobile-md) {
     .contact-area {
         padding-top: v.$area-spacing-sm;

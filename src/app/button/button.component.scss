@@ -43,7 +43,6 @@
     border: none;
 }
 
-// Animations
 @keyframes move-background {
     0% {
         background-position: 100% 100%;
@@ -54,7 +53,6 @@
     }
 }
 
-// Media
 @media screen and (max-width: $m-mobile-md) {
     .btn-primary,
     .btn-secondary {

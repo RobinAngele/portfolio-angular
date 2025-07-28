@@ -1,6 +1,4 @@
 @use '../../../variables' as v;
-
-
 form {
     position: relative;
     display: flex;
@@ -125,8 +123,6 @@ form {
 button {
     margin: auto;
 }
-
-
 .btn-primary {
     display: inline-block;
     width: max-content;
@@ -181,8 +177,6 @@ button {
     animation: mail-bubble 3.5s forwards;
 }
 
-
-
 @keyframes move {
     0% {
         background-position: 100% 100%;
@@ -219,8 +213,6 @@ button {
             rotate(800deg);
     }
 }
-
-
 
 @media screen and (max-width: v.$m-mobile-md) {
     .btn-primary {

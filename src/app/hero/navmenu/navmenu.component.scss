@@ -135,10 +135,6 @@ $overlay-opacity: 0.9;
         display: none !important;
     }
 }
-
-// Dynamic responsive breakpoints for different smartphone screen sizes
-
-// Very small smartphones (iPhone SE, older Android phones)
 @media screen and (max-width: 375px) {
     :host {
         --mobile-menu-width: #{$mobile-menu-width-tiny};
@@ -168,7 +164,6 @@ $overlay-opacity: 0.9;
     }
 }
 
-// Small smartphones (iPhone 12 mini, small Android phones)
 @media screen and (min-width: 376px) and (max-width: 480px) {
     :host {
         --mobile-menu-width: #{$mobile-menu-width-small};
@@ -198,7 +193,6 @@ $overlay-opacity: 0.9;
     }
 }
 
-// Medium smartphones (iPhone 12, most Android phones)
 @media screen and (min-width: 481px) and (max-width: 600px) {
     :host {
         --mobile-menu-width: #{$mobile-menu-width-medium};
@@ -228,7 +222,6 @@ $overlay-opacity: 0.9;
     }
 }
 
-// Large smartphones (iPhone 12 Pro Max, large Android phones)
 @media screen and (min-width: 601px) and (max-width: 768px) {
     :host {
         --mobile-menu-width: #{$mobile-menu-width-large};
@@ -251,7 +244,6 @@ $overlay-opacity: 0.9;
     }
 }
 
-// Small tablets and large phones in landscape
 @media screen and (min-width: 769px) and (max-width: 1023px) {
     :host {
         --mobile-menu-width: #{$mobile-menu-width-tablet};

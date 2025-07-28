@@ -107,8 +107,6 @@ h6 {
     @include heading-style('Montserrat');
     font-size: v.$fs-body;
 }
-
-// Media
 @media screen and (max-width: v.$m-mobile-md) {
     .container {
         padding: 0 24px;

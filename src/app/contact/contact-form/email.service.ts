@@ -22,7 +22,6 @@ export class EmailService {
     formDataToSend.append('mail', formData.email);
     formDataToSend.append('message', formData.message);
     
-    // Use the correct server path for your KasServer hosting
     const apiUrl = 'https://w0205860.kasserver.com/robin4consulting.com/send_mail.php';
 
     this.mailSendPromise = fetch(apiUrl, {
