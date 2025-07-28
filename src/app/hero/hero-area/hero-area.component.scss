@@ -121,6 +121,12 @@ app-bubble:nth-of-type(1) {
         $top: -20dvh,
         $left: -10dvw,
         $index: 0);
+    
+    pointer-events: none !important;
+    
+    .bubble {
+        animation: none !important;
+    }
 }
 
 app-bubble:nth-of-type(2) {
