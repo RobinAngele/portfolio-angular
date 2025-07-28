@@ -8,6 +8,8 @@
         v.$col-primary -33.96%,
         v.$col-primary 36.71%,
         v.$col-primary-dark 112.25%);
+    position: relative;
+    z-index: 20;
 
     .content-container {
         display: flex;
