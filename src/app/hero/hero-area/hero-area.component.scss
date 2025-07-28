@@ -306,15 +306,7 @@ app-bubble:nth-of-type(2) {
 @media screen and (max-width: 950px) {
     .hero-container {
         img {
-            transform: scale(1.5) translateY(190px) !important;
-        }
-    }
-}
-
-@media screen and (max-width: 950px) {
-    .hero-container {
-        img {
-            transform: scale(1.5) translateY(210px) !important;
+            transform: scale(1.5) translateY(200px) !important;
         }
     }
 }
@@ -398,49 +390,7 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .hero-container {
-        img {
-            transform: scale(1.8) translateY(145px) !important;
-        }
-    }
-    
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 160vw,
-            $top: 0vh,
-            $left: -52vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
-    }
-}
-
 @media screen and (max-width: 550px) {
-    .hero-container {
-        img {
-            transform: scale(1.85) translateY(165px) !important;
-        }
-    }
-    
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 155vw,
-            $top: 1vh,
-            $left: -50vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
     .hero-container {
         img {
             transform: scale(1.9) translateY(165px) !important;
@@ -479,36 +429,6 @@ app-bubble:nth-of-type(2) {
 }
 
 @media screen and (max-width: 345px) {
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 165vw,
-            $top: 3vh,
-            $left: -50vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
-    }
-}
-
-@media screen and (max-width: 340px) {
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 165vw,
-            $top: 3vh,
-            $left: -50vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
-    }
-}
-
-@media screen and (max-width: 320px) {
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
             $size: 165vw,
@@ -608,29 +528,27 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 320px) and (max-height: 500px) and (orientation: portrait),
-       screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait),
-       screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 2.75) and (orientation: portrait) {
+@media screen and (max-width: 320px) and (max-height: 500px) {
     .hero-container {
         img {
             transform: scale(2.0) translateY(80px) !important;
-            height: clamp(460px, 92vw, 680px) !important;
+            height: clamp(380px, 85vw, 500px) !important;
         }
         
         .greeting {
-            margin-bottom: -120px !important;
-            margin-left: 10px !important;
+            margin-bottom: -100px !important;
+            margin-left: 8px !important;
             
             p {
-                font-size: clamp(23px, 4.8vw, 30px) !important;
+                font-size: clamp(20px, 4.5vw, 26px) !important;
             }
             
             h1 {
-                font-size: clamp(34px, 9.5vw, 56px) !important;
+                font-size: clamp(30px, 8.5vw, 48px) !important;
             }
             
             h2 {
-                font-size: clamp(32px, 9vw, 52px) !important;
+                font-size: clamp(28px, 8vw, 44px) !important;
             }
         }
     }
