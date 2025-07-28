@@ -282,9 +282,9 @@ app-bubble:nth-of-type(2) {
 
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 180vw,
-            $top: -5vh,
-            $left: -60vw,
+            $size: 200vw,
+            $top: -10vh,
+            $left: -70vw,
             $index: 0);
         pointer-events: none !important;
         
@@ -336,9 +336,9 @@ app-bubble:nth-of-type(2) {
 
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 175vw,
-            $top: -3vh,
-            $left: -58vw,
+            $size: 210vw,
+            $top: -12vh,
+            $left: -75vw,
             $index: 0);
         pointer-events: none !important;
         
@@ -357,9 +357,9 @@ app-bubble:nth-of-type(2) {
     
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 170vw,
-            $top: -2vh,
-            $left: -56vw,
+            $size: 205vw,
+            $top: -10vh,
+            $left: -72vw,
             $index: 0);
         pointer-events: none !important;
         
@@ -378,9 +378,9 @@ app-bubble:nth-of-type(2) {
     
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 165vw,
-            $top: -1vh,
-            $left: -54vw,
+            $size: 200vw,
+            $top: -8vh,
+            $left: -70vw,
             $index: 0);
         pointer-events: none !important;
         
@@ -399,9 +399,9 @@ app-bubble:nth-of-type(2) {
     
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 150vw,
-            $top: 2vh,
-            $left: -48vw,
+            $size: 190vw,
+            $top: -2vh,
+            $left: -74vw,
             $index: 0);
         pointer-events: none !important;
         
@@ -431,9 +431,9 @@ app-bubble:nth-of-type(2) {
 @media screen and (max-width: 345px) {
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 165vw,
-            $top: 3vh,
-            $left: -50vw,
+            $size: 200vw,
+            $top: -3vh,
+            $left: -76vw,
             $index: 0);
         pointer-events: none !important;
         
