@@ -284,10 +284,15 @@ app-bubble:nth-of-type(2) {
 
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 350dvw,
-            $top: -115dvh,
-            $left: -700px,
+            $size: 180vw,
+            $top: -5vh,
+            $left: -60vw,
             $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
     }
 
     app-bubble:nth-of-type(2) {
@@ -325,14 +330,15 @@ app-bubble:nth-of-type(2) {
 
     app-bubble:nth-of-type(1) {
         @include m.app-bubble(
-            $size: 400dvw,
-            $top: -55dvh,
-            $left: -700px,
+            $size: 175vw,
+            $top: -3vh,
+            $left: -58vw,
             $index: 0);
-        width: 380dvw !important;
-        height: 380dvw !important;
-        top: -55dvh !important;
-        left: -700px !important;
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
     }
 }
 
@@ -340,6 +346,19 @@ app-bubble:nth-of-type(2) {
     .hero-container {
         img {
             transform: scale(1.7) translateY(135px) !important;
+        }
+    }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 170vw,
+            $top: -2vh,
+            $left: -56vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
         }
     }
 }
@@ -350,12 +369,38 @@ app-bubble:nth-of-type(2) {
             transform: scale(1.75) translateY(142px) !important;
         }
     }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 165vw,
+            $top: -1vh,
+            $left: -54vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
     .hero-container {
         img {
             transform: scale(1.8) translateY(145px) !important;
+        }
+    }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 160vw,
+            $top: 0vh,
+            $left: -52vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
         }
     }
 }
@@ -366,12 +411,38 @@ app-bubble:nth-of-type(2) {
             transform: scale(1.85) translateY(165px) !important;
         }
     }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 155vw,
+            $top: 1vh,
+            $left: -50vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
     .hero-container {
         img {
             transform: scale(1.9) translateY(165px) !important;
+        }
+    }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 150vw,
+            $top: 2vh,
+            $left: -48vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
         }
     }
 }
@@ -389,6 +460,51 @@ app-bubble:nth-of-type(2) {
         }
         >div:first-of-type {
             margin-left: -30px;
+        }
+    }
+}
+
+@media screen and (max-width: 345px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 165vw,
+            $top: 3vh,
+            $left: -50vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 165vw,
+            $top: 3vh,
+            $left: -50vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 165vw,
+            $top: 3vh,
+            $left: -50vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
         }
     }
 }
