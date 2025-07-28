@@ -185,3 +185,21 @@ app-bubble:nth-of-type(5) {
         pointer-events: auto;
     }
 }
+
+@media screen and (max-width: 670px) {
+    app-bubble:nth-of-type(4) {
+        @include m.app-bubble(
+            $size: 400px,
+            $top: 28%,
+            $right: -20%,
+            $index: 0);
+        pointer-events: auto;
+        opacity: 0.4;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    app-bubble:nth-of-type(1) {
+        display: none;
+    }
+}

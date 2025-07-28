@@ -182,7 +182,7 @@ button {
 }
 
 
-// Animations
+
 @keyframes move {
     0% {
         background-position: 100% 100%;
@@ -221,7 +221,7 @@ button {
 }
 
 
-// Media
+
 @media screen and (max-width: v.$m-mobile-md) {
     .btn-primary {
         padding: 12px 24px

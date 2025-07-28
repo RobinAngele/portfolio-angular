@@ -113,7 +113,7 @@ app-button {
 app-bubble:nth-of-type(1) {
     @include m.app-bubble(
         $size: 80px,
-        $top: 60px,
+        $top: -80px,
         $right: 25%);
     pointer-events: auto;
     z-index: 1;
@@ -148,6 +148,15 @@ app-bubble:nth-of-type(1) {
                 margin-bottom: v.$spacing-15;
             }
         }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: v.$spacing-60,
+            $top: 150px,
+            $right: 8%);
+        pointer-events: auto;
+        z-index: v.$z-base;
     }
 }
 
@@ -194,15 +203,6 @@ app-bubble:nth-of-type(1) {
         p {
             font-size: v.$fs-18;
         }
-    }
-
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: v.$spacing-60,
-            $top: 45px,
-            $right: 8%);
-        pointer-events: auto;
-        z-index: v.$z-base;
     }
 
     .heading-container .heading-line {
@@ -254,3 +254,4 @@ app-bubble:nth-of-type(1) {
         }
     }
 }
+
