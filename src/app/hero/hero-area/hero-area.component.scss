@@ -3,7 +3,7 @@
 
 header {
     position: relative;
-    height: 100dvh;
+    height: 95dvh;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, v.$col-primary-light 91.39%);
     overflow-x: clip;
 }
@@ -14,7 +14,7 @@ app-navmenu {
 
 .navigation {
     position: absolute;
-    top: 24px;
+    top: 0px;
     left: 0;
     right: 0;
     display: flex;
@@ -145,7 +145,7 @@ app-bubble:nth-of-type(2) {
     }
 
     .hero-container {
-        padding: 0 50px;
+        padding: 0 0px;
         font-size: 2.5vw;
         
         img {
@@ -174,14 +174,13 @@ app-bubble:nth-of-type(2) {
 
 @media screen and (max-width: 1000px) {
     header {
-        height: 100vh;
         display: flex;
         flex-direction: column;
     }
 
     .navigation {
         position: absolute;
-        top: 24px;
+        top: 0px;
         left: 24px;
         right: 24px;
         padding: 0;
