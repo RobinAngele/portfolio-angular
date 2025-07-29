@@ -369,7 +369,7 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) and (min-height: 800px) {
     .hero-container {
         img {
             transform: scale(1.75) translateY(142px) !important;
@@ -390,7 +390,7 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) and (min-height: 800px)  {
     .hero-container {
         img {
             transform: scale(1.9) translateY(165px) !important;
@@ -411,7 +411,7 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) and (min-height: 800px) {
     .hero-container {
         img {
             transform: scale(1.95) translateY(185px) !important;
