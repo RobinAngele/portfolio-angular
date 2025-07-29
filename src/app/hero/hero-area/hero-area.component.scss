@@ -139,6 +139,25 @@ app-bubble:nth-of-type(2) {
         transform: translate(-50%, 50%);
 }
 
+@media screen and (min-width: 1301px) and (max-width: 1607px) {
+    .hero-container {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        
+        >div:first-of-type {
+            flex: 0 0 50%;
+            min-width: 50%;
+        }
+
+        .greeting {
+            flex: 0 0 50%;
+            min-width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .navigation {
         left: 10px;
@@ -168,6 +187,7 @@ app-bubble:nth-of-type(2) {
         .cta-section {
             app-social-media-header {
                 margin-left: auto;
+                margin-right: 4.6vw;
             }
         }
     }
