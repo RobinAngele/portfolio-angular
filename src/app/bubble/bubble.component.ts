@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './bubble.component.scss'
 })
 export class BubbleComponent {
-
 }

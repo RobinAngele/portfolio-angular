@@ -11,5 +11,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true
 })
 export class ContactAreaComponent {
-
 }
