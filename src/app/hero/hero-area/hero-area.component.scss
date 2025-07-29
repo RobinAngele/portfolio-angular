@@ -51,16 +51,13 @@ app-navmenu {
         flex: 0 0 50%;
     }
 
-    img {
-        width: 120%;
-        height: 120%;
-        object-fit: cover;
-        object-position: bottom;
-        transform: scale(2.0);
-        
-    }
-
-    p {
+        img {
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+            object-position: bottom;
+            transform: scale(2.0);
+        }    p {
         font-size: clamp(16px, 2.2em, v.$fs-64);
         color: v.$col-primary;
         margin-top: 0;
@@ -117,26 +114,14 @@ app-navmenu {
 }
 
 app-bubble:nth-of-type(1) {
-    @include m.app-bubble(
-        $size: 55dvw,
-        $top: -20dvh,
-        $left: -10dvw,
-        $index: 0);
-    
+    @include m.app-bubble($size: 55dvw, $top: -20dvh, $left: -10dvw, $index: 0);
     pointer-events: none !important;
-    
-    .bubble {
-        animation: none !important;
-    }
+    .bubble { animation: none !important; }
 }
 
 app-bubble:nth-of-type(2) {
-    @include m.app-bubble(
-        $size: 200px,
-        $left: 50%,
-        $bottom: 0,
-        $index: 1);
-        transform: translate(-50%, 50%);
+    @include m.app-bubble($size: 200px, $left: 50%, $bottom: 0, $index: 1);
+    transform: translate(-50%, 50%);
 }
 
 @media screen and (min-width: 1301px) and (max-width: 1607px) {
@@ -165,30 +150,17 @@ app-bubble:nth-of-type(2) {
     }
 
     .hero-container {
-        padding: 0 0px;
+        padding: 0;
         font-size: 2.5vw;
         
-        img {
-            transform: scale(1.5) translateY(20px);
-        }
+        img { transform: scale(1.5) translateY(20px); }
+        p { font-size: clamp(14px, 2em, 48px); }
+        h1 { font-size: clamp(24px, 3.8em, 64px); }
+        h2 { font-size: clamp(22px, 3.5em, 58px); }
 
-        p {
-            font-size: clamp(14px, 2em, 48px);
-        }
-
-        h1 {
-            font-size: clamp(24px, 3.8em, 64px);
-        }
-    
-        h2 {
-            font-size: clamp(22px, 3.5em, 58px);
-        }
-
-        .cta-section {
-            app-social-media-header {
-                margin-left: auto;
-                margin-right: 4.6vw;
-            }
+        .cta-section app-social-media-header {
+            margin-left: auto;
+            margin-right: 4.6vw;
         }
     }
 }
@@ -197,7 +169,6 @@ app-bubble:nth-of-type(2) {
     header {
         display: flex;
         flex-direction: column;
-        
     }
 
     .navigation {
@@ -210,13 +181,8 @@ app-bubble:nth-of-type(2) {
         background: transparent;
     }
 
-    app-navbar {
-        display: none;
-    }
-
-    app-navmenu {
-        display: inline;
-    }
+    app-navbar { display: none; }
+    app-navmenu { display: inline; }
 
     .hero-container {
         height: clamp(700px, 100vw, 900px);
@@ -249,9 +215,7 @@ app-bubble:nth-of-type(2) {
             margin-left: -20px;
         }
 
-        div {
-            height: auto;
-        }
+        div { height: auto; }
 
         img {
             height: clamp(500px, 100vw, 800px);
@@ -292,143 +256,62 @@ app-bubble:nth-of-type(2) {
             color: white;
             font-size: clamp(34px, 9.5vw, 56px);
             line-height: 1.1;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             font-weight: 800;
         }
 
-        .cta-section {
-            display: none;
-        }
+        .cta-section { display: none; }
     }
 
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 200vw,
-            $top: -10vh,
-            $left: -70vw,
-            $index: 0);
+        @include m.app-bubble($size: 200vw, $top: -10vh, $left: -70vw, $index: 0);
         pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        .bubble { animation: none !important; }
     }
 
     app-bubble:nth-of-type(2) {
-        @include m.app-bubble(
-            $size: 150px,
-            $left: 50%,
-            $bottom: 0,
-            $index: 1);
-            transform: translate(-50%, 50%);
+        @include m.app-bubble($size: 150px, $left: 50%, $bottom: 0, $index: 1);
+        transform: translate(-50%, 50%);
     }
 }
 
-@media screen and (max-width: 950px) {
-    .hero-container {
-        img {
-            transform: scale(1.5) translateY(200px) !important;
-        }
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .hero-container {
-        img {
-            transform: scale(1.5) translateY(190px) !important;
-        }
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .hero-container {
-        img {
-            transform: scale(1.55) translateY(145px) !important;
-        }
-    }
-}
+// Mobile image transforms - consolidated
+@media screen and (max-width: 950px) { .hero-container img { transform: scale(1.5) translateY(200px) !important; } }
+@media screen and (max-width: 850px) { .hero-container img { transform: scale(1.5) translateY(190px) !important; } }
+@media screen and (max-width: 800px) { .hero-container img { transform: scale(1.55) translateY(145px) !important; } }
 
 @media screen and (max-width: 750px) {
-    .hero-container {
-        img {
-            transform: scale(1.6) translateY(140px) !important;
-        }
-    }
-
+    .hero-container img { transform: scale(1.6) translateY(140px) !important; }
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 210vw,
-            $top: -12vh,
-            $left: -75vw,
-            $index: 0);
+        @include m.app-bubble($size: 210vw, $top: -12vh, $left: -75vw, $index: 0);
         pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        .bubble { animation: none !important; }
     }
 }
 
 @media screen and (max-width: 700px) {
-    .hero-container {
-        img {
-            transform: scale(1.7) translateY(135px) !important;
-        }
-    }
-    
+    .hero-container img { transform: scale(1.7) translateY(135px) !important; }
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 205vw,
-            $top: -10vh,
-            $left: -72vw,
-            $index: 0);
+        @include m.app-bubble($size: 205vw, $top: -10vh, $left: -72vw, $index: 0);
         pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        .bubble { animation: none !important; }
     }
 }
 
+// More mobile optimizations - consolidated
 @media screen and (max-width: 650px) and (min-height: 800px) {
-    .hero-container {
-        img {
-            transform: scale(1.75) translateY(142px) !important;
-        }
-    }
-    
+    .hero-container img { transform: scale(1.75) translateY(142px) !important; }
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 200vw,
-            $top: -8vh,
-            $left: -70vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        @include m.app-bubble($size: 200vw, $top: -8vh, $left: -70vw, $index: 0);
+        pointer-events: none !important; .bubble { animation: none !important; }
     }
 }
 
-@media screen and (max-width: 550px) and (min-height: 800px)  {
-    .hero-container {
-        img {
-            transform: scale(1.9) translateY(165px) !important;
-        }
-    }
-    
+@media screen and (max-width: 550px) and (min-height: 800px) {
+    .hero-container img { transform: scale(1.9) translateY(165px) !important; }
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 190vw,
-            $top: -2vh,
-            $left: -74vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        @include m.app-bubble($size: 190vw, $top: -2vh, $left: -74vw, $index: 0);
+        pointer-events: none !important; .bubble { animation: none !important; }
     }
 }
 
@@ -449,201 +332,95 @@ app-bubble:nth-of-type(2) {
     }
 }
 
+// Small device optimizations
 @media screen and (max-width: 345px) {
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 200vw,
-            $top: -3vh,
-            $left: -76vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        @include m.app-bubble($size: 200vw, $top: -3vh, $left: -76vw, $index: 0);
+        pointer-events: none !important; .bubble { animation: none !important; }
     }
 }
 
 @media screen and (max-width: 400px) and (min-height: 800px) {
-    .hero-container {
-        img {
-            transform: scale(2.0) translateY(200px) !important;
-        }
-    }
+    .hero-container img { transform: scale(2.0) translateY(200px) !important; }
 }
+// Device-specific optimizations - consolidated
 @media screen and (width: 375px) and (height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
     .hero-container {
-        img {
-            transform: scale(1.95) translateY(100px) !important;
-            height: clamp(480px, 95vw, 700px) !important;
-        }
-        
+        img { transform: scale(1.95) translateY(100px) !important; height: clamp(480px, 95vw, 700px) !important; }
         .greeting {
-            margin-bottom: -110px !important;
-            margin-left: 12px !important;
-            
-            p {
-                font-size: clamp(24px, 5vw, 32px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(36px, 9.8vw, 58px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(34px, 9.3vw, 54px) !important;
-            }
+            margin: -110px 0 0 12px !important;
+            p { font-size: clamp(24px, 5vw, 32px) !important; }
+            h1 { font-size: clamp(36px, 9.8vw, 58px) !important; }
+            h2 { font-size: clamp(34px, 9.3vw, 54px) !important; }
         }
     }
 }
+
 @media screen and (width: 390px) and (height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
     .hero-container {
-        img {
-            transform: scale(1.9) translateY(120px) !important;
-            height: clamp(520px, 100vw, 750px);
-        }
-        
+        img { transform: scale(1.9) translateY(120px) !important; height: clamp(520px, 100vw, 750px); }
         .greeting {
-            margin-bottom: -100px !important;
-            margin-left: 15px !important;
-            
-            p {
-                font-size: clamp(25px, 5.2vw, 34px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(38px, 10.2vw, 62px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(36px, 9.7vw, 58px) !important;
-            }
+            margin: -100px 0 0 15px !important;
+            p { font-size: clamp(25px, 5.2vw, 34px) !important; }
+            h1 { font-size: clamp(38px, 10.2vw, 62px) !important; }
+            h2 { font-size: clamp(36px, 9.7vw, 58px) !important; }
         }
     }
 }
+
 @media screen and (max-width: 360px) and (min-height: 480px) and (max-height: 960px) and (orientation: portrait),
        screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait),
        screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 2.75) and (orientation: portrait) {
     .hero-container {
-        img {
-            transform: scale(2.0) translateY(135px) !important;
-            height: clamp(460px, 92vw, 680px) !important;
-        }
-        
+        img { transform: scale(2.0) translateY(135px) !important; height: clamp(460px, 92vw, 680px) !important; }
         .greeting {
-            margin-bottom: -120px !important;
-            margin-left: 10px !important;
-            
-            p {
-                font-size: clamp(23px, 4.8vw, 30px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(34px, 9.5vw, 56px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(32px, 9vw, 52px) !important;
-            }
+            margin: -120px 0 0 10px !important;
+            p { font-size: clamp(23px, 4.8vw, 30px) !important; }
+            h1 { font-size: clamp(34px, 9.5vw, 56px) !important; }
+            h2 { font-size: clamp(32px, 9vw, 52px) !important; }
         }
     }
 }
 
+// Smaller devices - highly optimized
 @media screen and (max-width: 320px) and (max-height: 500px) {
-    header {
-    position: relative;
-    height: 89dvh;
-    }
-
+    header { height: 89dvh; }
     .hero-container {
-        img {
-            transform: scale(2.0) translateY(80px) !important;
-            height: clamp(380px, 85vw, 500px) !important;
-        }
-        
+        img { transform: scale(2.0) translateY(80px) !important; height: clamp(380px, 85vw, 500px) !important; }
         .greeting {
-            margin-bottom: -100px !important;
-            margin-left: 8px !important;
-            
-            p {
-                font-size: clamp(20px, 4.5vw, 26px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(30px, 8.5vw, 48px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(28px, 8vw, 44px) !important;
-            }
+            margin: -100px 0 0 8px !important;
+            p { font-size: clamp(20px, 4.5vw, 26px) !important; }
+            h1 { font-size: clamp(30px, 8.5vw, 48px) !important; }
+            h2 { font-size: clamp(28px, 8vw, 44px) !important; }
         }
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) and (min-height: 362px) and (max-height: 622px) {
-    header {
-        height: 90dvh;
-    }
-
+    header { height: 90dvh; }
     .hero-container {
-        img {
-            transform: scale(1.8) translateY(70px) !important;
-            height: clamp(350px, 80vw, 480px) !important;
-        }
-        
+        img { transform: scale(1.8) translateY(70px) !important; height: clamp(350px, 80vw, 480px) !important; }
         .greeting {
-            margin-bottom: -80px !important;
-            margin-left: 15px !important;
-            
-            p {
-                font-size: clamp(18px, 4.2vw, 28px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(28px, 8vw, 50px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(26px, 7.5vw, 46px) !important;
-            }
+            margin: -80px 0 0 15px !important;
+            p { font-size: clamp(18px, 4.2vw, 28px) !important; }
+            h1 { font-size: clamp(28px, 8vw, 50px) !important; }
+            h2 { font-size: clamp(26px, 7.5vw, 46px) !important; }
         }
     }
-
     app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 180vw,
-            $top: -5vh,
-            $left: -70vw,
-            $index: 0);
-        pointer-events: none !important;
-        
-        .bubble {
-            animation: none !important;
-        }
+        @include m.app-bubble($size: 180vw, $top: -5vh, $left: -70vw, $index: 0);
+        pointer-events: none !important; .bubble { animation: none !important; }
     }
 }
+
 @media screen and (width: 540px) and (height: 720px) and (-webkit-device-pixel-ratio: 2.5) and (orientation: portrait) {
     .hero-container {
-        img {
-            transform: scale(1.7) translateY(140px) !important;
-            height: clamp(550px, 98vw, 780px) !important;
-        }
-        
+        img { transform: scale(1.7) translateY(140px) !important; height: clamp(550px, 98vw, 780px) !important; }
         .greeting {
-            margin-bottom: -80px !important;
-            margin-left: 25px !important;
-            
-            p {
-                font-size: clamp(26px, 4.8vw, 36px) !important;
-            }
-            
-            h1 {
-                font-size: clamp(40px, 7.4vw, 64px) !important;
-            }
-            
-            h2 {
-                font-size: clamp(38px, 7vw, 60px) !important;
-            }
+            margin: -80px 0 0 25px !important;
+            p { font-size: clamp(26px, 4.8vw, 36px) !important; }
+            h1 { font-size: clamp(40px, 7.4vw, 64px) !important; }
+            h2 { font-size: clamp(38px, 7vw, 60px) !important; }
         }
     }
 }
