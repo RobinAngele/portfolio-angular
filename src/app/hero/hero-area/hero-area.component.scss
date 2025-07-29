@@ -443,7 +443,7 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (min-height: 800px) n{
     .hero-container {
         img {
             transform: scale(2.0) translateY(200px) !important;
