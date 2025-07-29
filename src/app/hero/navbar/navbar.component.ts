@@ -2,11 +2,12 @@ import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { NgIf } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { BubbleIntersectionDirective } from '../../directives/bubble-intersection.directive';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgIf, TranslatePipe],
+  imports: [NgIf, TranslatePipe, BubbleIntersectionDirective],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

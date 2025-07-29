@@ -17,6 +17,8 @@ ul {
         color: v.$col-primary;
         font-size: v.$fs-24;
         text-decoration: none;
+        position: relative;
+        transition: all 0.2s ease;
 
         &:hover {
             font-weight: 800;

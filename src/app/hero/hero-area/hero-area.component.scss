@@ -21,6 +21,7 @@ app-navmenu {
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    isolation: isolate;
 }
 
 .hero-container {

@@ -1,9 +1,9 @@
 <nav>
     <ul>
-        <a href="#introduction"><li>{{ 'NAVBAR.ABOUT' | translate }}</li></a>
-        <a href="#skillset"><li>{{ 'NAVBAR.SKILLS' | translate }}</li></a>
-        <a href="#projects"><li>{{ 'NAVBAR.PROJECTS' | translate }}</li></a>
-        <a href="#contact"><li>{{ 'NAVBAR.CONTACT' | translate }}</li></a>
+        <a href="#introduction" appBubbleIntersection><li>{{ 'NAVBAR.ABOUT' | translate }}</li></a>
+        <a href="#skillset" appBubbleIntersection><li>{{ 'NAVBAR.SKILLS' | translate }}</li></a>
+        <a href="#projects" appBubbleIntersection><li>{{ 'NAVBAR.PROJECTS' | translate }}</li></a>
+        <a href="#contact" appBubbleIntersection><li>{{ 'NAVBAR.CONTACT' | translate }}</li></a>
     </ul>
     <div class="language-toggle">
         <img *ngIf="currentLang === 'en'" 
