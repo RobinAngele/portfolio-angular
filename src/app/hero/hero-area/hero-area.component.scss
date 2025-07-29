@@ -275,7 +275,6 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-// Mobile image transforms - consolidated
 @media screen and (max-width: 950px) { .hero-container img { transform: scale(1.5) translateY(200px) !important; } }
 @media screen and (max-width: 850px) { .hero-container img { transform: scale(1.5) translateY(190px) !important; } }
 @media screen and (max-width: 800px) { .hero-container img { transform: scale(1.55) translateY(145px) !important; } }
@@ -298,7 +297,6 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-// More mobile optimizations - consolidated
 @media screen and (max-width: 650px) and (min-height: 800px) {
     .hero-container img { transform: scale(1.75) translateY(142px) !important; }
     app-bubble:nth-of-type(1) {
@@ -332,7 +330,6 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-// Small device optimizations
 @media screen and (max-width: 345px) {
     app-bubble:nth-of-type(1) {
         @include m.app-bubble($size: 200vw, $top: -3vh, $left: -76vw, $index: 0);
@@ -343,7 +340,6 @@ app-bubble:nth-of-type(2) {
 @media screen and (max-width: 400px) and (min-height: 800px) {
     .hero-container img { transform: scale(2.0) translateY(200px) !important; }
 }
-// Device-specific optimizations - consolidated
 @media screen and (width: 375px) and (height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
     .hero-container {
         img { transform: scale(1.95) translateY(100px) !important; height: clamp(480px, 95vw, 700px) !important; }
@@ -382,7 +378,6 @@ app-bubble:nth-of-type(2) {
     }
 }
 
-// Smaller devices - highly optimized
 @media screen and (max-width: 320px) and (max-height: 500px) {
     header { height: 89dvh; }
     .hero-container {
