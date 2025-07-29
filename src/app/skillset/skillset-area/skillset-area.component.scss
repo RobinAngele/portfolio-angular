@@ -28,6 +28,12 @@
     }
 }
 
+@include m.custom-breakpoint(v.$m-mobile-sm) {
+    .skillset-area h3 {
+        font-size: 15vw; // Responsive scaling based on viewport width
+    }
+}
+
 @include m.mobile-md {
     .skillset-area {
         @include m.section-spacing(v.$area-spacing-sm, v.$area-spacing-sm);

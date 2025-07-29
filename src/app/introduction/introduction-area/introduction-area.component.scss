@@ -217,6 +217,10 @@ app-bubble:nth-of-type(1) {
 @include m.custom-breakpoint(v.$m-mobile-xs) {
     .introduction-area {
         h2 {
+            .smaller-text {
+                font-size: 5vw; // Smaller responsive scaling for better proportion
+            }
+
             .icons-container {
                 @include m.icon-container(v.$spacing-20, column);
                 margin-left: 0;
@@ -247,6 +251,10 @@ app-bubble:nth-of-type(1) {
                 }
             }
         }
+    }
+
+    .heading-container .heading-line {
+        font-size: 15vw; // Responsive scaling based on viewport width
     }
 }
 
