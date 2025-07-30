@@ -136,7 +136,6 @@ export class ContactFormComponent {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
         } else {
-          console.log('Email sent successfully:', result);
           this.resetForm();
         }
       } catch (error) {
