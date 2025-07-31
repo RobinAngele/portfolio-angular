@@ -2,8 +2,8 @@
 @use 'mixins' as *;
 
 footer {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: min(12vw, 120px);
+    padding-bottom: min(6vw, 60px);
     color: white;
     background: radial-gradient(
         71.18% 335.57% at 28.82% -124.4%,
@@ -46,18 +46,18 @@ footer {
 
 @media screen and (max-width: v.$m-mobile-md) {
     footer {
-        padding-top: 60px;
+        padding-top: min(8vw, 60px);
 
         .content-container {
-            gap: 16px;
+            gap: min(2vw, 16px);
         }
     }
 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: min(3vw, 24px);
         justify-items: center;
-        margin-bottom: 24px;
+        margin-bottom: min(3vw, 24px);
 
         p {
             font-size: v.$fs-18;
