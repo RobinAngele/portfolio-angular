@@ -100,6 +100,8 @@
     @include m.flex-column-center;
     gap: v.$gap-sm;
     text-align: justify;
+    padding-left: min(5%, 2.5em);
+    padding-right: min(5%, 2.5em);
 
     p {
         font-size: v.$fs-24;
