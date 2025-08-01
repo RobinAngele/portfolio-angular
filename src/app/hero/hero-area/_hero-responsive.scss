@@ -1,0 +1,186 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+@media screen and (min-width: 1301px) and (max-width: 1607px) {
+    .hero-container {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        
+        >div:first-of-type {
+            flex: 0 0 50%;
+            min-width: 50%;
+        }
+
+        .greeting {
+            flex: 0 0 50%;
+            min-width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .navigation {
+        left: 10px;
+        right: -20px;
+    }
+
+    .hero-container {
+        padding: 0 0px;
+        font-size: 2.5vw;
+        
+        img {
+            transform: scale(1.5) translateY(20px);
+        }
+
+        p {
+            font-size: clamp(14px, 2em, 48px);
+        }
+
+        h1 {
+            font-size: clamp(24px, 3.8em, 64px);
+        }
+    
+        h2 {
+            font-size: clamp(22px, 3.5em, 58px);
+        }
+
+        .cta-section {
+            app-social-media-header {
+                margin-left: auto;
+                margin-right: 4.6vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation {
+        position: absolute;
+        top: min(-1.25rem, -2vh);
+        left: min(1.5rem, 3vw);
+        right: min(1.5rem, 3vw);
+        padding: 0;
+        z-index: 10;
+        background: transparent;
+    }
+
+    app-navbar {
+        display: none;
+    }
+
+    app-navmenu {
+        display: inline;
+    }
+
+    .hero-container {
+        height: clamp(700px, 100vw, 900px);
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        position: static !important;
+        height: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        min-height: 0;
+        margin: auto;
+
+        .greeting {
+            order: 1 !important;
+            flex: 0 0 auto !important;
+            margin-bottom: -90px;
+            margin-left: 20px;
+        }
+
+        >div:first-of-type {
+            order: 2 !important;
+            flex: 0 0 auto !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -20px;
+        }
+
+        div {
+            height: auto;
+        }
+
+        img {
+            height: clamp(500px, 100vw, 800px);
+            max-width: 95vw;
+            max-height: 95vw;
+            object-fit: cover;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            margin: 0 auto;
+            transform: scale(1.5) translateY(170px);
+        }
+    }
+
+    .greeting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+
+        p {
+            color: white;
+            font-size: clamp(24px, 5vw, 32px);
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        h1 {
+            color: white;
+            font-size: clamp(36px, 10vw, 60px);
+            line-height: 1.1;
+            margin-bottom: 4px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: white;
+            font-size: clamp(34px, 9.5vw, 56px);
+            line-height: 1.1;
+            margin-bottom: 0px;
+            font-weight: 800;
+        }
+
+        .cta-section {
+            display: none;
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 200vw,
+            $top: -10vh,
+            $left: -70vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+
+    app-bubble:nth-of-type(2) {
+        @include m.app-bubble(
+            $size: 150px,
+            $left: 50%,
+            $bottom: 0,
+            $index: 1);
+        transform: translate(-50%, 50%);
+    }
+}

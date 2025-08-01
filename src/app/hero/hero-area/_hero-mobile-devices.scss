@@ -1,0 +1,387 @@
+// Hero Area Mobile & Device-Specific Styles - All mobile optimizations and device-specific responsive styles
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// High mobile devices optimization
+@media screen and (max-width: 950px) and (min-height: 700px) {
+    .hero-container {
+        img {
+            transform: scale(1.5) translateY(200px) !important;
+        }
+    }
+}
+
+@media screen and (min-width: 579px) and (max-width: 945px) and (max-height: 726px) {
+    .hero-container {
+        img {
+            transform: scale(1.5) translateY(100px) translateX(-10vw) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) and (min-height: 700px) {
+    .hero-container {
+        img {
+            transform: scale(1.5) translateY(190px) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) and (min-height: 700px) {
+    .hero-container {
+        img {
+            transform: scale(1.55) translateY(145px) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) and (min-height: 666px) {
+    .hero-container {
+        img {
+            transform: scale(1.6) translateY(140px) !important;
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 210vw,
+            $top: -12vh,
+            $left: -75vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (min-width: 590px) and (max-width: 785px) and (min-height: 666px) and (max-height: 789px) {
+    .hero-container {
+        img {
+            transform: scale(1.6) translateY(140px) translateX(-7vw) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) and (min-height: 600px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 205vw,
+            $top: -10vh,
+            $left: -72vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) and (min-height: 800px) {
+    .hero-container {
+        img {
+            transform: scale(1.75) translateY(142px) !important;
+        }
+    }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 200vw,
+            $top: -8vh,
+            $left: -70vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) and (min-height: 800px) {
+    .hero-container {
+        img {
+            transform: scale(1.9) translateY(165px) !important;
+        }
+    }
+    
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 190vw,
+            $top: -2vh,
+            $left: -74vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) and (min-height: 800px) {
+    .hero-container {
+        img {
+            transform: scale(1.95) translateY(185px) !important;
+        }
+        .greeting {
+            order: 1 !important;
+            flex: 0 0 auto !important;
+            margin-bottom: -140px;
+            margin-left: 10px;
+        }
+        >div:first-of-type {
+            margin-left: -30px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) and (min-height: 900px) {
+    .hero-container {
+        img {
+            transform: scale(2.0) translateY(200px) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 345px) {
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 200vw,
+            $top: -3vh,
+            $left: -76vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+// iPhone 8/SE specific
+@media screen and (width: 375px) and (height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+    .hero-container {
+        img {
+            transform: scale(1.95) translateY(100px) !important;
+            height: clamp(480px, 95vw, 700px) !important;
+        }
+        
+        .greeting {
+            margin-bottom: -110px !important;
+            margin-left: 12px !important;
+            
+            p {
+                font-size: clamp(24px, 5vw, 32px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(36px, 9.8vw, 58px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(34px, 9.3vw, 54px) !important;
+            }
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 200vw,
+            $top: -5vh,
+            $left: -80vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+// iPhone 12/13/14 specific
+@media screen and (width: 390px) and (height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    .hero-container {
+        img {
+            transform: scale(1.9) translateY(120px) !important;
+            height: clamp(520px, 100vw, 750px);
+        }
+        
+        .greeting {
+            margin-bottom: -100px !important;
+            margin-left: 15px !important;
+            
+            p {
+                font-size: clamp(25px, 5.2vw, 34px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(38px, 10.2vw, 62px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(36px, 9.7vw, 58px) !important;
+            }
+        }
+    }
+}
+
+// Galaxy devices and similar
+@media screen and (max-width: 360px) and (min-height: 480px) and (max-height: 960px) and (orientation: portrait),
+       screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait),
+       screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 2.75) and (orientation: portrait) {
+    .hero-container {
+        img {
+            transform: scale(2.0) translateY(135px) !important;
+            height: clamp(460px, 92vw, 680px) !important;
+        }
+        
+        .greeting {
+            margin-bottom: -120px !important;
+            margin-left: 10px !important;
+            
+            p {
+                font-size: clamp(23px, 4.8vw, 30px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(34px, 9.5vw, 56px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(32px, 9vw, 52px) !important;
+            }
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 190vw,
+            $top: -3vh,
+            $left: -78vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+// Small devices optimization
+@media screen and (max-width: 320px) and (max-height: 650px) {
+    header {
+        position: relative;
+        height: 89dvh;
+    }
+
+    .hero-container {
+        img {
+            transform: scale(2.0) translateY(80px) !important;
+            height: clamp(380px, 85vw, 500px) !important;
+        }
+        
+        .greeting {
+            margin-bottom: -100px !important;
+            margin-left: 8px !important;
+            
+            p {
+                font-size: clamp(20px, 4.5vw, 26px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(30px, 8.5vw, 48px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(28px, 8vw, 44px) !important;
+            }
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 220vw,
+            $top: -15vh,
+            $left: -85vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+// Landscape mobile devices
+@media screen and (min-width: 320px) and (max-width: 579px) and (min-height: 362px) and (max-height: 666px) {
+    header {
+        height: 90dvh;
+    }
+
+    .hero-container {
+        img {
+            transform: scale(1.8) translateY(80px) !important;
+            height: clamp(350px, 80vw, 480px) !important;
+        }
+        
+        .greeting {
+            margin-bottom: -80px !important;
+            margin-left: 15px !important;
+            
+            p {
+                font-size: clamp(18px, 4.2vw, 28px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(28px, 8vw, 50px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(26px, 7.5vw, 46px) !important;
+            }
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 180vw,
+            $top: -5vh,
+            $left: -70vw,
+            $index: 0);
+        pointer-events: none !important;
+        
+        .bubble {
+            animation: none !important;
+        }
+    }
+}
+
+// Specific tablet optimization
+@media screen and (width: 540px) and (height: 720px) and (-webkit-device-pixel-ratio: 2.5) and (orientation: portrait) {
+    .hero-container {
+        img {
+            transform: scale(1.7) translateY(140px) !important;
+            height: clamp(550px, 98vw, 780px) !important;
+        }
+        
+        .greeting {
+            margin-bottom: -80px !important;
+            margin-left: 25px !important;
+            
+            p {
+                font-size: clamp(26px, 4.8vw, 36px) !important;
+            }
+            
+            h1 {
+                font-size: clamp(40px, 7.4vw, 64px) !important;
+            }
+            
+            h2 {
+                font-size: clamp(38px, 7vw, 60px) !important;
+            }
+        }
+    }
+}
