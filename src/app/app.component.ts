@@ -23,6 +23,13 @@ import translationsDE from "../../public/i18n/de.json";
 export class AppComponent implements OnInit {
   title = 'portfoliorobin';
 
+  /**
+   * Initializes the main app component with routing and translation services
+   * @param router - Angular router service
+   * @param translate - Angular translation service
+   * @param languageService - Service for managing language preferences
+   * @param platformId - Platform identifier for browser detection
+   */
   constructor(
     private router: Router,
     private translate: TranslateService,

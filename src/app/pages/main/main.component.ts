@@ -22,6 +22,10 @@ import { FooterAreaComponent } from '../../footer/footer-area/footer-area.compon
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  /**
+   * Initializes the main page component and sets the page title
+   * @param titleService - Service for managing page title
+   */
   constructor(private titleService: Title) {
     this.titleService.setTitle('Robin Angelé | Frontend Developer');
   }

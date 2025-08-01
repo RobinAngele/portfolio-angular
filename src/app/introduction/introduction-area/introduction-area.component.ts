@@ -17,6 +17,11 @@ export class IntroductionAreaComponent {
   description: string = "I am a frontend developer based in Germany with a passion for AI, Linux, and automation. I specialize in creating modern, responsive web applications while leveraging the latest technologies and AI tools to enhance development workflows and user experiences.";
   contactBtnText: string = 'INTRODUCTION.SEND_MESSAGE';
   
+  /**
+   * Initializes the introduction area component with translation services
+   * @param translateService - Angular translation service
+   * @param languageService - Service for managing language preferences
+   */
   constructor(
     public translateService: TranslateService,
     private languageService: LanguageService

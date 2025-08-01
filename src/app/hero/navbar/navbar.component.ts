@@ -16,6 +16,11 @@ export class NavbarComponent {
   menuOpen = false;
   currentLang: string;
 
+  /**
+   * Initializes the navbar component with language service
+   * @param translate Translation service for internationalization
+   * @param languageService Service for language management
+   */
   constructor(
     private translate: TranslateService,
     private languageService: LanguageService

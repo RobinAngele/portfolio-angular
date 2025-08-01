@@ -39,5 +39,9 @@ export class ProjectsAreaComponent {
     }
   ];
 
+  /**
+   * Initializes the projects area component
+   * @param translate Translation service for internationalization
+   */
   constructor(private translate: TranslateService) {}
 }

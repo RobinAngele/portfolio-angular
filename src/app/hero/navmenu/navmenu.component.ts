@@ -19,6 +19,11 @@ export class NavmenuComponent {
   isMenuOpen = false;
   currentLang: string;
 
+  /**
+   * Initializes the navigation menu component
+   * @param translate Translation service for internationalization
+   * @param languageService Service for language management
+   */
   constructor(
     private translate: TranslateService,
     private languageService: LanguageService

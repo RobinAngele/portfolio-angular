@@ -9,9 +9,18 @@ import { BehaviorSubject } from 'rxjs';
 export class LanguageService {
   private readonly STORAGE_KEY = 'selectedLanguage';
   private readonly DEFAULT_LANGUAGE = 'en';
+  
+  /** Subject for tracking current language changes */
   private currentLanguageSubject = new BehaviorSubject<string>(this.DEFAULT_LANGUAGE);
+  
+  /** Observable for current language changes */
   public currentLanguage$ = this.currentLanguageSubject.asObservable();
 
+  /**
+   * Initializes the language service with translation and platform services
+   * @param translate Angular translation service
+   * @param platformId Platform identifier for browser detection
+   */
   constructor(
     private translate: TranslateService,
     @Inject(PLATFORM_ID) private platformId: Object
