@@ -1,3 +1,3 @@
-@import 'hero-layout';
-@import 'hero-responsive';
-@import 'hero-mobile-devices';
+@forward 'hero-layout';
+@forward 'hero-responsive';
+@forward 'hero-mobile-devices';
