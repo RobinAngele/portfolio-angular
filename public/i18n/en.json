@@ -18,12 +18,15 @@
   },
   "INTRODUCTION": {
     "HEADING": "Let's work together",
-    "HEADING_LINE1": "Let's work",
-    "HEADING_LINE2": "together",
+    "HEADING_LINE1": "Let's",
+    "HEADING_LINE2": "work",
+    "HEADING_LINE3": "together",
     "I_AM": "I am",
-    "BIO": "I'm a passionate frontend developer originally from Paris, now living in Hessen close to Frankfurt, Germany. I enjoy using various technologies to build amazing products and focusing on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
-    "CONTACT_INTRO": "I would love to hear from you. Whether it is a project, job opportunity, or just a chat.",
-    "SEND_MESSAGE": "Send a message"
+    "OPEN_TO_WORK": "open to work remote",
+    "LOCATED_IN": "located in Darmstadt",
+    "BIO": "I am a passionate Frontend Developer, originally from Paris, now residing in Hesse near Frankfurt, Germany. I enjoy using a variety of technologies to create great products and focus on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
+    "CONTACT_INTRO": "I would love to hear from you. Whether it's a project, a job opportunity, or just a conversation.",
+    "SEND_MESSAGE": "Send message"
   },
   "SKILLSET": {
     "TITLE": "Skillset"
