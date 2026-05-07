@@ -1,23 +1,28 @@
-# Portfoliorobin
+# 💼 Portfolio — Robin Angele
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=flat&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
 
-## Development server
+Front-end developer portfolio showcasing my projects and skills. Built with Angular 19, TypeScript, and SCSS.
 
-To start a local development server, run:
+🔗 **Live demo**: [frontend.robin4consulting.com](https://www.frontend.robin4consulting.com)
+
+## 🛠️ Tech Stack
+
+- **Angular 19** with standalone components
+- **TypeScript** (strict mode)
+- **SCSS** with responsive design
+- **Angular CLI** for tooling
+
+## 🚀 Quick Start
 
 ```bash
+git clone https://github.com/RobinAngele/portfolio-angular.git
+cd portfolio-angular
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+# Open http://localhost:4200
 ```
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
