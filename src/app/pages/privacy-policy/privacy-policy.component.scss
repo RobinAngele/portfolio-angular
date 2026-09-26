@@ -40,6 +40,7 @@
     .content {
         max-width: min(800px, calc(100vw - 2rem));
         width: 100%;
+        box-sizing: border-box;
         padding: 0 clamp(16px, 8vw, 100px);
         margin-top: clamp(100px, 15vh, 150px);
     }
@@ -49,6 +50,9 @@
         text-align: center;
         font-size: clamp(v.$fs-h4, 5vw, v.$fs-h2);
         line-height: 1.2;
+        // Long words like "confidentialité" must wrap on narrow screens
+        hyphens: auto;
+        overflow-wrap: break-word;
     }
 
     .section {

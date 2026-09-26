@@ -91,24 +91,28 @@
   },
   "LEGAL": {
     "TITLE": "Mentions légales",
-    "INFO_HEADING": "Informations conformément au § 5 TMG",
-    "COUNTRY": "Allemagne",
-    "CONTACT_HEADING": "Contact",
+    "INTRO": "Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), il est porté à la connaissance des utilisateurs du site les informations suivantes :",
+    "PUBLISHER_HEADING": "Éditeur du site",
+    "COUNTRY": "France",
+    "SIRET": "SIRET",
+    "VAT": "N° TVA intracommunautaire",
     "EMAIL": "E-mail",
-    "RESPONSIBLE_HEADING": "Responsable du contenu conformément au § 55 al. 2 RStV"
+    "PHONE": "Téléphone",
+    "DIRECTOR_HEADING": "Directeur de la publication",
+    "HOST_HEADING": "Hébergeur"
   },
   "PRIVACY": {
     "TITLE": "Politique de confidentialité",
     "SECTION1_HEADING": "1. La protection des données en bref",
     "SECTION1_TEXT": "Nous prenons la protection de vos données personnelles très au sérieux. Cette politique de confidentialité vous informe de la manière dont nous traitons vos données lorsque vous visitez notre site web.",
     "SECTION2_HEADING": "2. Informations générales",
-    "SECTION2_TEXT": "Ce site web ne collecte aucune donnée personnelle au-delà de ce qui est techniquement nécessaire à son fonctionnement. Nous traitons vos données conformément aux réglementations applicables en matière de protection des données.",
+    "SECTION2_TEXT": "Ce site web ne collecte aucune donnée personnelle au-delà de ce qui est techniquement nécessaire à son fonctionnement. Nous traitons vos données conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés. Le responsable du traitement est Robin Angelé EI (Robin4consulting), 67 rue Louis Girard, 92240 Malakoff, France.",
     "SECTION3_HEADING": "3. Hébergement",
-    "SECTION3_TEXT": "Ce site web est hébergé par all-inkl.com (ALL-INKL.COM - Neue Medien Münnich). L'hébergeur peut collecter des informations techniques telles que les adresses IP, le type de navigateur ainsi que la date et l'heure d'accès dans le cadre de ses procédures de journalisation habituelles. Ces données sont collectées afin de garantir la sécurité et le bon fonctionnement du site.",
+    "SECTION3_TEXT": "Ce site web est hébergé par o2switch, Chemin des Pardiaux, 63000 Clermont-Ferrand, France, sur des serveurs situés en France. L'hébergeur peut collecter des informations techniques telles que les adresses IP, le type de navigateur ainsi que la date et l'heure d'accès dans le cadre de ses procédures de journalisation habituelles. Ces données sont collectées afin de garantir la sécurité et le bon fonctionnement du site.",
     "SECTION4_HEADING": "4. Formulaire de contact",
     "SECTION4_TEXT": "Si vous utilisez le formulaire de contact, les données fournies sont uniquement utilisées pour traiter votre demande et ne sont pas conservées au-delà de ce qui est nécessaire pour y répondre. En envoyant le formulaire, vous consentez au traitement des données fournies à cette fin.",
     "CONTACT_EMAIL": "Pour toute demande, vous pouvez également nous contacter directement à l'adresse",
     "SECTION5_HEADING": "5. Vos droits",
-    "SECTION5_TEXT": "Conformément à la législation applicable en matière de protection des données, vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles. Pour toute question relative à la protection des données, veuillez nous contacter à frontend@robin4consulting.com."
+    "SECTION5_TEXT": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles, ainsi que d'un droit d'opposition et à la portabilité de vos données. Pour exercer ces droits ou pour toute question relative à la protection des données, veuillez nous contacter à frontend@robin4consulting.com. Vous avez également le droit d'introduire une réclamation auprès de la CNIL (www.cnil.fr)."
   }
 }

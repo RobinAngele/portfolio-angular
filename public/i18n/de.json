@@ -30,7 +30,7 @@
     "TITLE": "Fähigkeiten",
     "SKILLS": {
       "ANGULAR": "Angular",
-      "TYPESCRIPT": "TypeScript", 
+      "TYPESCRIPT": "TypeScript",
       "JAVASCRIPT": "JavaScript",
       "HTML": "HTML",
       "CSS": "CSS",
@@ -58,7 +58,7 @@
       "DESCRIPTION": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Funktionen umfassen Charakterbewegung, Kollisionserkennung und Gegner-KI."
     },
     "PROJECT_POKEDEX": {
-      "TITLE": "Pokedex", 
+      "TITLE": "Pokedex",
       "STACK": "REST API | JavaScript | HTML | CSS",
       "DESCRIPTION": "Pokedex-App mit REST API zum Abrufen aller Pokemon-Daten von der PokeAPI. Beinhaltet Suchfunktionalität und detaillierte Pokemon-Informationen."
     }
@@ -92,24 +92,28 @@
   },
   "LEGAL": {
     "TITLE": "Impressum",
-    "INFO_HEADING": "Angaben gemäß § 5 TMG",
-    "COUNTRY": "Deutschland",
-    "CONTACT_HEADING": "Kontakt",
+    "INTRO": "Gemäß Artikel 6 des französischen Gesetzes Nr. 2004-575 vom 21. Juni 2004 über das Vertrauen in die digitale Wirtschaft (LCEN) werden die Nutzer dieser Website über Folgendes informiert:",
+    "PUBLISHER_HEADING": "Herausgeber der Website",
+    "COUNTRY": "Frankreich",
+    "SIRET": "SIRET",
+    "VAT": "USt-IdNr.",
     "EMAIL": "E-Mail",
-    "RESPONSIBLE_HEADING": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV"
+    "PHONE": "Telefon",
+    "DIRECTOR_HEADING": "Verantwortlich für die Veröffentlichung",
+    "HOST_HEADING": "Hosting-Anbieter"
   },
   "PRIVACY": {
     "TITLE": "Datenschutz",
     "SECTION1_HEADING": "1. Datenschutz auf einen Blick",
     "SECTION1_TEXT": "Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie wir mit Ihren Daten umgehen, wenn Sie unsere Website besuchen.",
     "SECTION2_HEADING": "2. Allgemeine Hinweise",
-    "SECTION2_TEXT": "Diese Website sammelt keine persönlichen Daten, die über das technisch Notwendige für den Betrieb der Website hinausgehen. Wir verarbeiten Ihre Daten in Übereinstimmung mit den relevanten Datenschutzbestimmungen.",
+    "SECTION2_TEXT": "Diese Website sammelt keine persönlichen Daten, die über das technisch Notwendige für den Betrieb der Website hinausgehen. Wir verarbeiten Ihre Daten gemäß der Datenschutz-Grundverordnung (DSGVO) und dem französischen Datenschutzgesetz (loi Informatique et Libertés). Verantwortlicher ist Robin Angelé EI (Robin4consulting), 67 rue Louis Girard, 92240 Malakoff, France.",
     "SECTION3_HEADING": "3. Hosting",
-    "SECTION3_TEXT": "Diese Website wird auf all-inkl.com (ALL-INKL.COM - Neue Medien Münnich) gehostet. Der Hosting-Anbieter kann technische Informationen wie IP-Adressen, Browser-Typ und Datum und Uhrzeit des Zugriffs im Rahmen seiner standardmäßigen Protokollierungsverfahren erfassen. Diese Daten werden gesammelt, um die Sicherheit und Funktionalität der Website zu gewährleisten.",
+    "SECTION3_TEXT": "Diese Website wird von o2switch, Chemin des Pardiaux, 63000 Clermont-Ferrand, Frankreich, auf Servern in Frankreich gehostet. Der Hosting-Anbieter kann technische Informationen wie IP-Adressen, Browser-Typ und Datum und Uhrzeit des Zugriffs im Rahmen seiner standardmäßigen Protokollierungsverfahren erfassen. Diese Daten werden gesammelt, um die Sicherheit und Funktionalität der Website zu gewährleisten.",
     "SECTION4_HEADING": "4. Kontaktformular",
     "SECTION4_TEXT": "Wenn Sie das Kontaktformular verwenden, werden Ihre angegebenen Daten nur zur Bearbeitung Ihrer Anfrage verwendet und nicht länger als nötig gespeichert. Durch das Absenden des Kontaktformulars erklären Sie sich mit der Verarbeitung der bereitgestellten Daten für diesen Zweck einverstanden.",
     "CONTACT_EMAIL": "Für Anfragen können Sie uns auch direkt kontaktieren unter",
     "SECTION5_HEADING": "5. Ihre Rechte",
-    "SECTION5_TEXT": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten gemäß den geltenden Datenschutzgesetzen. Bei Fragen zum Datenschutz wenden Sie sich bitte an uns unter frontend@robin4consulting.com."
+    "SECTION5_TEXT": "Gemäß der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Widerspruch und Datenübertragbarkeit. Zur Ausübung dieser Rechte oder bei Fragen zum Datenschutz wenden Sie sich bitte an frontend@robin4consulting.com. Sie haben außerdem das Recht, eine Beschwerde bei der französischen Datenschutzbehörde (CNIL, www.cnil.fr) einzureichen."
   }
 }
