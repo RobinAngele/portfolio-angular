@@ -29,20 +29,31 @@ ul {
     align-items: center;
     gap: 10px;
     
-    img {
-        width: 85px;
-        height: 85px;
+    button {
+        padding: 0;
+        border: none;
+        background: none;
+        color: v.$col-primary;
+        font-family: inherit;
+        font-size: v.$fs-24;
         cursor: pointer;
-        transition: all 0.1s ease;
         opacity: 0.6;
-        
+        transition: all 0.1s ease;
+
         &.active {
+            font-weight: 800;
             opacity: 1;
         }
-        
+
         &:hover {
             transform: scale(1.1);
             opacity: 1;
         }
+    }
+
+    .separator {
+        color: v.$col-primary;
+        font-size: v.$fs-24;
+        opacity: 0.6;
     }
 }

@@ -1,0 +1,114 @@
+{
+  "GENERAL": {
+    "GREETING": "Bonjour",
+    "WELCOME": "Bienvenue sur mon portfolio"
+  },
+  "NAVBAR": {
+    "HOME": "Accueil",
+    "ABOUT": "À propos",
+    "SKILLS": "Compétences",
+    "PROJECTS": "Projets",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "GREETING": "Salut, je suis",
+    "ROLE_1": "FRONTEND",
+    "ROLE_2": "DÉVELOPPEUR",
+    "SCROLL": "DÉFILER"
+  },
+  "INTRODUCTION": {
+    "HEADING": "Travaillons ensemble",
+    "HEADING_LINE1": "Travaillons",
+    "HEADING_LINE2": "ensemble",
+    "I_AM": "Je suis",
+    "BIO": "Je suis un développeur frontend passionné, basé à Paris. J'aime utiliser différentes technologies pour créer des produits remarquables et je me concentre sur la résolution de problèmes pour des secteurs et des niches variés. Je m'intéresse également à l'IA, à l'automatisation et à la gestion de projet.",
+    "CONTACT_INTRO": "Je serais ravi d'avoir de vos nouvelles, que ce soit pour un projet, une opportunité professionnelle ou simplement pour échanger.",
+    "SEND_MESSAGE": "Envoyer un message"
+  },
+  "SKILLSET": {
+    "TITLE": "Compétences",
+    "SKILLS": {
+      "ANGULAR": "Angular",
+      "TYPESCRIPT": "TypeScript",
+      "JAVASCRIPT": "JavaScript",
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "FIREBASE": "Firebase",
+      "REST_API": "API REST",
+      "MATERIAL_DESIGN": "Material Design",
+      "SCRUM": "Scrum",
+      "GIT": "Git",
+      "GROWTH_MINDSET": "Growth Mindset"
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Mes projets",
+    "DESCRIPTION": "Ces projets illustrent mon expertise en développement frontend, en intégration de l'IA et en automatisation. Chacun met en avant des compétences différentes et des technologies web modernes.",
+    "LIVE_TEST": "Voir le site",
+    "GITHUB": "GitHub",
+    "PROJECT_JOIN": {
+      "TITLE": "Join",
+      "STACK": "Angular | TypeScript | HTML | CSS",
+      "DESCRIPTION": "Gestionnaire de tâches inspiré de la méthode Kanban. Un outil collaboratif de gestion de projet avec glisser-déposer."
+    },
+    "PROJECT_POLLO": {
+      "TITLE": "El Pollo Loco",
+      "STACK": "JavaScript (POO) | HTML | CSS",
+      "DESCRIPTION": "Jeu de plateforme basé sur une approche orientée objet. Il comprend le déplacement du personnage, la détection des collisions et une IA pour les ennemis."
+    },
+    "PROJECT_POKEDEX": {
+      "TITLE": "Pokedex",
+      "STACK": "API REST | JavaScript | HTML | CSS",
+      "DESCRIPTION": "Application Pokédex qui récupère toutes les données des Pokémon via l'API REST PokeAPI. Inclut une fonction de recherche et des informations détaillées sur chaque Pokémon."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "HEADING": "Un projet à réaliser ?",
+    "DESCRIPTION": "N'hésitez pas à me contacter via ce formulaire. J'ai hâte de découvrir vos idées afin que nous puissions les concrétiser ensemble.",
+    "NEED_DEVELOPER": "Besoin d'un développeur frontend ?",
+    "CONTACT_ME": "Contactez-moi !"
+  },
+  "CONTACT_FORM": {
+    "NAME": "Votre nom",
+    "NAME_PLACEHOLDER": "Veuillez saisir votre nom.",
+    "NAME_ERROR": "Votre nom est requis.",
+    "EMAIL": "Votre e-mail",
+    "EMAIL_PLACEHOLDER": "Veuillez saisir votre adresse e-mail.",
+    "EMAIL_ERROR": "Une adresse e-mail valide est requise.",
+    "MESSAGE": "Votre message",
+    "MESSAGE_PLACEHOLDER": "Veuillez saisir votre message.",
+    "MESSAGE_ERROR": "Votre message est requis.",
+    "PRIVACY_AGREEMENT": "J'accepte le traitement de mes données conformément à la",
+    "PRIVACY_ERROR": "Vous devez accepter la politique de confidentialité.",
+    "SEND": "Envoyer",
+    "SUCCESS": "Votre message a bien été envoyé !",
+    "ERROR": "Erreur lors de l'envoi du message. Veuillez réessayer."
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Mentions légales",
+    "PRIVACY_POLICY": "Politique de confidentialité"
+  },
+  "LEGAL": {
+    "TITLE": "Mentions légales",
+    "INFO_HEADING": "Informations conformément au § 5 TMG",
+    "COUNTRY": "Allemagne",
+    "CONTACT_HEADING": "Contact",
+    "EMAIL": "E-mail",
+    "RESPONSIBLE_HEADING": "Responsable du contenu conformément au § 55 al. 2 RStV"
+  },
+  "PRIVACY": {
+    "TITLE": "Politique de confidentialité",
+    "SECTION1_HEADING": "1. La protection des données en bref",
+    "SECTION1_TEXT": "Nous prenons la protection de vos données personnelles très au sérieux. Cette politique de confidentialité vous informe de la manière dont nous traitons vos données lorsque vous visitez notre site web.",
+    "SECTION2_HEADING": "2. Informations générales",
+    "SECTION2_TEXT": "Ce site web ne collecte aucune donnée personnelle au-delà de ce qui est techniquement nécessaire à son fonctionnement. Nous traitons vos données conformément aux réglementations applicables en matière de protection des données.",
+    "SECTION3_HEADING": "3. Hébergement",
+    "SECTION3_TEXT": "Ce site web est hébergé par all-inkl.com (ALL-INKL.COM - Neue Medien Münnich). L'hébergeur peut collecter des informations techniques telles que les adresses IP, le type de navigateur ainsi que la date et l'heure d'accès dans le cadre de ses procédures de journalisation habituelles. Ces données sont collectées afin de garantir la sécurité et le bon fonctionnement du site.",
+    "SECTION4_HEADING": "4. Formulaire de contact",
+    "SECTION4_TEXT": "Si vous utilisez le formulaire de contact, les données fournies sont uniquement utilisées pour traiter votre demande et ne sont pas conservées au-delà de ce qui est nécessaire pour y répondre. En envoyant le formulaire, vous consentez au traitement des données fournies à cette fin.",
+    "CONTACT_EMAIL": "Pour toute demande, vous pouvez également nous contacter directement à l'adresse",
+    "SECTION5_HEADING": "5. Vos droits",
+    "SECTION5_TEXT": "Conformément à la législation applicable en matière de protection des données, vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles. Pour toute question relative à la protection des données, veuillez nous contacter à frontend@robin4consulting.com."
+  }
+}

@@ -24,4 +24,15 @@ export class HeroAreaComponent {
   role: string = 'FRONTEND DEVELOPER';
   name: string = 'Robin';
   ctaText: string = 'Contact me';
+
+  /** Longest role word that fits the hero layout at full size (e.g. "DEVELOPER") */
+  private readonly MAX_ROLE_LENGTH = 9;
+
+  /**
+   * Returns a font-size scale so longer role words (e.g. "DÉVELOPPEUR") don't break the layout
+   * @param text - Translated role text
+   */
+  roleScale(text: string): number {
+    return Math.min(1, this.MAX_ROLE_LENGTH / text.length);
+  }
 }
