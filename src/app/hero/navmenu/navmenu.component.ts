@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
@@ -10,7 +10,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './navmenu.component.html',
   styleUrls: ['./navmenu.component.scss']
 })
-export class NavmenuComponent {
+export class NavmenuComponent implements OnDestroy {
   menuItems = [
     { label: 'About', link: '#about' },
     { label: 'Skills', link: '#skills' },
@@ -39,6 +39,7 @@ export class NavmenuComponent {
    */
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+    this.lockPageScroll(this.isMenuOpen);
   }
 
   /**
@@ -46,6 +47,24 @@ export class NavmenuComponent {
    */
   closeMenu(): void {
     this.isMenuOpen = false;
+    this.lockPageScroll(false);
+  }
+
+  /**
+   * Releases the page scroll lock if the menu is destroyed while open
+   */
+  ngOnDestroy(): void {
+    if (this.isMenuOpen) {
+      this.lockPageScroll(false);
+    }
+  }
+
+  /**
+   * Prevents the page behind the open menu from scrolling
+   * @param lock - Whether page scrolling should be locked
+   */
+  private lockPageScroll(lock: boolean): void {
+    document.body.style.overflow = lock ? 'hidden' : '';
   }
 
   /**
