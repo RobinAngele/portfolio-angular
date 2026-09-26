@@ -21,7 +21,7 @@
     "HEADING_LINE1": "Let's work",
     "HEADING_LINE2": "together",
     "I_AM": "I am",
-    "BIO": "I'm a passionate frontend developer originally from Paris, now living in Hessen close to Frankfurt, Germany. I enjoy using various technologies to build amazing products and focusing on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
+    "BIO": "I'm a passionate frontend developer based in Paris, France. I enjoy using various technologies to build amazing products and focusing on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
     "CONTACT_INTRO": "I would love to hear from you. Whether it is a project, job opportunity, or just a chat.",
     "SEND_MESSAGE": "Send a message"
   },
@@ -45,7 +45,7 @@
     },
     "PROJECT_POKEDEX": {
       "TITLE": "Pokedex",
-      "STACK": "REST API | JavaScript | HTML | CSS", 
+      "STACK": "REST API | JavaScript | HTML | CSS",
       "DESCRIPTION": "Pokedex App using REST API to fetch all Pokemon data from the PokeAPI. Includes search functionality and detailed Pokemon information."
     }
   },
@@ -78,24 +78,28 @@
   },
   "LEGAL": {
     "TITLE": "Legal Notice",
-    "INFO_HEADING": "Information according to § 5 TMG",
-    "COUNTRY": "Germany",
-    "CONTACT_HEADING": "Contact",
+    "INTRO": "In accordance with Article 6 of French Law No. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN), users of this website are informed of the following:",
+    "PUBLISHER_HEADING": "Website publisher",
+    "COUNTRY": "France",
+    "SIRET": "SIRET",
+    "VAT": "Intra-EU VAT number",
     "EMAIL": "Email",
-    "RESPONSIBLE_HEADING": "Responsible for content according to § 55 Abs. 2 RStV"
+    "PHONE": "Phone",
+    "DIRECTOR_HEADING": "Publication director",
+    "HOST_HEADING": "Hosting provider"
   },
   "PRIVACY": {
     "TITLE": "Privacy Policy",
     "SECTION1_HEADING": "1. Data Protection at a Glance",
     "SECTION1_TEXT": "We take the protection of your personal data very seriously. This privacy policy informs you about how we handle your data when you visit our website.",
     "SECTION2_HEADING": "2. General Information",
-    "SECTION2_TEXT": "This website does not collect any personal data beyond what is technically necessary for the operation of the website. We process your data in compliance with relevant data protection regulations.",
+    "SECTION2_TEXT": "This website does not collect any personal data beyond what is technically necessary for the operation of the website. We process your data in accordance with the General Data Protection Regulation (GDPR) and the French Data Protection Act (loi Informatique et Libertés). The data controller is Robin Angelé EI (Robin4consulting), 67 rue Louis Girard, 92240 Malakoff, France.",
     "SECTION3_HEADING": "3. Hosting",
-    "SECTION3_TEXT": "This website is hosted on all-inkl.com (ALL-INKL.COM - Neue Medien Münnich). The hosting provider may collect technical information such as IP addresses, browser type, and date and time of access as part of its standard logging procedures. This data is collected to ensure the security and functionality of the website.",
+    "SECTION3_TEXT": "This website is hosted by o2switch, Chemin des Pardiaux, 63000 Clermont-Ferrand, France, on servers located in France. The hosting provider may collect technical information such as IP addresses, browser type, and date and time of access as part of its standard logging procedures. This data is collected to ensure the security and functionality of the website.",
     "SECTION4_HEADING": "4. Contact Form",
     "SECTION4_TEXT": "If you use the contact form, your provided data will only be used to process your inquiry and will not be stored beyond what is necessary to answer your request. By submitting the contact form, you consent to the processing of the provided data for this purpose.",
     "CONTACT_EMAIL": "For inquiries, you can also contact us directly at",
     "SECTION5_HEADING": "5. Your Rights",
-    "SECTION5_TEXT": "You have the right to information, correction, deletion, and restriction of processing of your personal data in accordance with applicable data protection laws. If you have questions about data protection, please contact us at frontend@robin4consulting.com."
+    "SECTION5_TEXT": "In accordance with the GDPR, you have the right to access, rectify, erase, and restrict the processing of your personal data, as well as the right to object and to data portability. To exercise these rights or for any question about data protection, please contact us at contact@robin4consulting.com. You also have the right to lodge a complaint with the French data protection authority (CNIL, www.cnil.fr)."
   }
 }

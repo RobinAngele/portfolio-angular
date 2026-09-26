@@ -14,14 +14,14 @@
                 <li><a href="#contact" (click)="closeMenu()">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
             </ul>
             <div class="language-toggle">
-                <img *ngIf="currentLang === 'en'" 
-                     src="assets/icons/translation_EN active.svg" 
-                     alt="English" 
-                     (click)="switchLanguage('de')">
-                <img *ngIf="currentLang === 'de'" 
-                     src="assets/icons/translation_DE active.svg" 
-                     alt="Deutsch" 
-                     (click)="switchLanguage('en')">
+                <ng-container *ngFor="let lang of languages; let last = last">
+                    <button type="button"
+                            [class.active]="currentLang === lang.code"
+                            [attr.aria-pressed]="currentLang === lang.code"
+                            [attr.aria-label]="lang.label"
+                            (click)="switchLanguage(lang.code)">{{ lang.code | uppercase }}</button>
+                    <span *ngIf="!last" class="separator">/</span>
+                </ng-container>
             </div>
         </nav>
     </div>

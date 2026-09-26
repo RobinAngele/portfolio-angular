@@ -35,6 +35,7 @@
             ],
             "assets": [
               { "glob": "favicon.ico", "input": "public", "output": "/" },
+              { "glob": "send_mail.php", "input": "public", "output": "/" },
               { "glob": "**/*", "input": "public/assets", "output": "/assets/" }
             ],
             "styles": [
@@ -98,6 +99,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               { "glob": "favicon.ico", "input": "public", "output": "/" },
+              { "glob": "send_mail.php", "input": "public", "output": "/" },
               { "glob": "**/*", "input": "public/assets", "output": "/assets/" }
             ],
             "styles": [
