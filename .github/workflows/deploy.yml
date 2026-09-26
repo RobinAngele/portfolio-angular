@@ -41,5 +41,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           local-dir: ./dist/portfoliorobin/browser/
-          # Path relative to the FTP account's root (/home2/kiri5142 for the main cPanel account)
-          server-dir: frontend.robin4consulting.com/
+          # Path relative to the FTP account's root; the "deploy" FTP account is rooted at
+          # /home2/kiri5142/frontend.robin4consulting.com
+          server-dir: ./
