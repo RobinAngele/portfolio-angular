@@ -2,13 +2,15 @@
 @use '../../../mixins' as m;
 
 .burger-menu-button {
+    // Positioned so its z-index applies and the close (X) button stays above the open menu
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
 
     div {
         width: 100%;
@@ -45,7 +47,8 @@
     transition: all 0.1s ease;
 
     &.open {
-        opacity: 0.9;
+        // Full opacity so the white menu panel is not see-through (the backdrop color is already translucent)
+        opacity: 1;
         visibility: visible;
     }
 }
@@ -55,7 +58,11 @@
     top: 0;
     right: -300px;
     width: 300px;
-    height: 100%;
+    height: 100dvh;
+    box-sizing: border-box;
+    // Let the menu scroll on its own when it is taller than the screen (phones in landscape)
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background-color: white;
     padding: 80px 40px 40px;
     transition: right 0.1s ease;
@@ -130,5 +137,24 @@
 @media screen and (min-width: v.$m-tablet) {
     .mobile-menu {
         display: none !important;
+    }
+}
+
+// Phones in landscape: tighter spacing so the whole menu fits (it still scrolls if needed)
+@media screen and (max-height: 520px) and (orientation: landscape) {
+    .mobile-menu {
+        padding: 64px 40px 24px;
+
+        nav {
+            gap: 20px;
+
+            ul {
+                gap: 16px;
+            }
+
+            .language-toggle {
+                margin-top: 0;
+            }
+        }
     }
 }
