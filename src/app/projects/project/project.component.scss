@@ -102,6 +102,10 @@
         pointer-events: none;
     }
 
+    .description-container h4 {
+        margin-bottom: 8px;
+    }
+
     .button-container {
         app-button:first-child {
             display: inline-block;
@@ -115,6 +119,25 @@
         .button-container {
             justify-content: flex-start;
         }
+    }
+}
+
+// Phones in landscape: screenshot and description side by side instead of a full-width screenshot
+@media screen and (max-height: 520px) and (orientation: landscape) {
+    .project-container,
+    .odd:nth-child(odd) {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        text-align: left;
+    }
+
+    .image-container {
+        width: 45%;
+    }
+
+    .odd:nth-child(odd) .button-container {
+        justify-content: flex-start;
     }
 }
 

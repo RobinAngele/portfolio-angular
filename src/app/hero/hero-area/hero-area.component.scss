@@ -51,6 +51,10 @@ app-navmenu {
         flex: 0 0 50%;
     }
 
+    picture {
+        display: contents;
+    }
+
     img {
         width: 120%;
         height: 120%;
@@ -197,45 +201,63 @@ app-bubble:nth-of-type(2) {
         display: inline;
     }
 
+    // Stack greeting above the photo in a single column (no wrapping into a second column)
     .hero-container {
-        display: flex;
-        flex-direction: column-reverse;
+        top: 110px;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
         align-items: center;
-        gap: 48px;
+        gap: 24px;
         padding: 0 24px;
+        font-size: 4vw;
 
-        div {
+        >div:first-of-type {
+            order: 2;
+            flex: 0 1 auto;
+            min-height: 0;
             height: auto;
         }
 
+        .greeting {
+            order: 1;
+            flex: 0 0 auto;
+            height: auto;
+            align-items: center;
+            padding: 0;
+            // Center the greeting vertically in the free space above the photo
+            margin: auto 0;
+
+            p {
+                color: white;
+                font-size: clamp(16px, 2.2em, 36px);
+            }
+
+            h1 {
+                color: white;
+                font-size: calc(clamp(16px, 4.2em, 73px) * var(--role-scale, 1));
+            }
+
+            h2 {
+                color: white;
+                font-size: calc(clamp(16px, 3.9em, 67px) * var(--role-scale, 1));
+            }
+
+            .cta-section {
+                display: none;
+            }
+        }
+
+        // Show the whole photo (arms included) instead of a zoomed, cropped version
         img {
-            max-width: 70dvw;
-            object-fit: cover;
-        }
-    }
-
-    .greeting {
-        align-items: center;
-        font-size: 4vw;
-        padding: 0 24px;
-
-        p {
-            color: white;
-            font-size: clamp(16px, 2.2em, 36px);
-        }
-
-        h1 {
-            color: white;
-            font-size: calc(clamp(16px, 4.2em, 73px) * var(--role-scale, 1));
-        }
-
-        h2 {
-            color: white;
-            font-size: calc(clamp(16px, 3.9em, 67px) * var(--role-scale, 1));
-        }
-
-        .cta-section {
-            display: none;
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: min(88vw, 460px);
+            max-height: 52dvh;
+            object-fit: contain;
+            transform: none;
         }
     }
 
@@ -254,5 +276,91 @@ app-bubble:nth-of-type(2) {
             $bottom: 0,
             $index: 1);
             transform: translate(-50%, 50%);
+    }
+}
+
+
+// Phones in landscape: little height, so use the burger menu and put photo and greeting side by side
+@media screen and (max-height: 520px) and (orientation: landscape) {
+    .navigation {
+        top: 12px;
+        left: 24px;
+        right: 24px;
+    }
+
+    app-navbar {
+        display: none;
+    }
+
+    app-navmenu {
+        display: inline;
+    }
+
+    .hero-container {
+        top: 0;
+        height: 100dvh;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 4vw;
+        padding: 0 5vw;
+
+        >div:first-of-type {
+            order: 1;
+            flex: 0 0 auto;
+            height: auto;
+        }
+
+        .greeting {
+            order: 2;
+            flex: 0 1 auto;
+            height: auto;
+            align-self: center;
+            align-items: center;
+            padding: 0;
+
+            p {
+                color: v.$col-primary;
+                font-size: clamp(16px, 7dvh, 36px);
+            }
+
+            h1 {
+                color: v.$col-primary;
+                font-size: calc(clamp(24px, 15dvh, 72px) * var(--role-scale, 1));
+            }
+
+            h2 {
+                color: v.$col-primary;
+                font-size: calc(clamp(22px, 14dvh, 66px) * var(--role-scale, 1));
+            }
+
+            .cta-section {
+                display: none;
+            }
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: 78dvh;
+            max-width: 42vw;
+            max-height: none;
+            object-fit: contain;
+            object-position: bottom;
+            transform: none;
+        }
+    }
+
+    app-bubble:nth-of-type(1) {
+        @include m.app-bubble(
+            $size: 130dvh,
+            $top: -35dvh,
+            $left: -25dvh,
+            $index: 0);
+    }
+
+    app-bubble:nth-of-type(2) {
+        display: none;
     }
 }

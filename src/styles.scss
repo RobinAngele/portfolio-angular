@@ -102,7 +102,7 @@ h6 {
 }
 
 // Media
-@media screen and (max-width: v.$m-mobile-md) {
+@media screen and (max-width: v.$m-mobile-md), screen and (max-height: 520px) and (orientation: landscape) {
     .container {
         padding: 0 24px;
     }
