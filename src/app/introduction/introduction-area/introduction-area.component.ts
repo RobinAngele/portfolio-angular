@@ -14,7 +14,7 @@ import { LanguageService } from '../../services/language.service';
 })
 export class IntroductionAreaComponent {
   title: string = "About me";
-  description: string = "I am a frontend developer based in Paris, France with a passion for AI, Linux, and automation. I specialize in creating modern, responsive web applications while leveraging the latest technologies and AI tools to enhance development workflows and user experiences.";
+  description: string = "I am a frontend developer based in Germany with a passion for AI, Linux, and automation. I specialize in creating modern, responsive web applications while leveraging the latest technologies and AI tools to enhance development workflows and user experiences.";
   contactBtnText: string = 'INTRODUCTION.SEND_MESSAGE';
   
   constructor(

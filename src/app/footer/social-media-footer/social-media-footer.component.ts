@@ -21,7 +21,7 @@ export class SocialMediaFooterComponent {
     { 
       name: 'Email', 
       icon: 'assets/icons/mail_white.svg', 
-      href: 'mailto:contact@robin4consulting.com' 
+      href: 'mailto:frontend@robin4consulting.com' 
     }
   ];
 }

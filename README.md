@@ -41,19 +41,6 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Deployment
-
-Every push to `main` builds the site and uploads `dist/portfoliorobin/browser/` to o2switch via FTPS
-(see `.github/workflows/deploy.yml`). It can also be started manually from the **Actions** tab.
-
-Required repository secrets (**Settings → Secrets and variables → Actions**):
-
-| Secret | Value |
-| --- | --- |
-| `FTP_SERVER` | FTP host from cPanel → FTP Accounts |
-| `FTP_USERNAME` | FTP user name |
-| `FTP_PASSWORD` | FTP password |
-
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:

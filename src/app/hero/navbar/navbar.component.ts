@@ -1,12 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgIf, NgFor, UpperCasePipe, TranslatePipe],
+  imports: [NgIf, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
@@ -14,11 +14,6 @@ export class NavbarComponent {
   scrolled = false;
   menuOpen = false;
   currentLang: string;
-  languages = [
-    { code: 'en', label: 'English' },
-    { code: 'de', label: 'Deutsch' },
-    { code: 'fr', label: 'Français' }
-  ];
 
   constructor(
     private translate: TranslateService,

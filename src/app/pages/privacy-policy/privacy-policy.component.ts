@@ -27,8 +27,6 @@ export class PrivacyPolicyComponent {
       this.currentLang = lang;
       if (lang === 'de') {
         this.titleService.setTitle('Datenschutz | Robin Angelé');
-      } else if (lang === 'fr') {
-        this.titleService.setTitle('Politique de confidentialité | Robin Angelé');
       } else {
         this.titleService.setTitle('Privacy Policy | Robin Angelé');
       }

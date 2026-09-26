@@ -25,11 +25,6 @@
         gap: 32px;
         padding-top: v.$area-spacing-sm;
         padding-bottom: v.$area-spacing-sm;
-
-        h3 {
-            // Scale down on narrow screens so longer titles (e.g. "Compétences") fit
-            font-size: min(64px, 14vw);
-        }
     }
 }
 

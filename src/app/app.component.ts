@@ -8,7 +8,6 @@ import { BubbleComponent } from './bubble/bubble.component';
 import { LanguageService } from './services/language.service';
 import translationsEN from "../../public/i18n/en.json";
 import translationsDE from "../../public/i18n/de.json";
-import translationsFR from "../../public/i18n/fr.json";
 
 @Component({
   selector: 'app-root',
@@ -32,8 +31,7 @@ export class AppComponent implements OnInit {
   ) {
     translate.setTranslation('en', translationsEN);
     translate.setTranslation('de', translationsDE);
-    translate.setTranslation('fr', translationsFR);
-    this.translate.addLangs(['de', 'en', 'fr']);
+    this.translate.addLangs(['de', 'en']);
   }
 
   /**

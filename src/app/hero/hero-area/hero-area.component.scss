@@ -68,11 +68,11 @@ app-navmenu {
     }
 
     h1 {
-        font-size: calc(clamp(16px, 4.2em, v.$fs-h1) * var(--role-scale, 1));
+        font-size: clamp(16px, 4.2em, v.$fs-h1);
     }
 
     h2 {
-        font-size: calc(clamp(16px, 3.9em, v.$fs-h2) * var(--role-scale, 1));
+        font-size: clamp(16px, 3.9em, v.$fs-h2);
     }
 }
 
@@ -151,11 +151,11 @@ app-bubble:nth-of-type(2) {
         }
 
         h1 {
-            font-size: calc(clamp(24px, 3.8em, 64px) * var(--role-scale, 1));
+            font-size: clamp(24px, 3.8em, 64px);
         }
     
         h2 {
-            font-size: calc(clamp(22px, 3.5em, 58px) * var(--role-scale, 1));
+            font-size: clamp(22px, 3.5em, 58px);
         }
 
         .cta-section {
@@ -226,12 +226,12 @@ app-bubble:nth-of-type(2) {
 
         h1 {
             color: white;
-            font-size: calc(clamp(16px, 4.2em, 73px) * var(--role-scale, 1));
+            font-size: clamp(16px, 4.2em, 73px);
         }
 
         h2 {
             color: white;
-            font-size: calc(clamp(16px, 3.9em, 67px) * var(--role-scale, 1));
+            font-size: clamp(16px, 3.9em, 67px);
         }
 
         .cta-section {

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navmenu',
   standalone: true,
-  imports: [NgIf, NgFor, UpperCasePipe, TranslatePipe],
+  imports: [NgIf, TranslatePipe],
   templateUrl: './navmenu.component.html',
   styleUrls: ['./navmenu.component.scss']
 })
@@ -18,11 +18,6 @@ export class NavmenuComponent {
   ];
   isMenuOpen = false;
   currentLang: string;
-  languages = [
-    { code: 'en', label: 'English' },
-    { code: 'de', label: 'Deutsch' },
-    { code: 'fr', label: 'Français' }
-  ];
 
   constructor(
     private translate: TranslateService,

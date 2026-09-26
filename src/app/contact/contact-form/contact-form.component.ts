@@ -95,7 +95,7 @@ export class ContactFormComponent {
       bubbleEl.style.display = 'inline';
       bubbleEl.className = 'mail-bubble mail-animation';
       
-      await fetch('/send_mail.php',
+      await fetch('https://robin4consulting.com/send_mail.php',
       {
         method: 'post',
         body: data

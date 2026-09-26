@@ -27,8 +27,6 @@ export class LegalNoticeComponent {
       this.currentLang = lang;
       if (lang === 'de') {
         this.titleService.setTitle('Impressum | Robin Angelé');
-      } else if (lang === 'fr') {
-        this.titleService.setTitle('Mentions légales | Robin Angelé');
       } else {
         this.titleService.setTitle('Legal Notice | Robin Angelé');
       }
