@@ -109,11 +109,12 @@ app-bubble:nth-of-type(5) {
         pointer-events: auto;
     }
 
+    // Small and mostly off-screen so it never sits behind the Join text and buttons
     app-bubble:nth-of-type(4) {
         @include m.app-bubble(
-            $size: 450px,
+            $size: 180px,
             $top: 36%,
-            $right: -20%,
+            $right: -130px,
             $index: 0);
         pointer-events: auto;
     }
@@ -163,9 +164,9 @@ app-bubble:nth-of-type(5) {
 
     app-bubble:nth-of-type(4) {
         @include m.app-bubble(
-            $size: 400px,
+            $size: 140px,
             $top: 28%,
-            $right: -20%,
+            $right: -100px,
             $index: 0);
         pointer-events: auto;
     }
