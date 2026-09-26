@@ -51,7 +51,7 @@ Required repository secrets (**Settings → Secrets and variables → Actions**)
 | Secret | Value |
 | --- | --- |
 | `FTP_SERVER` | FTP host from cPanel → FTP Accounts |
-| `FTP_USERNAME` | FTP user name |
+| `FTP_USERNAME` | FTP user name (the `deploy` account, rooted at the site folder) |
 | `FTP_PASSWORD` | FTP password |
 
 ## Running unit tests
