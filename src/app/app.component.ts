@@ -3,7 +3,6 @@ import { Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from "@ngx-translate/core";
 import { isPlatformBrowser } from '@angular/common';
 import AOS from 'aos';
-import { LogoComponent } from './logo/logo.component';
 import { BubbleComponent } from './bubble/bubble.component';
 import { LanguageService } from './services/language.service';
 import translationsEN from "../../public/i18n/en.json";
@@ -15,7 +14,6 @@ import translationsFR from "../../public/i18n/fr.json";
   standalone: true,
   imports: [
     RouterOutlet, 
-    LogoComponent, 
     BubbleComponent
   ],
   templateUrl: './app.component.html',

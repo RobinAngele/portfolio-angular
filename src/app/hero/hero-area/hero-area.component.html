@@ -9,7 +9,11 @@
     
     <div class="hero-container">
         <div>
-            <img src="assets/img/robin.png" alt="Hero Image" draggable="false">
+            <picture>
+                <!-- Tightly cropped photo on phones: its bottom edge is the cut of the torso -->
+                <source media="(max-width: 800px), (max-height: 520px) and (orientation: landscape)" srcset="assets/img/robin-cropped.png">
+                <img src="assets/img/robin.png" alt="Robin Angelé" draggable="false">
+            </picture>
         </div>
         <div class="greeting">
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">{{ 'HERO.GREETING' | translate }} {{ name }}</p>

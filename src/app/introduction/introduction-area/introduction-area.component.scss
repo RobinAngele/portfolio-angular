@@ -114,7 +114,7 @@ app-bubble:nth-of-type(1) {
     }
 }
 
-@media screen and (max-width: v.$m-mobile-md) {
+@media screen and (max-width: v.$m-mobile-md), screen and (max-height: 520px) and (orientation: landscape) {
     .introduction-area {
         gap: 35px;
         padding-top: 150px;
@@ -123,7 +123,6 @@ app-bubble:nth-of-type(1) {
         h2 {
             .icons-container {
                 gap: 15px;
-                margin-left: 60px;
 
                 .remote-icon,
                 .located-icon {
@@ -134,8 +133,11 @@ app-bubble:nth-of-type(1) {
     }
 
     .introduction-container {
+        text-align: left;
+
         p {
             font-size: v.$fs-18;
+            margin-top: 0;
         }
     }
 
@@ -150,7 +152,13 @@ app-bubble:nth-of-type(1) {
 
     .heading-container .heading-line {
         white-space: nowrap;
-        font-size: inherit;
+        font-size: clamp(40px, 14vw, 72px);
+        margin-bottom: 8px;
+    }
+
+    h2 .smaller-text {
+        margin-top: 8px;
+        margin-bottom: 16px;
     }
 }
 
