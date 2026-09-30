@@ -14,6 +14,22 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class ProjectsAreaComponent {
   projects = [
     {
+      titleKey: 'PROJECTS.PROJECT_REEFOFFICE.TITLE',
+      stackKey: 'PROJECTS.PROJECT_REEFOFFICE.STACK',
+      descriptionKey: 'PROJECTS.PROJECT_REEFOFFICE.DESCRIPTION',
+      projectUrl: 'https://reefoffice.com',
+      prevImageUrl: 'assets/img/preview_reefoffice.jpg',
+      ctaKey: 'PROJECTS.VISIT_SITE'
+    },
+    {
+      titleKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.TITLE',
+      stackKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.STACK',
+      descriptionKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.DESCRIPTION',
+      projectUrl: 'https://www.robin4consulting.com',
+      prevImageUrl: 'assets/img/preview_robin4consulting.jpg',
+      ctaKey: 'PROJECTS.VISIT_SITE'
+    },
+    {
       titleKey: 'PROJECTS.PROJECT_JOIN.TITLE',
       stackKey: 'PROJECTS.PROJECT_JOIN.STACK',
       descriptionKey: 'PROJECTS.PROJECT_JOIN.DESCRIPTION',

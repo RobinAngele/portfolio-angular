@@ -12,7 +12,7 @@
   },
   "HERO": {
     "GREETING": "Hallo! Ich bin",
-    "ROLE_1": "FRONTEND",
+    "ROLE_1": "FULL-STACK",
     "ROLE_2": "ENTWICKLER",
     "SCROLL": "SCROLLEN"
   },
@@ -22,7 +22,7 @@
     "HEADING_LINE2": "zusammen",
     "HEADING_LINE3": "arbeiten",
     "I_AM": "Ich bin",
-    "BIO": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit Sitz in Paris, Frankreich. Ich nutze gerne verschiedene Technologien, um tolle Produkte zu entwickeln und konzentriere mich darauf, Probleme für verschiedene Branchen und Nischen zu lösen. Ich interessiere mich auch für KI, Automatisierung und Projektmanagement.",
+    "BIO": "Ich bin ein leidenschaftlicher Full-Stack-Entwickler mit Sitz in Paris, Frankreich. Ich entwickle komplette Produkte – von modernen Weboberflächen über Server und Unternehmenssoftware (Odoo) bis hin zur Automatisierung – und löse gerne konkrete Probleme für verschiedene Branchen und Nischen. Ich interessiere mich auch für KI, Open Source und Projektmanagement.",
     "CONTACT_INTRO": "Ich würde mich freuen, von dir zu hören. Ob es ein Projekt, eine Jobmöglichkeit oder nur ein Gespräch ist.",
     "SEND_MESSAGE": "Nachricht senden"
   },
@@ -44,9 +44,20 @@
   },
   "PROJECTS": {
     "TITLE": "Meine Projekte",
-    "DESCRIPTION": "Diese Projekte zeigen meine Expertise in der Frontend-Entwicklung, KI-Integration und Automatisierung. Jedes Projekt demonstriert verschiedene Fähigkeiten und moderne Webtechnologien.",
+    "DESCRIPTION": "Diese Projekte zeigen meine Expertise in der Full-Stack-Entwicklung, Unternehmenssoftware und Automatisierung – von eigenen Produkten bis zu Übungsprojekten. Jedes Projekt demonstriert verschiedene Fähigkeiten und moderne Webtechnologien.",
     "LIVE_TEST": "Live-Test",
     "GITHUB": "GitHub",
+    "VISIT_SITE": "Website ansehen",
+    "PROJECT_REEFOFFICE": {
+      "TITLE": "ReefOffice",
+      "STACK": "SvelteKit | Docker | Nextcloud | PostgreSQL | Private KI",
+      "DESCRIPTION": "Mein SaaS-Produkt: ein verwaltetes, privates Backoffice für kleine Unternehmen. Dateien, Dokumentenmanagement, CRM, Rechnungsstellung, Automatisierung und private KI laufen auf einem eigenen EU-Server pro Kunde – eingerichtet, abgesichert und regelmäßig gesichert."
+    },
+    "PROJECT_ROBIN4CONSULTING": {
+      "TITLE": "Robin4consulting",
+      "STACK": "Odoo | Python | Website & CRM | EN/FR/DE",
+      "DESCRIPTION": "Die Odoo-Website meines Beratungsunternehmens, das Privatpersonen und Firmen beim Umzug und bei der Unternehmensgründung in Deutschland unterstützt. Eine dreisprachige Website mit Preisen, Kontaktformularen, Online-Terminbuchung und WhatsApp-Kontakt."
+    },
     "PROJECT_JOIN": {
       "TITLE": "Join",
       "STACK": "Angular | TypeScript | HTML | CSS",
@@ -67,7 +78,7 @@
     "TITLE": "Kontakt",
     "HEADING": "Projekte zu verwirklichen?",
     "DESCRIPTION": "Kontaktiere mich gerne über dieses Formular. Ich bin interessiert, von dir und deinen Ideen zu hören, damit wir sie gemeinsam umsetzen können.",
-    "NEED_DEVELOPER": "Brauchst du einen Frontend-Entwickler?",
+    "NEED_DEVELOPER": "Brauchst du einen Full-Stack-Entwickler?",
     "CONTACT_ME": "Kontaktiere mich!"
   },
   "CONTACT_FORM": {

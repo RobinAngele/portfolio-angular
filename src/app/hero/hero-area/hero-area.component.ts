@@ -21,7 +21,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrls: ['./hero-area.component.scss']
 })
 export class HeroAreaComponent {
-  role: string = 'FRONTEND DEVELOPER';
   name: string = 'Robin';
   ctaText: string = 'Contact me';
 

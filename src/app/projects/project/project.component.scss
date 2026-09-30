@@ -63,6 +63,11 @@
     app-button:first-child {
         display: none;
     }
+
+    // Without a GitHub link the "Visit site" button is the only one, so always show it
+    &.no-github app-button:first-child {
+        display: inline-block;
+    }
 }
 
 .odd:nth-child(odd) {
@@ -104,6 +109,9 @@
 
     .description-container h4 {
         margin-bottom: 8px;
+        // Long titles like "Robin4consulting" must fit narrow screens
+        font-size: clamp(30px, 9vw, 48px);
+        overflow-wrap: anywhere;
     }
 
     .button-container {
@@ -138,6 +146,12 @@
 
     .odd:nth-child(odd) .button-container {
         justify-content: flex-start;
+    }
+
+    // The text column is narrow next to the screenshot: let the buttons wrap
+    .button-container {
+        flex-wrap: wrap;
+        gap: 16px;
     }
 }
 

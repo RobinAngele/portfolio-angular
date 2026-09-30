@@ -4,7 +4,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
 
-Front-end developer portfolio showcasing my projects and skills. Built with Angular 19, TypeScript, and SCSS.
+Full stack developer portfolio showcasing my projects and skills. Built with Angular 19, TypeScript, and SCSS.
 
 🔗 **Live demo**: [frontend.robin4consulting.com](https://www.frontend.robin4consulting.com)
 

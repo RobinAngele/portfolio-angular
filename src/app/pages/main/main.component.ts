@@ -23,6 +23,6 @@ import { FooterAreaComponent } from '../../footer/footer-area/footer-area.compon
 })
 export class MainComponent {
   constructor(private titleService: Title) {
-    this.titleService.setTitle('Robin Angelé | Frontend Developer');
+    this.titleService.setTitle('Robin Angelé | Full Stack Developer');
   }
 }
