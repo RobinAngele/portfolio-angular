@@ -25,7 +25,7 @@ export class ProjectsAreaComponent {
       titleKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.TITLE',
       stackKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.STACK',
       descriptionKey: 'PROJECTS.PROJECT_ROBIN4CONSULTING.DESCRIPTION',
-      projectUrl: 'https://www.robin4consulting.com',
+      projectUrl: 'https://robin4consulting.com',
       prevImageUrl: 'assets/img/preview_robin4consulting.jpg',
       ctaKey: 'PROJECTS.VISIT_SITE'
     },
