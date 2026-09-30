@@ -22,6 +22,22 @@
     }
 }
 
+.booking {
+    margin-top: 32px;
+}
+
+// Beats the generic ".contact-area p:first-of-type" margins, also on mobile
+.contact-area .booking p:first-of-type {
+    margin: 0 0 20px;
+}
+
+// Buttons never wrap by default; let this one wrap rather than overflow narrow phones
+.booking ::ng-deep app-button a {
+    white-space: normal;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,10 +101,11 @@
     }
 }
 
+// Below the booking button, in the free space of the left column
 app-bubble:nth-of-type(1) {
     @include m.app-bubble(
         $size: 200px,
-        $top: 530px,
+        $top: 670px,
         $left: 15%,
         $index: 0);
 }
@@ -126,19 +143,9 @@ app-bubble:nth-of-type(2) {
         margin-top: 24px;
     }
 
-    app-bubble:nth-of-type(1) {
-        @include m.app-bubble(
-            $size: 100px,
-            $top: 430px,
-            $left: 40%,
-            $index: 0);
-    }
-
+    // Text and form fill the whole width on phones: no free space for the bubbles
+    app-bubble:nth-of-type(1),
     app-bubble:nth-of-type(2) {
-        @include m.app-bubble(
-            $size: 40px,
-            $bottom: 7%,
-            $right: 10%,
-            $index: 0)
+        display: none;
     }
 }

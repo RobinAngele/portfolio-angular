@@ -82,7 +82,9 @@
     "HEADING": "Un projet à réaliser ?",
     "DESCRIPTION": "N'hésitez pas à me contacter via ce formulaire. J'ai hâte de découvrir vos idées afin que nous puissions les concrétiser ensemble.",
     "NEED_DEVELOPER": "Besoin d'un développeur full stack ?",
-    "CONTACT_ME": "Contactez-moi !"
+    "CONTACT_ME": "Contactez-moi !",
+    "BOOK_INTRO": "Vous préférez échanger de vive voix ? Réservez un appel gratuit de 20 minutes directement dans mon agenda.",
+    "BOOK_CALL": "Réserver un appel gratuit"
   },
   "CONTACT_FORM": {
     "NAME": "Votre nom",
@@ -127,7 +129,9 @@
     "SECTION4_HEADING": "4. Formulaire de contact",
     "SECTION4_TEXT": "Si vous utilisez le formulaire de contact, les données fournies sont uniquement utilisées pour traiter votre demande et ne sont pas conservées au-delà de ce qui est nécessaire pour y répondre. En envoyant le formulaire, vous consentez au traitement des données fournies à cette fin.",
     "CONTACT_EMAIL": "Pour toute demande, vous pouvez également nous contacter directement à l'adresse",
-    "SECTION5_HEADING": "5. Vos droits",
-    "SECTION5_TEXT": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles, ainsi que d'un droit d'opposition et à la portabilité de vos données. Pour exercer ces droits ou pour toute question relative à la protection des données, veuillez nous contacter à contact@robin4consulting.com. Vous avez également le droit d'introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+    "SECTION5_HEADING": "5. Prise de rendez-vous",
+    "SECTION5_TEXT": "Si vous réservez un appel via la page de réservation (cloud.robin4consulting.com), les données que vous saisissez (nom, adresse e-mail, numéro de téléphone, date et heure choisies et éventuel message) sont traitées uniquement pour planifier et tenir le rendez-vous. L'outil de réservation est Nextcloud Appointments, auto-hébergé sur notre propre serveur exploité par Robin Angelé EI ; aucun prestataire tiers n'a accès à ces données. Les données sont supprimées dès qu'elles ne sont plus nécessaires au rendez-vous et à son éventuel suivi.",
+    "SECTION6_HEADING": "6. Vos droits",
+    "SECTION6_TEXT": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles, ainsi que d'un droit d'opposition et à la portabilité de vos données. Pour exercer ces droits ou pour toute question relative à la protection des données, veuillez nous contacter à contact@robin4consulting.com. Vous avez également le droit d'introduire une réclamation auprès de la CNIL (www.cnil.fr)."
   }
 }

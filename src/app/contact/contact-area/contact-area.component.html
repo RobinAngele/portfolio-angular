@@ -7,6 +7,15 @@
             <h5>{{ 'CONTACT.HEADING' | translate }}</h5>
             <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
             <p>{{ 'CONTACT.NEED_DEVELOPER' | translate }} <span>{{ 'CONTACT.CONTACT_ME' | translate }}</span></p>
+            <div class="booking">
+                <p>{{ 'CONTACT.BOOK_INTRO' | translate }}</p>
+                <app-button
+                    [btnText]="'CONTACT.BOOK_CALL' | translate"
+                    [href]="bookingUrl"
+                    [target]="'_blank'"
+                    [style]="'secondary'"
+                ></app-button>
+            </div>
         </div>
         <div>
             <app-contact-form></app-contact-form>
