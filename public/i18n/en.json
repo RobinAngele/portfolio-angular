@@ -45,8 +45,8 @@
     },
     "PROJECT_ROBIN4CONSULTING": {
       "TITLE": "Robin4consulting",
-      "STACK": "Odoo | Python | Website & CRM | EN/FR/DE",
-      "DESCRIPTION": "The Odoo website of my consulting business, helping individuals and companies relocate and set up a business in Germany. A trilingual site with pricing, contact forms, online booking and WhatsApp contact."
+      "STACK": "Odoo | Python | Multi-site | EN/FR/DE",
+      "DESCRIPTION": "My consulting platform, built with Odoo: robin4consulting.com presents three services, each with its own site – germany.robin4consulting.com (relocating and setting up a business in Germany), it.robin4consulting.com (independent IT for freelancers and small businesses) and coaching.robin4consulting.com (coaching for founders). Trilingual, with pricing, contact forms and online booking."
     },
     "PROJECT_JOIN": {
       "TITLE": "Join",
