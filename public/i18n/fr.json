@@ -21,6 +21,10 @@
     "HEADING_LINE1": "Travaillons",
     "HEADING_LINE2": "ensemble",
     "I_AM": "Je suis",
+    "REMOTE_LINE1": "disponible",
+    "REMOTE_LINE2": "en télétravail",
+    "LOCATED_LINE1": "basé à",
+    "LOCATED_LINE2": "Paris",
     "BIO": "Je suis un développeur full stack passionné, basé à Paris. Je conçois des produits complets, des interfaces web modernes jusqu'aux serveurs, aux logiciels de gestion (Odoo) et à l'automatisation, et j'aime résoudre des problèmes concrets pour des secteurs et des niches variés. Je m'intéresse également à l'IA, à l'open source et à la gestion de projet.",
     "CONTACT_INTRO": "Je serais ravi d'avoir de vos nouvelles, que ce soit pour un projet, une opportunité professionnelle ou simplement pour échanger.",
     "SEND_MESSAGE": "Envoyer un message"
