@@ -9,8 +9,15 @@
         </div>
         <span class="smaller-text">{{ 'INTRODUCTION.I_AM' | translate }}</span>
         <div class="icons-container">
-            <img src="assets/icons/work_remote.svg" class="remote-icon" alt="Work Remote">
-            <img src="assets/icons/located_in.svg" class="located-icon" alt="Located in Paris">
+            <!-- Icon + translatable text (the text used to be baked into the SVGs) -->
+            <span class="badge">
+                <img src="assets/icons/work_remote_icon.svg" alt="">
+                <span class="badge-text">{{ 'INTRODUCTION.REMOTE_LINE1' | translate }}<br>{{ 'INTRODUCTION.REMOTE_LINE2' | translate }}</span>
+            </span>
+            <span class="badge">
+                <img src="assets/icons/located_in_icon.svg" alt="">
+                <span class="badge-text">{{ 'INTRODUCTION.LOCATED_LINE1' | translate }}<br>{{ 'INTRODUCTION.LOCATED_LINE2' | translate }}</span>
+            </span>
         </div>
     </h2>
     <div class="introduction-container">
