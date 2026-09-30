@@ -12,7 +12,7 @@
   },
   "HERO": {
     "GREETING": "Hello! I am",
-    "ROLE_1": "FRONTEND",
+    "ROLE_1": "FULL STACK",
     "ROLE_2": "DEVELOPER",
     "SCROLL": "SCROLL"
   },
@@ -21,7 +21,7 @@
     "HEADING_LINE1": "Let's work",
     "HEADING_LINE2": "together",
     "I_AM": "I am",
-    "BIO": "I'm a passionate frontend developer based in Paris, France. I enjoy using various technologies to build amazing products and focusing on solving problems for different industries and niches. I'm also interested in AI, automation, and project management.",
+    "BIO": "I'm a passionate full stack developer based in Paris, France. I build complete products, from modern web interfaces to servers, business software (Odoo) and automation, and I enjoy solving concrete problems for different industries and niches. I'm also interested in AI, open source and project management.",
     "CONTACT_INTRO": "I would love to hear from you. Whether it is a project, job opportunity, or just a chat.",
     "SEND_MESSAGE": "Send a message"
   },
@@ -30,9 +30,20 @@
   },
   "PROJECTS": {
     "TITLE": "My Projects",
-    "DESCRIPTION": "These projects showcase my expertise in frontend development, AI integration, and automation. Each project demonstrates different skills and modern web technologies.",
+    "DESCRIPTION": "These projects showcase my expertise in full stack development, business software and automation, from my own products to training projects. Each one demonstrates different skills and modern web technologies.",
     "LIVE_TEST": "Live test",
     "GITHUB": "GitHub",
+    "VISIT_SITE": "Visit site",
+    "PROJECT_REEFOFFICE": {
+      "TITLE": "ReefOffice",
+      "STACK": "SvelteKit | Docker | Nextcloud | PostgreSQL | Private AI",
+      "DESCRIPTION": "My SaaS product: a managed private back office for small businesses. Files, document management, CRM, invoicing, automation and private AI run on a dedicated EU server for each customer, deployed, secured and backed up for them."
+    },
+    "PROJECT_ROBIN4CONSULTING": {
+      "TITLE": "Robin4consulting",
+      "STACK": "Odoo | Python | Website & CRM | EN/FR/DE",
+      "DESCRIPTION": "The Odoo website of my consulting business, helping individuals and companies relocate and set up a business in Germany. A trilingual site with pricing, contact forms, online booking and WhatsApp contact."
+    },
     "PROJECT_JOIN": {
       "TITLE": "Join",
       "STACK": "Angular | TypeScript | HTML | CSS",
@@ -53,7 +64,7 @@
     "TITLE": "Contact",
     "HEADING": "Got projects to realize?",
     "DESCRIPTION": "Feel free to contact me through this form. I'm interested in hearing from you and your ideas, so that we can turn them into reality.",
-    "NEED_DEVELOPER": "Need a Frontend developer?",
+    "NEED_DEVELOPER": "Need a full stack developer?",
     "CONTACT_ME": "Contact me!"
   },
   "CONTACT_FORM": {

@@ -10,6 +10,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrls: ['./skillset-area.component.scss']
 })
 export class SkillsetAreaComponent {
-  title: string = "My Skills";
-  description: string = "I specialize in frontend development with a focus on modern web technologies, AI integration, Linux environments, and automation tools. Here are the key technologies I work with:";
 }

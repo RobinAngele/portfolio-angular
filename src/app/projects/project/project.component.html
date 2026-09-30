@@ -1,8 +1,8 @@
 <div class="project-container" [class.odd]="isSecondElement"
     data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
     <div class="image-container">
-        <img [src]="project.prevImageUrl" alt="Project Preview Image" draggable="false" loading="lazy">
-        <app-button [btnText]="'PROJECTS.LIVE_TEST' | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
+        <img [src]="project.prevImageUrl" [alt]="project.titleKey | translate" draggable="false" loading="lazy">
+        <app-button [btnText]="(project.ctaKey || 'PROJECTS.LIVE_TEST') | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
     </div>
     <div>
         <div class="description-container">
@@ -10,9 +10,11 @@
             <p class="project-stack">{{ project.stackKey | translate }}</p>
             <p>{{ project.descriptionKey | translate }}</p>
         </div>
-        <div class="button-container">
-            <app-button [btnText]="'PROJECTS.LIVE_TEST' | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
-            <app-button [btnText]="'PROJECTS.GITHUB' | translate" [href]="project.github" [target]="'_blank'"></app-button>
+        <div class="button-container" [class.no-github]="!project.github">
+            <app-button [btnText]="(project.ctaKey || 'PROJECTS.LIVE_TEST') | translate" [href]="project.projectUrl" [target]="'_blank'" [style]="'secondary'"></app-button>
+            @if (project.github) {
+                <app-button [btnText]="'PROJECTS.GITHUB' | translate" [href]="project.github" [target]="'_blank'"></app-button>
+            }
         </div>
     </div>
 </div>
