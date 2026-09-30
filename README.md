@@ -6,7 +6,7 @@
 
 Full stack developer portfolio showcasing my projects and skills. Built with Angular 19, TypeScript, and SCSS.
 
-🔗 **Live demo**: [frontend.robin4consulting.com](https://www.frontend.robin4consulting.com)
+🔗 **Live demo**: [portfolio.robin4consulting.com](https://portfolio.robin4consulting.com)
 
 ## 🛠️ Tech Stack
 

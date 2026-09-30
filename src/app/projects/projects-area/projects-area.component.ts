@@ -34,7 +34,7 @@ export class ProjectsAreaComponent {
       stackKey: 'PROJECTS.PROJECT_JOIN.STACK',
       descriptionKey: 'PROJECTS.PROJECT_JOIN.DESCRIPTION',
       github: "https://github.com/RobinAngele/join-angular",
-      projectUrl: 'https://frontend.robin4consulting.com/join/',
+      projectUrl: 'https://portfolio.robin4consulting.com/join/',
       prevImageUrl: "assets/img/preview_join.svg"
     },
     {
