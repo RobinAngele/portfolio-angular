@@ -69,7 +69,9 @@
     "HEADING": "Got projects to realize?",
     "DESCRIPTION": "Feel free to contact me through this form. I'm interested in hearing from you and your ideas, so that we can turn them into reality.",
     "NEED_DEVELOPER": "Need a full stack developer?",
-    "CONTACT_ME": "Contact me!"
+    "CONTACT_ME": "Contact me!",
+    "BOOK_INTRO": "Prefer to talk? Book a free 20-minute call directly in my calendar.",
+    "BOOK_CALL": "Book a free call"
   },
   "CONTACT_FORM": {
     "NAME": "Your name",
@@ -114,7 +116,9 @@
     "SECTION4_HEADING": "4. Contact Form",
     "SECTION4_TEXT": "If you use the contact form, your provided data will only be used to process your inquiry and will not be stored beyond what is necessary to answer your request. By submitting the contact form, you consent to the processing of the provided data for this purpose.",
     "CONTACT_EMAIL": "For inquiries, you can also contact us directly at",
-    "SECTION5_HEADING": "5. Your Rights",
-    "SECTION5_TEXT": "In accordance with the GDPR, you have the right to access, rectify, erase, and restrict the processing of your personal data, as well as the right to object and to data portability. To exercise these rights or for any question about data protection, please contact us at contact@robin4consulting.com. You also have the right to lodge a complaint with the French data protection authority (CNIL, www.cnil.fr)."
+    "SECTION5_HEADING": "5. Appointment Booking",
+    "SECTION5_TEXT": "If you book a call through the booking page (cloud.robin4consulting.com), the data you enter (name, email address, phone number, chosen date and time and any message) is processed only to schedule and hold the appointment. The booking tool is Nextcloud Appointments, self-hosted on our own server operated by Robin Angelé EI; no third-party provider has access to this data. The data is deleted once it is no longer needed for the appointment and any follow-up.",
+    "SECTION6_HEADING": "6. Your Rights",
+    "SECTION6_TEXT": "In accordance with the GDPR, you have the right to access, rectify, erase, and restrict the processing of your personal data, as well as the right to object and to data portability. To exercise these rights or for any question about data protection, please contact us at contact@robin4consulting.com. You also have the right to lodge a complaint with the French data protection authority (CNIL, www.cnil.fr)."
   }
 }
