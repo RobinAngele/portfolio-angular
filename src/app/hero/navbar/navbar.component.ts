@@ -33,7 +33,7 @@ export class NavbarComponent {
   /**
    * Listens to scroll events and updates scrolled state
    */
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onScroll(): void {
     if (window.scrollY > 20) {
       this.scrolled = true;
