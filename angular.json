@@ -97,6 +97,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            },
             "assets": [
               { "glob": "favicon.ico", "input": "public", "output": "/" },
               { "glob": "send_mail.php", "input": "public", "output": "/" },
