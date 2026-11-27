@@ -1,5 +1,5 @@
-import { Component, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { Component, OnDestroy, inject, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
@@ -8,41 +8,33 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [UpperCasePipe, TranslatePipe],
   templateUrl: './navmenu.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./navmenu.component.scss']
 })
 export class NavmenuComponent implements OnDestroy {
-  isMenuOpen = false;
-  currentLang: string;
+  private languageService = inject(LanguageService);
+
+  isMenuOpen = signal(false);
+  /** The language the site is shown in; the template follows every change */
+  currentLang = this.languageService.currentLanguage;
   languages = [
     { code: 'en', label: 'English' },
     { code: 'de', label: 'Deutsch' },
     { code: 'fr', label: 'Français' }
   ];
 
-  constructor(
-    private translate: TranslateService,
-    private languageService: LanguageService
-  ) {
-    this.currentLang = this.languageService.getCurrentLanguage();
-    this.languageService.currentLanguage$.subscribe(lang => {
-      this.currentLang = lang;
-    });
-  }
-
   /**
    * Toggles the mobile menu open/closed state
    */
   toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-    this.lockPageScroll(this.isMenuOpen);
+    this.isMenuOpen.update((open) => !open);
+    this.lockPageScroll(this.isMenuOpen());
   }
 
   /**
    * Closes the mobile menu
    */
   closeMenu(): void {
-    this.isMenuOpen = false;
+    this.isMenuOpen.set(false);
     this.lockPageScroll(false);
   }
 
@@ -50,7 +42,7 @@ export class NavmenuComponent implements OnDestroy {
    * Releases the page scroll lock if the menu is destroyed while open
    */
   ngOnDestroy(): void {
-    if (this.isMenuOpen) {
+    if (this.isMenuOpen()) {
       this.lockPageScroll(false);
     }
   }

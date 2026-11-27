@@ -1,13 +1,12 @@
-import { Component, ElementRef, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ElementRef, ViewChild, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, TranslatePipe]
 })
 export class ContactFormComponent {
@@ -17,20 +16,24 @@ export class ContactFormComponent {
   @ViewChild('privacy') privacyEl!: ElementRef;
   @ViewChild('bubble') bubbleEl!: ElementRef;
 
-  isInputValid: { [input: string]: boolean } = {
+  /** Which fields currently hold a valid value. A signal, so the template follows every change. */
+  isInputValid = signal<{ [input: string]: boolean }>({
     'name': false,
     'email': false,
     'message': false,
     'privacy': false
-  }
+  });
 
-  private translate = inject(TranslateService);
+  /** True once every field is valid; the send button is enabled from this. */
+  isFormValid = computed(() => Object.values(this.isInputValid()).every((valid) => valid));
 
-  ngAfterViewInit() {
-    this.nameEl.nativeElement.onblur = (event: Event) => this.onInputBlur(event);
-    this.emailEl.nativeElement.onblur = (event: Event) => this.onInputBlur(event);
-    this.messageEl.nativeElement.onblur = (event: Event) => this.onInputBlur(event);
-    this.privacyEl.nativeElement.onchange = (event: Event) => this.onCheckboxChange(event);
+  /**
+   * Records whether a field is valid.
+   * @param id Id of the input element.
+   * @param valid Whether its value is valid.
+   */
+  private setValid(id: string, valid: boolean): void {
+    this.isInputValid.update((state) => ({ ...state, [id]: valid }));
   }
 
   /**
@@ -53,10 +56,10 @@ export class ContactFormComponent {
     
     if (target.checked) {
       errorEl!.style.display = 'none';
-      this.isInputValid[target.id] = true;
+      this.setValid(target.id, true);
     } else {
       errorEl!.style.display = 'inline';
-      this.isInputValid[target.id] = false;
+      this.setValid(target.id, false);
     }
   }
 
@@ -70,11 +73,11 @@ export class ContactFormComponent {
     if (!target.checkValidity()) {
       target.style.background = "white url('/assets/icons/error.svg') no-repeat right 25px top 10px";
       errorEl!.style.display = 'inline';
-      this.isInputValid[target.id] = false;
+      this.setValid(target.id, false);
     } else {
       target.style.background = "white url('/assets/icons/valid.svg') no-repeat right 25px top 10px";
       errorEl!.style.display = 'none';
-      this.isInputValid[target.id] = true;
+      this.setValid(target.id, true);
     }
   }
 
@@ -86,10 +89,9 @@ export class ContactFormComponent {
     const emailText = this.emailEl.nativeElement.value;
     const messageText = this.messageEl.nativeElement.value;
     const bubbleEl = this.bubbleEl.nativeElement;
-    const isFormValid = this.isInputValid['name'] && this.isInputValid['email'] && this.isInputValid['message'] && this.isInputValid['privacy'];
     const data = new FormData();
 
-    if (isFormValid) {
+    if (this.isFormValid()) {
       data.append('name', nameText);
       data.append('mail', emailText);
       data.append('message', messageText);
@@ -144,10 +146,12 @@ export class ContactFormComponent {
    * Resets the input validation.
    */
   resetInputValidation() {
-    this.isInputValid['name'] = false;
-    this.isInputValid['email'] = false;
-    this.isInputValid['message'] = false;
-    this.isInputValid['privacy'] = false;
+    this.isInputValid.set({
+      'name': false,
+      'email': false,
+      'message': false,
+      'privacy': false
+    });
   }
 
   /**

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { BubbleComponent } from '../../bubble/bubble.component';
 import { ProjectComponent } from '../project/project.component';
@@ -9,7 +9,6 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [BubbleComponent, ProjectComponent, TranslatePipe],
   templateUrl: './projects-area.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./projects-area.component.scss']
 })
 export class ProjectsAreaComponent {
