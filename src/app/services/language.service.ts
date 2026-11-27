@@ -29,7 +29,7 @@ export class LanguageService {
   private initializeLanguage(): void {
     const savedLanguage = this.getSavedLanguage();
     const languageToUse = savedLanguage || this.DEFAULT_LANGUAGE;
-    this.translate.setDefaultLang(this.DEFAULT_LANGUAGE);
+    this.translate.setFallbackLang(this.DEFAULT_LANGUAGE);
     this.setLanguage(languageToUse, false);
   }
 

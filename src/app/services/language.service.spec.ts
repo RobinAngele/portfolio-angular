@@ -38,7 +38,7 @@ describe('LanguageService', () => {
     service.setLanguage('de');
 
     expect(service.getCurrentLanguage()).toBe('de');
-    expect(TestBed.inject(TranslateService).currentLang).toBe('de');
+    expect(TestBed.inject(TranslateService).getCurrentLang()).toBe('de');
     expect(document.documentElement.lang).toBe('de');
     expect(localStorage.getItem(STORAGE_KEY)).toBe('de');
   });

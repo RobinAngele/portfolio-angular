@@ -19,7 +19,7 @@ export const appConfig: ApplicationConfig = {
     ),
     provideClientHydration(withEventReplay(), withNoIncrementalHydration()),
     provideTranslateService({
-      defaultLanguage: 'en'
+      fallbackLang: 'en'
     })
   ]
 };

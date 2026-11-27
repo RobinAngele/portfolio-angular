@@ -8,7 +8,7 @@ describe('AppComponent', () => {
     localStorage.removeItem('selectedLanguage');
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-      providers: [provideRouter([]), provideTranslateService({ defaultLanguage: 'en' })],
+      providers: [provideRouter([]), provideTranslateService({ fallbackLang: 'en' })],
     }).compileComponents();
   });
 
