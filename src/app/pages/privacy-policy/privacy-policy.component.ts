@@ -1,9 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { FooterAreaComponent } from '../../footer/footer-area/footer-area.component';
 import { NavbarComponent } from '../../hero/navbar/navbar.component';
 import { NavmenuComponent } from '../../hero/navmenu/navmenu.component';
-import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
@@ -11,21 +11,16 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [FooterAreaComponent, NavbarComponent, NavmenuComponent, TranslatePipe],
   templateUrl: './privacy-policy.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./privacy-policy.component.scss']
 })
 export class PrivacyPolicyComponent {
-  currentLang: string;
+  private titleService = inject(Title);
+  private languageService = inject(LanguageService);
 
-  constructor(
-    private titleService: Title,
-    private translate: TranslateService,
-    private languageService: LanguageService
-  ) {
-    this.currentLang = this.languageService.getCurrentLanguage();
-    this.titleService.setTitle('Privacy Policy | Robin Angelé');
-    this.languageService.currentLanguage$.subscribe(lang => {
-      this.currentLang = lang;
+  constructor() {
+    // Runs once at the start and again every time the language changes
+    effect(() => {
+      const lang = this.languageService.currentLanguage();
       if (lang === 'de') {
         this.titleService.setTitle('Datenschutz | Robin Angelé');
       } else if (lang === 'fr') {

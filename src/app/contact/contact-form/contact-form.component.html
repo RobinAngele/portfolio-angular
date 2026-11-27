@@ -2,6 +2,7 @@
     <div class="input-container">
         <input type="text"
             name="name" id="name" #name
+            (blur)="onInputBlur($event)"
             placeholder="{{ 'CONTACT_FORM.NAME_PLACEHOLDER' | translate }}"
             minlength="4" required>
         <label for="name">{{ 'CONTACT_FORM.NAME' | translate }}</label>
@@ -11,6 +12,7 @@
     <div class="input-container">
         <input type="email"
             name="email" id="email" #email
+            (blur)="onInputBlur($event)"
             placeholder="{{ 'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate }}"
             required>
         <label for="email">{{ 'CONTACT_FORM.EMAIL' | translate }}</label>
@@ -20,6 +22,7 @@
     <div class="input-container">
         <textarea cols="30" rows="10"
             name="message" id="message" #message
+            (blur)="onInputBlur($event)"
             placeholder="{{ 'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate }}" title=""
             required></textarea>
         <label for="message">{{ 'CONTACT_FORM.MESSAGE' | translate }}</label>
@@ -29,6 +32,7 @@
     <div class="checkbox-container">
         <input type="checkbox" 
             name="privacy" id="privacy" #privacy
+            (change)="onCheckboxChange($event)"
             required>
         <label for="privacy">
             {{ 'CONTACT_FORM.PRIVACY_AGREEMENT' | translate }}
@@ -40,7 +44,7 @@
     </div>
 
     <button type="submit" class="btn-primary"
-    [disabled]="!(isInputValid['name'] && isInputValid['email'] && isInputValid['message'] && isInputValid['privacy'])">
+    [disabled]="!isFormValid()">
     {{ 'CONTACT_FORM.SEND' | translate }}</button>
 
     <img src="/assets/icons/mail_blue.svg" class="mail-bubble" id="bubble" #bubble>

@@ -1,7 +1,6 @@
-import { Injectable, Inject, PLATFORM_ID, DOCUMENT } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID, DOCUMENT, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
-import { BehaviorSubject } from 'rxjs';
 
 export const SUPPORTED_LANGUAGES = ['en', 'de', 'fr'] as const;
 export type Language = typeof SUPPORTED_LANGUAGES[number];
@@ -12,8 +11,9 @@ export type Language = typeof SUPPORTED_LANGUAGES[number];
 export class LanguageService {
   private readonly STORAGE_KEY = 'selectedLanguage';
   private readonly DEFAULT_LANGUAGE = 'en';
-  private currentLanguageSubject = new BehaviorSubject<string>(this.DEFAULT_LANGUAGE);
-  public currentLanguage$ = this.currentLanguageSubject.asObservable();
+  private readonly language = signal<string>(this.DEFAULT_LANGUAGE);
+  /** The language the site is shown in. Templates and effects that read it follow every change. */
+  public readonly currentLanguage = this.language.asReadonly();
 
   constructor(
     private translate: TranslateService,
@@ -37,7 +37,7 @@ export class LanguageService {
    * Gets the currently selected language
    */
   getCurrentLanguage(): string {
-    return this.currentLanguageSubject.value;
+    return this.language();
   }
 
   /**
@@ -51,7 +51,7 @@ export class LanguageService {
     }
     this.translate.use(language);
     this.document.documentElement.lang = language;
-    this.currentLanguageSubject.next(language);
+    this.language.set(language);
     if (save) {
       this.saveLanguage(language);
     }

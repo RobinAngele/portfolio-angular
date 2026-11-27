@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-social-media-header',
   standalone: true,
   templateUrl: './social-media-header.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./social-media-header.component.scss']
 })
 export class SocialMediaHeaderComponent {

@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
@@ -8,26 +8,18 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [UpperCasePipe, TranslatePipe],
   templateUrl: './navbar.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  currentLang: string;
+  private languageService = inject(LanguageService);
+
+  /** The language the site is shown in; the template follows every change */
+  currentLang = this.languageService.currentLanguage;
   languages = [
     { code: 'en', label: 'English' },
     { code: 'de', label: 'Deutsch' },
     { code: 'fr', label: 'Français' }
   ];
-
-  constructor(
-    private translate: TranslateService,
-    private languageService: LanguageService
-  ) {
-    this.currentLang = this.languageService.getCurrentLanguage();
-    this.languageService.currentLanguage$.subscribe(lang => {
-      this.currentLang = lang;
-    });
-  }
 
   /**
    * Switches the application language using the language service
