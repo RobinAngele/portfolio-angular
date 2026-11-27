@@ -1,12 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgIf, NgFor, UpperCasePipe, TranslatePipe],
+  imports: [UpperCasePipe, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

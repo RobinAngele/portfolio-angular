@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { BubbleComponent } from '../../bubble/bubble.component';
 import { ButtonComponent } from '../../button/button.component';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { NgIf } from '@angular/common';
+
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-introduction-area',
   standalone: true,
-  imports: [BubbleComponent, ButtonComponent, TranslatePipe, NgIf],
+  imports: [BubbleComponent, ButtonComponent, TranslatePipe],
   templateUrl: './introduction-area.component.html',
   styleUrls: ['./introduction-area.component.scss']
 })

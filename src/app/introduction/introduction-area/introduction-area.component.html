@@ -1,34 +1,36 @@
 <section class="container introduction-area" id="introduction">
-    <app-bubble></app-bubble>
-    <h2>
-        <!-- Language-specific heading structure using translation keys -->
-        <div class="heading-container">
-            <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE1' | translate }}</div>
-            <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE2' | translate }}</div>
-            <div *ngIf="currentLang === 'de'" class="heading-line">{{ 'INTRODUCTION.HEADING_LINE3' | translate }}</div>
-        </div>
-        <span class="smaller-text">{{ 'INTRODUCTION.I_AM' | translate }}</span>
-        <div class="icons-container">
-            <!-- Icon + translatable text (the text used to be baked into the SVGs) -->
-            <span class="badge">
-                <img src="assets/icons/work_remote_icon.svg" alt="">
-                <span class="badge-text">{{ 'INTRODUCTION.REMOTE_LINE1' | translate }}<br>{{ 'INTRODUCTION.REMOTE_LINE2' | translate }}</span>
-            </span>
-            <span class="badge">
-                <img src="assets/icons/located_in_icon.svg" alt="">
-                <span class="badge-text">{{ 'INTRODUCTION.LOCATED_LINE1' | translate }}<br>{{ 'INTRODUCTION.LOCATED_LINE2' | translate }}</span>
-            </span>
-        </div>
-    </h2>
-    <div class="introduction-container">
-        <p>
-            {{ 'INTRODUCTION.BIO' | translate }}
-            <br><br>
-            {{ 'INTRODUCTION.CONTACT_INTRO' | translate }}
-        </p>
-        <app-button
-            [btnText]="contactBtnText | translate"
-            [href]="'#contact'"
-        ></app-button>
+  <app-bubble></app-bubble>
+  <h2>
+    <!-- Language-specific heading structure using translation keys -->
+    <div class="heading-container">
+      <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE1' | translate }}</div>
+      <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE2' | translate }}</div>
+      @if (currentLang === 'de') {
+        <div class="heading-line">{{ 'INTRODUCTION.HEADING_LINE3' | translate }}</div>
+      }
     </div>
+    <span class="smaller-text">{{ 'INTRODUCTION.I_AM' | translate }}</span>
+    <div class="icons-container">
+      <!-- Icon + translatable text (the text used to be baked into the SVGs) -->
+      <span class="badge">
+        <img src="assets/icons/work_remote_icon.svg" alt="">
+        <span class="badge-text">{{ 'INTRODUCTION.REMOTE_LINE1' | translate }}<br>{{ 'INTRODUCTION.REMOTE_LINE2' | translate }}</span>
+      </span>
+      <span class="badge">
+        <img src="assets/icons/located_in_icon.svg" alt="">
+        <span class="badge-text">{{ 'INTRODUCTION.LOCATED_LINE1' | translate }}<br>{{ 'INTRODUCTION.LOCATED_LINE2' | translate }}</span>
+      </span>
+    </div>
+  </h2>
+  <div class="introduction-container">
+    <p>
+      {{ 'INTRODUCTION.BIO' | translate }}
+      <br><br>
+      {{ 'INTRODUCTION.CONTACT_INTRO' | translate }}
+    </p>
+    <app-button
+      [btnText]="contactBtnText | translate"
+      [href]="'#contact'"
+    ></app-button>
+  </div>
 </section>

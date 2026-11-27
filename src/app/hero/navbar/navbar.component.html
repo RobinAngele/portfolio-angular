@@ -1,18 +1,20 @@
 <nav>
-    <ul>
-        <a href="#introduction"><li>{{ 'NAVBAR.ABOUT' | translate }}</li></a>
-        <a href="#skillset"><li>{{ 'NAVBAR.SKILLS' | translate }}</li></a>
-        <a href="#projects"><li>{{ 'NAVBAR.PROJECTS' | translate }}</li></a>
-        <a href="#contact"><li>{{ 'NAVBAR.CONTACT' | translate }}</li></a>
-    </ul>
-    <div class="language-toggle">
-        <ng-container *ngFor="let lang of languages; let last = last">
-            <button type="button"
-                    [class.active]="currentLang === lang.code"
-                    [attr.aria-pressed]="currentLang === lang.code"
-                    [attr.aria-label]="lang.label"
-                    (click)="switchLanguage(lang.code)">{{ lang.code | uppercase }}</button>
-            <span *ngIf="!last" class="separator">/</span>
-        </ng-container>
-    </div>
+  <ul>
+    <a href="#introduction"><li>{{ 'NAVBAR.ABOUT' | translate }}</li></a>
+    <a href="#skillset"><li>{{ 'NAVBAR.SKILLS' | translate }}</li></a>
+    <a href="#projects"><li>{{ 'NAVBAR.PROJECTS' | translate }}</li></a>
+    <a href="#contact"><li>{{ 'NAVBAR.CONTACT' | translate }}</li></a>
+  </ul>
+  <div class="language-toggle">
+    @for (lang of languages; track lang; let last = $last) {
+      <button type="button"
+        [class.active]="currentLang === lang.code"
+        [attr.aria-pressed]="currentLang === lang.code"
+        [attr.aria-label]="lang.label"
+      (click)="switchLanguage(lang.code)">{{ lang.code | uppercase }}</button>
+      @if (!last) {
+        <span class="separator">/</span>
+      }
+    }
+  </div>
 </nav>
