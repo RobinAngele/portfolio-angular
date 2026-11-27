@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
 
@@ -7,7 +7,6 @@ import { provideClientHydration, withEventReplay, withNoIncrementalHydration } f
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       routes,
       withInMemoryScrolling({

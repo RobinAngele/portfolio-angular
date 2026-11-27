@@ -20,9 +20,6 @@
             "outputPath": "dist/portfoliorobin",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
@@ -73,10 +70,6 @@
               "extractLicenses": false,
               "styles": [
                 "src/styles.scss"
-              ],
-              "polyfills": [
-                "zone.js",
-                "zone.js/testing"
               ]
             }
           },
