@@ -1,28 +1,30 @@
 <div class="burger-menu-button" [class.button-open]="isMenuOpen" (click)="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 
 <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()">
-    <div class="mobile-menu" [class.open]="isMenuOpen">
-        <nav>
-            <ul>
-                <li><a href="#introduction" (click)="closeMenu()">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
-                <li><a href="#skillset" (click)="closeMenu()">{{ 'NAVBAR.SKILLS' | translate }}</a></li>
-                <li><a href="#projects" (click)="closeMenu()">{{ 'NAVBAR.PROJECTS' | translate }}</a></li>
-                <li><a href="#contact" (click)="closeMenu()">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
-            </ul>
-            <div class="language-toggle">
-                <ng-container *ngFor="let lang of languages; let last = last">
-                    <button type="button"
-                            [class.active]="currentLang === lang.code"
-                            [attr.aria-pressed]="currentLang === lang.code"
-                            [attr.aria-label]="lang.label"
-                            (click)="switchLanguage(lang.code)">{{ lang.code | uppercase }}</button>
-                    <span *ngIf="!last" class="separator">/</span>
-                </ng-container>
-            </div>
-        </nav>
-    </div>
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <nav>
+      <ul>
+        <li><a href="#introduction" (click)="closeMenu()">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
+        <li><a href="#skillset" (click)="closeMenu()">{{ 'NAVBAR.SKILLS' | translate }}</a></li>
+        <li><a href="#projects" (click)="closeMenu()">{{ 'NAVBAR.PROJECTS' | translate }}</a></li>
+        <li><a href="#contact" (click)="closeMenu()">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
+      </ul>
+      <div class="language-toggle">
+        @for (lang of languages; track lang; let last = $last) {
+          <button type="button"
+            [class.active]="currentLang === lang.code"
+            [attr.aria-pressed]="currentLang === lang.code"
+            [attr.aria-label]="lang.label"
+          (click)="switchLanguage(lang.code)">{{ lang.code | uppercase }}</button>
+          @if (!last) {
+            <span class="separator">/</span>
+          }
+        }
+      </div>
+    </nav>
+  </div>
 </div>

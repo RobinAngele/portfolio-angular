@@ -1,16 +1,16 @@
 # 💼 Portfolio — Robin Angele
 
-![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=flat&logo=angular&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-22-DD0031?style=flat&logo=angular&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
 
-Full stack developer portfolio showcasing my projects and skills. Built with Angular 19, TypeScript, and SCSS.
+Full stack developer portfolio showcasing my projects and skills. Built with Angular 22, TypeScript, and SCSS.
 
 🔗 **Live demo**: [portfolio.robin4consulting.com](https://portfolio.robin4consulting.com)
 
 ## 🛠️ Tech Stack
 
-- **Angular 19** with standalone components
+- **Angular 22** with standalone components
 - **TypeScript** (strict mode)
 - **SCSS** with responsive design
 - **Angular CLI** for tooling

@@ -1,13 +1,14 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navmenu',
   standalone: true,
-  imports: [NgIf, NgFor, UpperCasePipe, TranslatePipe],
+  imports: [UpperCasePipe, TranslatePipe],
   templateUrl: './navmenu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./navmenu.component.scss']
 })
 export class NavmenuComponent implements OnDestroy {

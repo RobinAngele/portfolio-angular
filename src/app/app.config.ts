@@ -3,7 +3,7 @@ import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular
 import { provideTranslateService } from '@ngx-translate/core';
 
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideClientHydration, withEventReplay, withNoIncrementalHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
         onSameUrlNavigation: 'reload'
       })
     ),
-    provideClientHydration(withEventReplay()),
+    provideClientHydration(withEventReplay(), withNoIncrementalHydration()),
     provideTranslateService({
       defaultLanguage: 'en'
     })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { HeroAreaComponent } from '../../hero/hero-area/hero-area.component';
 import { IntroductionAreaComponent } from '../../introduction/introduction-area/introduction-area.component';
@@ -19,6 +19,7 @@ import { FooterAreaComponent } from '../../footer/footer-area/footer-area.compon
     FooterAreaComponent
   ],
   templateUrl: './main.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {

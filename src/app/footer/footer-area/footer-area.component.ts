@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LogoComponent } from '../../logo/logo.component';
 import { SocialMediaFooterComponent } from '../social-media-footer/social-media-footer.component';
@@ -9,6 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true,
   imports: [RouterModule, LogoComponent, SocialMediaFooterComponent, TranslatePipe],
   templateUrl: './footer-area.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./footer-area.component.scss']
 })
 export class FooterAreaComponent {

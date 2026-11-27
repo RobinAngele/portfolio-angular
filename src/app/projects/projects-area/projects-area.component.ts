@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 import { BubbleComponent } from '../../bubble/bubble.component';
 import { ProjectComponent } from '../project/project.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -7,8 +7,9 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-projects-area',
   standalone: true,
-  imports: [CommonModule, BubbleComponent, ProjectComponent, TranslatePipe],
+  imports: [BubbleComponent, ProjectComponent, TranslatePipe],
   templateUrl: './projects-area.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./projects-area.component.scss']
 })
 export class ProjectsAreaComponent {
