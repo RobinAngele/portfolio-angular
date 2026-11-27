@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-skill-grid',
   standalone: true,
   templateUrl: './skill-grid.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./skill-grid.component.scss']
 })
 export class SkillGridComponent {

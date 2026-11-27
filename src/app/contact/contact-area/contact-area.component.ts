@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BubbleComponent } from '../../bubble/bubble.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -9,6 +9,7 @@ import { ButtonComponent } from '../../button/button.component';
   templateUrl: './contact-area.component.html',
   styleUrls: ['./contact-area.component.scss'],
   imports: [BubbleComponent, ContactFormComponent, TranslatePipe, ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true
 })
 export class ContactAreaComponent {

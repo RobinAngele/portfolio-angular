@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
@@ -7,6 +7,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, TranslatePipe]
 })
 export class ContactFormComponent {

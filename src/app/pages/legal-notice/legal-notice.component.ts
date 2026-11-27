@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { FooterAreaComponent } from '../../footer/footer-area/footer-area.component';
 import { NavbarComponent } from '../../hero/navbar/navbar.component';
@@ -11,6 +11,7 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [FooterAreaComponent, NavbarComponent, NavmenuComponent, TranslatePipe],
   templateUrl: './legal-notice.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./legal-notice.component.scss']
 })
 export class LegalNoticeComponent {

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
@@ -8,6 +8,7 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [UpperCasePipe, TranslatePipe],
   templateUrl: './navbar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { LogoComponent } from '../../logo/logo.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NavmenuComponent } from '../navmenu/navmenu.component';
@@ -18,6 +18,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     TranslatePipe
   ],
   templateUrl: './hero-area.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./hero-area.component.scss']
 })
 export class HeroAreaComponent {

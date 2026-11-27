@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonComponent } from '../../button/button.component';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -7,6 +7,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true,
   imports: [ButtonComponent, TranslatePipe],
   templateUrl: './project.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
