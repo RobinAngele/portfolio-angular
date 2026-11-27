@@ -54,6 +54,9 @@ Required repository secrets (**Settings → Secrets and variables → Actions**)
 | `FTP_USERNAME` | FTP user name (the `deploy` account, rooted at the site folder) |
 | `FTP_PASSWORD` | FTP password |
 
+Every pull request against `main` runs the unit tests and the build first
+(see `.github/workflows/ci.yml`). Nothing is uploaded from a pull request.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev) test runner, use the following command:
