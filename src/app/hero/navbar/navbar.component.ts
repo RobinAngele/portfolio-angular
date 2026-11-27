@@ -1,4 +1,4 @@
-import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { UpperCasePipe } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
@@ -12,8 +12,6 @@ import { LanguageService } from '../../services/language.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  scrolled = false;
-  menuOpen = false;
   currentLang: string;
   languages = [
     { code: 'en', label: 'English' },
@@ -29,25 +27,6 @@ export class NavbarComponent {
     this.languageService.currentLanguage$.subscribe(lang => {
       this.currentLang = lang;
     });
-  }
-
-  /**
-   * Listens to scroll events and updates scrolled state
-   */
-  @HostListener('window:scroll')
-  onScroll(): void {
-    if (window.scrollY > 20) {
-      this.scrolled = true;
-    } else {
-      this.scrolled = false;
-    }
-  }
-
-  /**
-   * Toggles the mobile menu open/closed state
-   */
-  toggleMenu(): void {
-    this.menuOpen = !this.menuOpen;
   }
 
   /**
