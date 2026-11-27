@@ -23,7 +23,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class HeroAreaComponent {
   name: string = 'Robin';
-  ctaText: string = 'Contact me';
 
   /** Longest role word that fits the hero layout at full size (e.g. "DEVELOPER") */
   private readonly MAX_ROLE_LENGTH = 9;

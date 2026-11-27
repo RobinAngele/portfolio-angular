@@ -1,23 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideTranslateService } from '@ngx-translate/core';
 import { ContactAreaComponent } from './contact-area.component';
 
 describe('ContactAreaComponent', () => {
-  let component: ContactAreaComponent;
   let fixture: ComponentFixture<ContactAreaComponent>;
+  let el: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactAreaComponent ]
-    })
-    .compileComponents();
+      imports: [ContactAreaComponent],
+      providers: [provideTranslateService()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContactAreaComponent);
-    component = fixture.componentInstance;
+    el = fixture.nativeElement;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('shows the contact form', () => {
+    expect(el.querySelector('app-contact-form form')).not.toBeNull();
+  });
+
+  it('links the booking button to the appointment page in a new tab', () => {
+    const link = el.querySelector<HTMLAnchorElement>('.booking a')!;
+
+    expect(link.getAttribute('href')).toBe(fixture.componentInstance.bookingUrl);
+    expect(link.target).toBe('_blank');
   });
 });

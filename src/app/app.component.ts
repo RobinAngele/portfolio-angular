@@ -21,8 +21,6 @@ import translationsFR from "../../public/i18n/fr.json";
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'portfoliorobin';
-
   constructor(
     private router: Router,
     private translate: TranslateService,

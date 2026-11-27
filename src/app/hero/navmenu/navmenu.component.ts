@@ -12,11 +12,6 @@ import { LanguageService } from '../../services/language.service';
   styleUrls: ['./navmenu.component.scss']
 })
 export class NavmenuComponent implements OnDestroy {
-  menuItems = [
-    { label: 'About', link: '#about' },
-    { label: 'Skills', link: '#skills' },
-    { label: 'Projects', link: '#projects' }
-  ];
   isMenuOpen = false;
   currentLang: string;
   languages = [
